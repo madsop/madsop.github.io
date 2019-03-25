@@ -8,13 +8,14 @@ show_excerpts: false # set to true to show excerpts on the homepage
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
-  date_format: "%-d %b  %Y"
+  date_format: "%b %-d, %Y"
 
   # generate social links in footer
-  social:
+  social_links:
     twitter: madsopheim
     github:  madsop
     rss: rss
+    # dribbble: jekyll
     facebook: madsop
     # flickr:   jekyll
     # instagram: jekyll
@@ -24,6 +25,7 @@ minima:
     # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
     # youtube_channel_name: CloudCannon
     # telegram: jekyll
+    # googleplus: +jekyll
     # microdotblog: jekyll
 
     # Mastodon instances
