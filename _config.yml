@@ -41,8 +41,9 @@ minima:
 # - about.md
 
 # Build settings
-theme: minima
+remote_theme: mmistakes/minimal-mistakes@4.15.2
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-include-cache
