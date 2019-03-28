@@ -132,6 +132,13 @@ and many more
     <td> <a href="https://2019.geecon.org/speakers/info.html?id=492">Link</a></td>
 </tr>
 <tr>
+    <td>DevSum </td>
+    <td> Stockholm, Sweden </td>
+    <td> 23. May 2019 </td>
+    <td> IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) </td>
+    <td> <a href="https://www.devsum.se/sessions/iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
+</tr>
+<tr>
     <td>JBCNConf </td>
     <td> Barcelona, Catalonia </td>
     <td> 27.-28. May 2019 </td>
