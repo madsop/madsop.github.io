@@ -125,6 +125,13 @@ and many more
 <table>
 <tr><th>Conference </th><th> Location </th><th> Date </th><th> Talk title </th><th> URL</th></tr>
 <tr>
+    <td>GeeCon Krakow</td>
+    <td> Krakow, Poland </td>
+    <td> 17. May 2019 </td>
+    <td> 9 ways to test your spaghetti code </td>
+    <td> <a href="https://2019.geecon.org/speakers/info.html?id=492">Link</a></td>
+</tr>
+<tr>
     <td>JBCNConf </td>
     <td> Barcelona, Catalonia </td>
     <td> 27.-28. May 2019 </td>
