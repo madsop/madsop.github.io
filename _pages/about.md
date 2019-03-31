@@ -1,1 +1,3 @@
-Hei
+Mads Opheim is a tech lead, developer and test enthusiast, who works in Computas, currently on a project for the Norwegian Courts. Mads wants to make people awesome, with test-driven development, Domain-driven design and Modern agile as his favourite techniques.
+
+As there are lots of people to make awesome in the sphere of a software project, he’s interested in all phases of the development process.
