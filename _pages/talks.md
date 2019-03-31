@@ -160,3 +160,5 @@ and many more
     <td> <a href="https://2019.rigadevdays.lv/event-sessions/iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
 </tr>
 </table>
+
+Slides for several of the talks are available at <a href="https://speakerdeck.com/madsopheim">SpeakerDeck</a>.
