@@ -9,7 +9,8 @@ I'm grateful for being in such a position. I'm working as tech lead in my job, b
  After all, there are many people wanting to share a message, and the program committees typically have luxury problems choosing talks.
  
  Where do I head to find places to apply for speaking?
- 
+
+ - <a href="https://www.meetup.com/">Meetup</a>: There are a lot of meetups out there, and most put a lot of work into finding speakers. Chances are, they'll be happy if you pitch your idea.  
  - Twitter:
    - <a href="https://twitter.com/cfp_land">cfp_land</a>
    - <a href="https://twitter.com/cfp_exchange">cfp_exchange</a>
@@ -20,5 +21,7 @@ I'm grateful for being in such a position. I'm working as tech lead in my job, b
     - https://github.com/dmitryvinn/it-conferences
     - https://marcus-biel.com/java-conferences-2019/
 - PaperCall's <a href="https://www.papercall.io/events">list of events</a>
+- The <a href="https://beta.voxxeddays.com/#/">Voxxed-series</a> (Devoxx/Voxxed Days) consists of a lot of conferences, usually of high quality
+
 
 You'll be disappointed, by the way. The acceptance-rejection ratio tends to be at quite many rejections per acceptance. That's how it is, for must of us.
