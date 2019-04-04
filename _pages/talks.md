@@ -25,8 +25,7 @@
     <td>DDD Europe</td>
     <td> Amsterdam, Netherlands</td>
     <td> 31. Jan - 1. Feb 2019</td>
-    <td> Make your tests tell the story of your domain (with Anne Landro)
-    </td>
+    <td> Make your tests tell the story of your domain (with Anne Landro)</td>
     <td> <a href="https://dddeurope.com/2019/speakers/mads-opheim/">Link</a> </td>
 </tr>
 <tr>
@@ -158,6 +157,13 @@ and many more
     <td> 31. May 2019 </td>
     <td> IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) </td>
     <td> <a href="https://2019.rigadevdays.lv/event-sessions/iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
+</tr>
+<tr>
+    <td>KanDDDinsky</td>
+    <td>Berlin, Germany</td>
+    <td>17.-18. October 2019</td>
+    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
+    <td><a href="https://kandddinsky.de/">Link</a></td>
 </tr>
 </table>
 
