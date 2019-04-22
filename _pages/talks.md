@@ -12,7 +12,7 @@
     <td> Istanbul, Turkey </td>
     <td> 15.-16. Mar 2019 </td>
     <td> 9 ways to test your spaghetti code </td>
-    <td> <a href="https://javaday.istanbul/">Link</a> </td> 
+    <td> <a href="https://www.youtube.com/watch?v=RaPegXzHvhg">Video</a> <a href="https://2019.javaday.istanbul/speaker/mads-opheim/">Info</a> </td> 
 </tr>
 <tr>
     <td>Booster </td>
