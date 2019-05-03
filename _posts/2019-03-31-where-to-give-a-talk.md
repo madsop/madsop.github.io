@@ -18,9 +18,9 @@ I'm grateful for being in such a position. I'm working as tech lead in my job, b
    - <a href="https://twitter.com/AppCfp">AppCfp</a>
    - Following people I admire/look up to and see where they're speaking
 - Lists other speakers make of where they're speaking/wanting to speak
-    - https://github.com/dmitryvinn/it-conferences
-    - https://marcus-biel.com/java-conferences-2019/
-    - https://confs.tech/cfp/
+    - <a href="https://github.com/dmitryvinn/it-conferences">https://github.com/dmitryvinn/it-conferences</a>
+    - <a href="https://marcus-biel.com/java-conferences-2019">https://marcus-biel.com/java-conferences-2019</a>
+    - <a href="https://confs.tech/cfp">https://confs.tech/cfp</a>
 - PaperCall's <a href="https://www.papercall.io/events">list of events</a>
 - The <a href="https://beta.voxxeddays.com/#/">Voxxed-series</a> (Devoxx/Voxxed Days) consists of a lot of conferences, usually of high quality
 
