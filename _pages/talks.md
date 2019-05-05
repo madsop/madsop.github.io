@@ -159,6 +159,13 @@ and many more
     <td> <a href="https://2019.rigadevdays.lv/event-sessions/iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
 </tr>
 <tr>
+    <td>NDC TechTown</td>
+    <td>Kongsberg, Norway</td>
+    <td>4.-5. September 2019</td>
+    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
+    <td><a href="https://ndctechtown.com/talk/make-your-tests-tell-the-story-of-your-domain/">Link</a></td>
+</tr>
+<tr>
     <td>KanDDDinsky</td>
     <td>Berlin, Germany</td>
     <td>17.-18. October 2019</td>
