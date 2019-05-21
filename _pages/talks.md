@@ -8,6 +8,13 @@
 </tr>
 
 <tr>
+    <td>GeeCon Krakow</td>
+    <td> Krakow, Poland </td>
+    <td> 17. May 2019 </td>
+    <td> 9 ways to test your spaghetti code </td>
+    <td> <a href="https://2019.geecon.org/speakers/info.html?id=492">Link</a></td>
+</tr>
+<tr>
     <td>JavaDay </td>
     <td> Istanbul, Turkey </td>
     <td> 15.-16. Mar 2019 </td>
@@ -124,13 +131,6 @@ and many more
 <table>
 <tr><th>Conference </th><th> Location </th><th> Date </th><th> Talk title </th><th> URL</th></tr>
 <tr>
-    <td>GeeCon Krakow</td>
-    <td> Krakow, Poland </td>
-    <td> 17. May 2019 </td>
-    <td> 9 ways to test your spaghetti code </td>
-    <td> <a href="https://2019.geecon.org/speakers/info.html?id=492">Link</a></td>
-</tr>
-<tr>
     <td>DevSum </td>
     <td> Stockholm, Sweden </td>
     <td> 23. May 2019 </td>
@@ -164,6 +164,13 @@ and many more
     <td>4.-5. September 2019</td>
     <td>Make your tests tell the story of your domain (with Anne Landro)</td>
     <td><a href="https://ndctechtown.com/talk/make-your-tests-tell-the-story-of-your-domain/">Link</a></td>
+</tr>
+<tr>
+    <td>JavaZone</td>
+    <td>Oslo, Norway</td>
+    <td>11.-12. September 2019</td>
+    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
+    <td><a href="https://2019.javazone.no/">Link</a></td>
 </tr>
 <tr>
     <td>KanDDDinsky</td>
