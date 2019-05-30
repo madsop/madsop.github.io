@@ -8,6 +8,27 @@
 </tr>
 
 <tr>
+    <td>Nordic Testing Days </td>
+    <td> Tallinn, Estonia </td>
+    <td> 30. May 2019 </td>
+    <td> 9 ways to test your spaghetti code </td>
+    <td> <a href="https://nordictestingdays.eu/events/tracks/9-ways-test-your-spaghetti-code">Link</a></td>
+</tr>
+<tr>
+    <td>JBCNConf </td>
+    <td> Barcelona, Catalonia </td>
+    <td> 27.-28. May 2019 </td>
+    <td> IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) </td>
+    <td> <a href="http://www.jbcnconf.com/2019/infoTalk.html?id=5c44693a9034ae38180b14b2">Link</a></td>
+</tr>
+<tr>
+    <td>DevSum </td>
+    <td> Stockholm, Sweden </td>
+    <td> 23. May 2019 </td>
+    <td> IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) </td>
+    <td> <a href="https://www.devsum.se/sessions/iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
+</tr>
+<tr>
     <td>GeeCon Krakow</td>
     <td> Krakow, Poland </td>
     <td> 17. May 2019 </td>
@@ -130,27 +151,6 @@ and many more
 ##### Upcoming talks
 <table>
 <tr><th>Conference </th><th> Location </th><th> Date </th><th> Talk title </th><th> URL</th></tr>
-<tr>
-    <td>DevSum </td>
-    <td> Stockholm, Sweden </td>
-    <td> 23. May 2019 </td>
-    <td> IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) </td>
-    <td> <a href="https://www.devsum.se/sessions/iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
-</tr>
-<tr>
-    <td>JBCNConf </td>
-    <td> Barcelona, Catalonia </td>
-    <td> 27.-28. May 2019 </td>
-    <td> IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) </td>
-    <td> <a href="http://www.jbcnconf.com/2019/infoTalk.html?id=5c44693a9034ae38180b14b2">Link</a></td>
-</tr>
-<tr>
-    <td>Nordic Testing Days </td>
-    <td> Tallinn, Estonia </td>
-    <td> 30. May 2019 </td>
-    <td> 9 ways to test your spaghetti code </td>
-    <td> <a href="https://nordictestingdays.eu/events/tracks/9-ways-test-your-spaghetti-code">Link</a></td>
-</tr>
 <tr>
     <td>Riga Dev Days </td>
     <td> Riga, Latvia </td>
