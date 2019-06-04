@@ -8,6 +8,13 @@
 </tr>
 
 <tr>
+    <td>Riga Dev Days </td>
+    <td> Riga, Latvia </td>
+    <td> 31. May 2019 </td>
+    <td> IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) </td>
+    <td> <a href="https://2019.rigadevdays.lv/event-sessions/iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
+</tr>
+<tr>
     <td>Nordic Testing Days </td>
     <td> Tallinn, Estonia </td>
     <td> 30. May 2019 </td>
@@ -152,11 +159,11 @@ and many more
 <table>
 <tr><th>Conference </th><th> Location </th><th> Date </th><th> Talk title </th><th> URL</th></tr>
 <tr>
-    <td>Riga Dev Days </td>
-    <td> Riga, Latvia </td>
-    <td> 31. May 2019 </td>
-    <td> IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) </td>
-    <td> <a href="https://2019.rigadevdays.lv/event-sessions/iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
+    <td>JUGNsk meetup</td>
+    <td>Novosibirsk, Russia</td>
+    <td>13. June 2019</td>
+    <td>9 Ways to Test Your Spaghetti Code</td>
+    <td><a href="https://www.meetup.com/JUGNsk/events/262010051/">Link</a></td>
 </tr>
 <tr>
     <td>NDC TechTown</td>
