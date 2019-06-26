@@ -8,6 +8,13 @@
 </tr>
 
 <tr>
+    <td>JUGNsk meetup</td>
+    <td>Novosibirsk, Russia</td>
+    <td>13. June 2019</td>
+    <td>9 Ways to Test Your Spaghetti Code</td>
+    <td><a href="https://www.meetup.com/JUGNsk/events/262010051/">Link</a></td>
+</tr>
+<tr>
     <td>Riga Dev Days </td>
     <td> Riga, Latvia </td>
     <td> 31. May 2019 </td>
@@ -159,13 +166,6 @@ and many more
 <table>
 <tr><th>Conference </th><th> Location </th><th> Date </th><th> Talk title </th><th> URL</th></tr>
 <tr>
-    <td>JUGNsk meetup</td>
-    <td>Novosibirsk, Russia</td>
-    <td>13. June 2019</td>
-    <td>9 Ways to Test Your Spaghetti Code</td>
-    <td><a href="https://www.meetup.com/JUGNsk/events/262010051/">Link</a></td>
-</tr>
-<tr>
     <td>NDC TechTown</td>
     <td>Kongsberg, Norway</td>
     <td>4.-5. September 2019</td>
@@ -178,6 +178,13 @@ and many more
     <td>11.-12. September 2019</td>
     <td>Make your tests tell the story of your domain (with Anne Landro)</td>
     <td><a href="https://2019.javazone.no/">Link</a></td>
+</tr>
+<tr>
+    <td>Testkonferansen Odin</td>
+    <td>Oslo, Norway</td>
+    <td>18. September 2019</td>
+    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
+    <td><a href="https://event.dnd.no/odin/make-your-tests-tell-the-story-of-your-domain/">Link</a></td>
 </tr>
 <tr>
     <td>KanDDDinsky</td>
