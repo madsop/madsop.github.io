@@ -18,8 +18,10 @@ A surprisingly big part of MicroProfile is concerning operations, so it’s easy
 
 However, most application servers lets you choose freely which features to bring into your system, and the unused features won’t even be included, using OSGi technology.
 
-Another thing that fascinates us with MicroProfile, is the diverse and broad backing they have from large application server creators such as IBM and Tomitribe, unrelated huge companies like Fujitsu and Microsoft, and lesser-known application server creators like Kumuluz.
+Another thing that's fascinating with MicroProfile, is the diverse and broad backing they have from large application server creators such as IBM and Tomitribe, unrelated huge companies like Fujitsu and Microsoft, and lesser-known application server creators like Kumuluz.
 
-We’ve used MicroProfile to create a system for controlling the lights in our office. This system currently have four microservices, all using MicroProfile, and based upon either Thorntail, Quarkus or OpenLiberty. There, you can see how it works in real, working code, and how little code that is actually needed to utilize the different features. It’s available at <a href="https://github.com/mehmandarov/microprofile-iot/issues">GitHub</a> (and yes, we do appreciate pull requests)
+Along with colleague <a href="https://mehmandarov.com">Rustam Mehmandarov</a>, I've used MicroProfile to create a system, where our example domain is controlling the lights in our company's office.
+
+This system currently has four microservices, all using MicroProfile, each running on either Thorntail, Quarkus or OpenLiberty. There, you can see how it works in real, working code, and how little code that is actually needed to utilize the different features. It’s available at <a href="https://github.com/mehmandarov/microprofile-iot/issues">GitHub</a> (and yes, we do appreciate pull requests)
 
 You can also see us giving a talk about MicroProfile and this system over on <a href="https://www.youtube.com/watch?v=Kp5NRcbDvOk">YouTube</a>.
