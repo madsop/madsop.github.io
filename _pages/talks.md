@@ -22,11 +22,11 @@
     <td><a href="https://www.meetup.com/JUGNsk/events/262010051/">Link</a></td>
 </tr>
 <tr>
-    <td>Riga Dev Days </td>
-    <td> Riga, Latvia </td>
-    <td> 31. May 2019 </td>
-    <td> IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) </td>
-    <td> <a href="https://www.youtube.com/watch?v=Kp5NRcbDvOk">Video</a> <a href="https://2019.rigadevdays.lv/event-sessions/iot-powered-by-microprofile-microservices-in-practice/">Info</a></td>
+    <td>Riga Dev Days</td>
+    <td>Riga, Latvia</td>
+    <td>31. May 2019</td>
+    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
+    <td><a href="https://www.youtube.com/watch?v=Kp5NRcbDvOk">Video</a> <a href="https://2019.rigadevdays.lv/event-sessions/iot-powered-by-microprofile-microservices-in-practice/">Info</a></td>
 </tr>
 <tr>
     <td>Nordic Testing Days</td>
