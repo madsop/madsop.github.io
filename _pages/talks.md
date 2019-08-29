@@ -8,6 +8,13 @@
 </tr>
 
 <tr>
+    <td>Jakarta Tech Talks</td>
+    <td>Virtual</td>
+    <td>28. August 2019</td>
+    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
+    <td><a href="https://www.meetup.com/jakartatechtalks_/events/263423153/">Link</a></td>
+</tr>
+<tr>
     <td>JUGNsk meetup</td>
     <td>Novosibirsk, Russia</td>
     <td>13. June 2019</td>
@@ -187,11 +194,25 @@ and many more
     <td><a href="https://event.dnd.no/odin/make-your-tests-tell-the-story-of-your-domain/">Link</a></td>
 </tr>
 <tr>
+    <td>MakeIT</td>
+    <td>Portoroz, Slovenia</td>
+    <td>14.-15. October 2019</td>
+    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
+    <td><a href="https://www.makeit.si/index.php/vsebina/java-devops/item/90-iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
+</tr>
+<tr>
     <td>KanDDDinsky</td>
     <td>Berlin, Germany</td>
     <td>17.-18. October 2019</td>
     <td>Make your tests tell the story of your domain (with Anne Landro)</td>
     <td><a href="https://kandddinsky.de/">Link</a></td>
+</tr>
+<tr>
+    <td>JFuture</td>
+    <td>Minsk, Belarus</td>
+    <td>16. November 2019</td>
+    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
+    <td><a href="https://jfuture.dev/">Link</a></td>
 </tr>
 </table>
 
