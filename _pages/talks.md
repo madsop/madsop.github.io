@@ -8,6 +8,20 @@
 </tr>
 
 <tr>
+    <td>JavaZone</td>
+    <td>Oslo, Norway</td>
+    <td>11.-12. September 2019</td>
+    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
+    <td><a href="https://2019.javazone.no/">Link</a></td>
+</tr>
+<tr>
+    <td>NDC TechTown</td>
+    <td>Kongsberg, Norway</td>
+    <td>4.-5. September 2019</td>
+    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
+    <td><a href="https://ndctechtown.com/talk/make-your-tests-tell-the-story-of-your-domain/">Link</a></td>
+</tr>
+<tr>
     <td>Jakarta Tech Talks</td>
     <td>Virtual</td>
     <td>28. August 2019</td>
@@ -172,20 +186,6 @@ and many more
 ##### Upcoming talks
 <table>
 <tr><th>Conference </th><th> Location </th><th> Date </th><th> Talk title </th><th> URL</th></tr>
-<tr>
-    <td>NDC TechTown</td>
-    <td>Kongsberg, Norway</td>
-    <td>4.-5. September 2019</td>
-    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://ndctechtown.com/talk/make-your-tests-tell-the-story-of-your-domain/">Link</a></td>
-</tr>
-<tr>
-    <td>JavaZone</td>
-    <td>Oslo, Norway</td>
-    <td>11.-12. September 2019</td>
-    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://2019.javazone.no/">Link</a></td>
-</tr>
 <tr>
     <td>Testkonferansen Odin</td>
     <td>Oslo, Norway</td>
