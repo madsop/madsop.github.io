@@ -6,13 +6,19 @@
 <th>Conference</th><th>Location</th>
 <th>Date</th><th>Talk title</th><th>URL</th>
 </tr>
-
+<tr>
+    <td>Testkonferansen Odin</td>
+    <td>Oslo, Norway</td>
+    <td>18. September 2019</td>
+    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
+    <td><a href="https://event.dnd.no/odin/make-your-tests-tell-the-story-of-your-domain/">Link</a></td>
+</tr>
 <tr>
     <td>JavaZone</td>
     <td>Oslo, Norway</td>
     <td>11.-12. September 2019</td>
     <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://2019.javazone.no/">Link</a></td>
+    <td><a href="https://2019.javazone.no/program/31684fcf-7dc4-4b3d-ae1a-1d4e46e0b9e4">Link</a></td>
 </tr>
 <tr>
     <td>NDC TechTown</td>
@@ -186,13 +192,6 @@ and many more
 ##### Upcoming talks
 <table>
 <tr><th>Conference </th><th> Location </th><th> Date </th><th> Talk title </th><th> URL</th></tr>
-<tr>
-    <td>Testkonferansen Odin</td>
-    <td>Oslo, Norway</td>
-    <td>18. September 2019</td>
-    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://event.dnd.no/odin/make-your-tests-tell-the-story-of-your-domain/">Link</a></td>
-</tr>
 <tr>
     <td>MakeIT</td>
     <td>Portoroz, Slovenia</td>
