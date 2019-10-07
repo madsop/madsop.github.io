@@ -25,7 +25,7 @@
     <td>Kongsberg, Norway</td>
     <td>4.-5. September 2019</td>
     <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://ndctechtown.com/talk/make-your-tests-tell-the-story-of-your-domain/">Link</a></td>
+    <td><a href="https://www.youtube.com/watch?v=IepYRiQ7Flw">Video</a> <a href="https://ndctechtown.com/talk/make-your-tests-tell-the-story-of-your-domain/">Info</a></td>
 </tr>
 <tr>
     <td>Jakarta Tech Talks</td>
