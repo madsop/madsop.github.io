@@ -211,7 +211,14 @@ and many more
     <td>Minsk, Belarus</td>
     <td>16. November 2019</td>
     <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="https://jfuture.dev/">Link</a></td>
+    <td><a href="https://jfuture.dev/#talk_Mads_Opheim">Link</a></td>
+</tr>
+<tr>
+    <td>J-Santa</td>
+    <td>Lublin, Poland</td>
+    <td>30. November 2019</td>
+    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
+    <td><a href="https://j-santa.pl/">Link</a></td>
 </tr>
 </table>
 
