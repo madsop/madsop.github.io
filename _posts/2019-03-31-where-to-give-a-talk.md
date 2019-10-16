@@ -21,8 +21,9 @@ I'm grateful for being in such a position. I'm working as tech lead in my job, b
     - <a href="https://github.com/dmitryvinn/it-conferences">https://github.com/dmitryvinn/it-conferences</a>
     - <a href="https://marcus-biel.com/java-conferences-2019">https://marcus-biel.com/java-conferences-2019</a>
     - <a href="https://confs.tech/cfp">https://confs.tech/cfp</a>
-- PaperCall's <a href="https://www.papercall.io/events">list of events</a>
-- The <a href="https://beta.voxxeddays.com/#/">Voxxed-series</a> (Devoxx/Voxxed Days) consists of a lot of conferences, usually of high quality
+    - PaperCall's <a href="https://www.papercall.io/events">list of events</a>
+    - And my current favourite: <a href="https://callingallpapers.com">Calling all papers</a>. This one is even more meta, as it fetches from both PaperCall and Confs.tech.
+- The <a href="https://beta.voxxeddays.com/#/">Voxxed-series</a> (Devoxx/Voxxed Days) consists of a lot of conferences, usually of high quality 
 
 
 You'll be disappointed, by the way. The acceptance-rejection ratio tends to be at quite many rejections per acceptance. That's how it is, for must of us.
