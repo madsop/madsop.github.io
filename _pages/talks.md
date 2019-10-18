@@ -1,4 +1,5 @@
 #### Talks I've given
+Slides for several of the talks are available at <a href="https://speakerdeck.com/madsopheim">SpeakerDeck</a>.
 
 ##### Conferences
 <table>
@@ -221,5 +222,3 @@ and many more
     <td><a href="https://j-santa.pl/">Link</a></td>
 </tr>
 </table>
-
-Slides for several of the talks are available at <a href="https://speakerdeck.com/madsopheim">SpeakerDeck</a>.
