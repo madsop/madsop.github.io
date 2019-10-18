@@ -7,6 +7,13 @@
 <th>Date</th><th>Talk title</th><th>URL</th>
 </tr>
 <tr>
+    <td>KanDDDinsky</td>
+    <td>Berlin, Germany</td>
+    <td>17.-18. October 2019</td>
+    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
+    <td><a href="https://kandddinsky.de/">Link</a></td>
+</tr>
+<tr>
     <td>MakeIT</td>
     <td>Portoroz, Slovenia</td>
     <td>14.-15. October 2019</td>
@@ -199,13 +206,6 @@ and many more
 ##### Upcoming talks
 <table>
 <tr><th>Conference </th><th> Location </th><th> Date </th><th> Talk title </th><th> URL</th></tr>
-<tr>
-    <td>KanDDDinsky</td>
-    <td>Berlin, Germany</td>
-    <td>17.-18. October 2019</td>
-    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://kandddinsky.de/">Link</a></td>
-</tr>
 <tr>
     <td>JFuture</td>
     <td>Minsk, Belarus</td>
