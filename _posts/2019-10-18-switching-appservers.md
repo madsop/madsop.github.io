@@ -1,13 +1,13 @@
-With <a href="2019-08-18-microservices-with-microprofile.md">MicroProfile</a>, you can switch application servers for your Java or Kotlin application without touching your code at all.
+With <a href="../microservices-with-microprofile/">MicroProfile</a>, you can switch application servers for your Java or Kotlin application without touching your code at all.
 
 That means that the cost of switching servers shrinks dramatically, and is codewise limited to configuration of build files (like pom.xml for Maven or build.gradle), container deployment (like Dockerfile or Maven-plugin) and CI/CD (like Jenkinsfile). This is of course oversimplified, as there are also costs on gaining knowledge on the operations parts and so on.
 
 Nevertheless, all your Java code can still be the same. Let's have a look at an example. We have a very simple microservice, which I wrote for a side project, which has the responsibility of giving out the current time, and expose that through a REST API.
 
-The source code for the microservice is available at <a href="https://github.com/mehmandarov/microprofile-iot/timeservice-v2/">GitHub</a>, along with pom files for two different application servers. There, you'll see that one pom file is tailored for <a href="https://thorntail.io">Thorntail</a>, while the other is made for <a href="https://quarkus.io">Quarkus</a>.
+The source code for the microservice is available at <a href="https://github.com/mehmandarov/microprofile-iot/tree/master/timeservice-v2">GitHub</a>, along with pom files for two different application servers. There, you'll see that one pom file is tailored for <a href="https://thorntail.io">Thorntail</a>, while the other is made for <a href="https://quarkus.io">Quarkus</a>.
 
 You can check out the code yourself and see that it gives exactly the same result when you run _mvn clean install_ as when you run _mvn clean install -f thorntail-pom.xml_. 
 
-Granted, the pom files are a bit long and can seem massive, but almost all of it is what you get from the official starters. Luckily, there's an effort currently being made in the MicroProfile community introducing <a href="TODO">TODOURL Boost</a>, with the ambition of dramatically shrinking the differences between these pom files, so that you ideally the only change you'll have to make will be on the single line stating which application server to use.
+Granted, the pom files are a bit long and can seem massive, but almost all of it is what you get from the official starters. Luckily, there's an effort currently being made in the MicroProfile community introducing <a href="https://microprofile.io/2019/04/18/build-your-microprofile-apps-quickly-with-boost/">Boost</a>, with the ambition of dramatically shrinking the differences between these pom files, so that you ideally the only change you'll have to make will be on the single line stating which application server to use.
 
 This very narrow microservice leverages only a subset of the features of MicroProfile, namely CDI, JAX-RS, JSON-B, OpenAPI and MP Config. however, hardly anything would be different if we've used all of it. As not everything about the configuration is part of the MicroProfile standard, I guess that you'd have to change some config files for JWT propagation and maybe also OpenTracing, but that shouldn't be much.
