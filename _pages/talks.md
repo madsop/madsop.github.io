@@ -33,7 +33,7 @@ Slides for several of the talks are available at <a href="https://speakerdeck.co
     <td>Oslo, Norway</td>
     <td>11.-12. September 2019</td>
     <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://2019.javazone.no/program/31684fcf-7dc4-4b3d-ae1a-1d4e46e0b9e4">Link</a></td>
+    <td><a href="https://vimeo.com/360781128">Video</a> <a href="https://2019.javazone.no/program/31684fcf-7dc4-4b3d-ae1a-1d4e46e0b9e4">Info</a></td>
 </tr>
 <tr>
     <td>NDC TechTown</td>
