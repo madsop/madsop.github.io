@@ -57,5 +57,5 @@ Slides for several of the talks are available at <a href="https://speakerdeck.co
 
 | Conference | Location | Date | Talk title | URL |
 | --- |
-| JFuture | Minsk, Belarus | 16. November 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://jfuture.dev/#talk_Mads_Opheim">Link</a> |
+| JFuture | Minsk, Belarus | 16. November 2019 | IoT powered by Microprofile – Microservices in practice | <a href="https://jfuture.dev/#talk_Mads_Opheim">Link</a> |
 | J-Santa | Lublin, Poland | 30. November 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://j-santa.pl/">Link</a> |
