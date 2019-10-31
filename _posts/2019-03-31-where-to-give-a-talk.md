@@ -19,7 +19,7 @@ I'm grateful for being in such a position. I'm working as tech lead in my job, b
    - Following people I admire/look up to and see where they're speaking
 - Lists other speakers make of where they're speaking/wanting to speak
     - <a href="https://github.com/dmitryvinn/it-conferences">https://github.com/dmitryvinn/it-conferences</a>
-    - <a href="https://marcus-biel.com/java-conferences-2019">https://marcus-biel.com/java-conferences-2019</a>
+    - <a href="https://marcus-biel.com/java-conferences-2020">https://marcus-biel.com/java-conferences-2020</a>
     - <a href="https://confs.tech/cfp">https://confs.tech/cfp</a>
     - PaperCall's <a href="https://www.papercall.io/events">list of events</a>
     - And my current favourite: <a href="https://callingallpapers.com">Calling all papers</a>. This one is even more meta, as it fetches from both PaperCall and Confs.tech.
