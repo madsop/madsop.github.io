@@ -2,223 +2,60 @@
 Slides for several of the talks are available at <a href="https://speakerdeck.com/madsopheim">SpeakerDeck</a>.
 
 ##### Conferences
-<table>
-<tr>
-<th>Conference</th><th>Location</th>
-<th>Date</th><th>Talk title</th><th>URL</th>
-</tr>
-<tr>
-    <td>KanDDDinsky</td>
-    <td>Berlin, Germany</td>
-    <td>17.-18. October 2019</td>
-    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://kandddinsky.de/">Link</a></td>
-</tr>
-<tr>
-    <td>MakeIT</td>
-    <td>Portoroz, Slovenia</td>
-    <td>14.-15. October 2019</td>
-    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="https://www.makeit.si/index.php/vsebina/java-devops/item/90-iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
-</tr>
-<tr>
-    <td>Testkonferansen Odin</td>
-    <td>Oslo, Norway</td>
-    <td>18. September 2019</td>
-    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://event.dnd.no/odin/make-your-tests-tell-the-story-of-your-domain/">Link</a></td>
-</tr>
-<tr>
-    <td>JavaZone</td>
-    <td>Oslo, Norway</td>
-    <td>11.-12. September 2019</td>
-    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://2019.javazone.no/program/31684fcf-7dc4-4b3d-ae1a-1d4e46e0b9e4">Link</a></td>
-</tr>
-<tr>
-    <td>NDC TechTown</td>
-    <td>Kongsberg, Norway</td>
-    <td>4.-5. September 2019</td>
-    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://www.youtube.com/watch?v=IepYRiQ7Flw">Video</a> <a href="https://ndctechtown.com/talk/make-your-tests-tell-the-story-of-your-domain/">Info</a></td>
-</tr>
-<tr>
-    <td>Jakarta Tech Talks</td>
-    <td>Virtual</td>
-    <td>28. August 2019</td>
-    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="https://www.meetup.com/jakartatechtalks_/events/263423153/">Link</a></td>
-</tr>
-<tr>
-    <td>JUGNsk meetup</td>
-    <td>Novosibirsk, Russia</td>
-    <td>13. June 2019</td>
-    <td>9 Ways to Test Your Spaghetti Code</td>
-    <td><a href="https://www.meetup.com/JUGNsk/events/262010051/">Link</a></td>
-</tr>
-<tr>
-    <td>Riga Dev Days</td>
-    <td>Riga, Latvia</td>
-    <td>31. May 2019</td>
-    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="https://www.youtube.com/watch?v=Kp5NRcbDvOk">Video</a> <a href="https://2019.rigadevdays.lv/event-sessions/iot-powered-by-microprofile-microservices-in-practice/">Info</a></td>
-</tr>
-<tr>
-    <td>Nordic Testing Days</td>
-    <td>Tallinn, Estonia</td>
-    <td>30. May 2019</td>
-    <td>9 ways to test your spaghetti code</td>
-    <td><a href="https://nordictestingdays.eu/events/tracks/9-ways-test-your-spaghetti-code">Link</a></td>
-</tr>
-<tr>
-    <td>JBCNConf</td>
-    <td>Barcelona, Catalonia</td>
-    <td>27.-28. May 2019</td>
-    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="http://www.jbcnconf.com/2019/infoTalk.html?id=5c44693a9034ae38180b14b2">Link</a></td>
-</tr>
-<tr>
-    <td>DevSum</td>
-    <td>Stockholm, Sweden</td>
-    <td>23. May 2019</td>
-    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="https://www.devsum.se/sessions/iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
-</tr>
-<tr>
-    <td>GeeCon Krakow</td>
-    <td>Krakow, Poland</td>
-    <td>17. May 2019</td>
-    <td>9 ways to test your spaghetti code</td>
-    <td><a href="https://2019.geecon.org/speakers/info.html?id=492">Link</a></td>
-</tr>
-<tr>
-    <td>JavaDay</td>
-    <td>Istanbul, Turkey</td>
-    <td>15.-16. Mar 2019</td>
-    <td>9 ways to test your spaghetti code</td>
-    <td><a href="https://www.youtube.com/watch?v=RaPegXzHvhg">Video</a> <a href="https://2019.javaday.istanbul/speaker/mads-opheim/">Info</a></td> 
-</tr>
-<tr>
-    <td>Booster</td>
-    <td>Bergen, Norway</td>
-    <td>14. Mar 2019</td>
-    <td>Domain driven design in the real world (with Anne Landro)</td>
-    <td><a href="https://2019.boosterconf.no/talks/1216">Link</a></td>
-</tr>
-<tr>
-    <td>DDD Europe</td>
-    <td>Amsterdam, Netherlands</td>
-    <td>31. Jan - 1. Feb 2019</td>
-    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://dddeurope.com/2019/speakers/mads-opheim/">Link</a></td>
-</tr>
-<tr>
-    <td>DDD Norway meetup</td>
-    <td>Oslo, Norway</td>
-    <td>22. Jan 2019</td>
-    <td>Make your tests tell the story of your domain (with Anne Landro)</td>
-    <td><a href="https://www.meetup.com/dddnorway/events/257968490/">Link</a></td>
-</tr>
-<tr>
-    <td>javaBin Trondheim, JUG meeting</td>
-    <td>Trondheim, Norway</td>
-    <td>28. Nov 2018</td>
-    <td>IoT powered by MicroProfile - Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="https://www.meetup.com/javaBin-Trondheim/events/255193377/">Link</a></td>
-</tr>
-<tr>
-    <td>Devoxx Ukraine</td>
-    <td>Kiev, Ukraine</td>
-    <td>23.-24. Nov 2018</td>
-    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="https://www.youtube.com/watch?v=r6bhFOr_jNg">Video</a> <a href="https://dvua18.confinabox.com/talk/NBH-1424/IoT_powered_by_Microprofile_%E2%80%93_Microservices_in_practice">Info</a></td>
-</tr>
-<tr>
-    <td>Devoxx Ukraine</td>
-    <td>Kiev, Ukraine</td>
-    <td>23.-24. Nov 2018</td>
-    <td>9 ways to test your spaghetti code</td>
-    <td><a href="https://www.youtube.com/watch?v=ZMuI524OP-8">Video</a> <a href="https://dvua18.confinabox.com/talk/XGY-1566/9_ways_to_test_your_spaghetti_code">Info</a></td>
-</tr>
-<tr>
-    <td>JCON</td>
-    <td>Dusseldorf, Germany</td>
-    <td>09. Oct 2018</td>
-    <td>9 ways to test your spaghetti code</td>
-    <td><a href="http://jcon.one/en">Link</a></td>
-</tr>
-<tr>
-    <td>javaBin Stavanger, JUG meeting</td>
-    <td>Stavanger, Norway</td><td>22. Aug 2018</td>
-    <td>IoT powered by MicroProfile - Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="https://www.meetup.com/javaBin-Stavanger/events/253537920/">Link</a></td>
-</tr>
-<tr>
-    <td>Voxxed Days Bucharest</td>
-    <td>Bucharest, Romania</td>
-    <td>22.-23. Mar 2018</td>
-    <td>IoT powered by MicroProfile – Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="https://voxxeddays.com/romania/2018/01/16/iot-powered-by-microprofile-microservices-in-practice/">Link</a></td>
-</tr>
-<tr>
-    <td>Software 2018</td>
-    <td>Oslo, Norway</td>
-    <td>14.-15. Feb 2018</td>
-    <td>Technology is fun, but the domain is important (with Anne Landro)</td>
-    <td><a href="https://event.dnd.no/software/sessions/teknologi-er-artig-men-domenet-er-viktig-vanne-landro-og-mads-opheim-computas/">Link</a></td>
-</tr>
-<tr>
-    <td>JavaZone 2017</td>
-    <td>Oslo, Norway</td>
-    <td>13.-14. Sep 2017</td>
-    <td>DDD + legacy-monolith=true? (with Anne Landro)</td>
-    <td><a href="https://2017.javazone.no/program/bcbb8c889b204ddbb59a4c5d67035897">Link</a></td>
-</tr>
-<tr>
-    <td>Booster 2017</td>
-    <td>Bergen, Norway</td>
-    <td>15.-17. Feb 2017</td>
-    <td>Programming and politics - it's more similar than you believe</td>
-    <td><a href="https://2017.boosterconf.no/talks/877">Link</a></td>
-</tr>
-<tr>
-    <td>NTNU Tech Talks</td>
-    <td>Trondheim, Norway</td>
-    <td>7. Feb 2017</td>
-    <td>Programming and politics - it's more similar than you believe</td><td><a href="https://techtalks.no/">Link</a></td>
-</tr>
-</table>
+#### 2019
+
+| Conference | Location | Date | Talk title | URL |
+| ------ |
+| KanDDDinsky | Berlin, Germany | 17.-18. October 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://kandddinsky.de/">Link</a> |
+| MakeIT | Portoroz, Slovenia | 14.-15. October 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://www.makeit.si/index.php/vsebina/java-devops/item/90-iot-powered-by-microprofile-microservices-in-practice/">Link</a> |
+| Testkonferansen Odin | Oslo, Norway | 18. September 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://event.dnd.no/odin/make-your-tests-tell-the-story-of-your-domain/">Link</a> |
+| JavaZone | Oslo, Norway | 11.-12. September 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://2019.javazone.no/program/31684fcf-7dc4-4b3d-ae1a-1d4e46e0b9e4">Link</a> |
+| NDC TechTown | Kongsberg, Norway | 4.-5. September 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://www.youtube.com/watch?v=IepYRiQ7Flw">Video</a> <a href="https://ndctechtown.com/talk/make-your-tests-tell-the-story-of-your-domain/">Info</a> |
+| Jakarta Tech Talks | Virtual | 28. August 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://www.meetup.com/jakartatechtalks_/events/263423153/">Link</a> |
+| JUGNsk meetup | Novosibirsk, Russia | 13. June 2019 | 9 Ways to Test Your Spaghetti Code | <a href="https://www.meetup.com/JUGNsk/events/262010051/">Link</a> |
+| Riga Dev Days | Riga, Latvia | 31. May 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://www.youtube.com/watch?v=Kp5NRcbDvOk">Video</a> <a href="https://2019.rigadevdays.lv/event-sessions/iot-powered-by-microprofile-microservices-in-practice/">Info</a> |
+| Nordic Testing Days | Tallinn, Estonia | 30. May 2019 | 9 ways to test your spaghetti code | <a href="https://nordictestingdays.eu/events/tracks/9-ways-test-your-spaghetti-code">Link</a> |
+| JBCNConf | Barcelona, Catalonia | 27.-28. May 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="http://www.jbcnconf.com/2019/infoTalk.html?id=5c44693a9034ae38180b14b2">Link</a> |
+| DevSum | Stockholm, Sweden | 23. May 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://www.devsum.se/sessions/iot-powered-by-microprofile-microservices-in-practice/">Link</a> |
+| GeeCon Krakow | Krakow, Poland | 17. May 2019 | 9 ways to test your spaghetti code | <a href="https://2019.geecon.org/speakers/info.html?id=492">Link</a> |
+| JavaDay | Istanbul, Turkey | 15.-16. Mar 2019 | 9 ways to test your spaghetti code | <a href="https://www.youtube.com/watch?v=RaPegXzHvhg">Video</a> <a href="https://2019.javaday.istanbul/speaker/mads-opheim/">Info</a> |
+| Booster | Bergen, Norway | 14. Mar 2019 | Domain driven design in the real world (with Anne Landro) | <a href="https://2019.boosterconf.no/talks/1216">Link</a> |
+| DDD Europe | Amsterdam, Netherlands | 31. Jan - 1. Feb 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://dddeurope.com/2019/speakers/mads-opheim/">Link</a> |
+| DDD Norway meetup | Oslo, Norway | 22. Jan 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://www.meetup.com/dddnorway/events/257968490/">Link</a> |
+
+
+#### 2018
+
+| javaBin Trondheim, JUG meeting | Trondheim, Norway | 28. Nov 2018 | IoT powered by MicroProfile - Microservices in practice (with Rustam Mehmandarov) | <a href="https://www.meetup.com/javaBin-Trondheim/events/255193377/">Link</a> |
+| Devoxx Ukraine | Kiev, Ukraine | 23.-24. Nov 2018 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://www.youtube.com/watch?v=r6bhFOr_jNg">Video</a> <a href="https://dvua18.confinabox.com/talk/NBH-1424/IoT_powered_by_Microprofile_%E2%80%93_Microservices_in_practice">Info</a> |
+| Devoxx Ukraine | Kiev, Ukraine | 23.-24. Nov 2018 | 9 ways to test your spaghetti code | <a href="https://www.youtube.com/watch?v=ZMuI524OP-8">Video</a> <a href="https://dvua18.confinabox.com/talk/XGY-1566/9_ways_to_test_your_spaghetti_code">Info</a> |
+| JCON | Dusseldorf, Germany | 09. Oct 2018 | 9 ways to test your spaghetti code | <a href="http://jcon.one/en">Link</a> |
+| javaBin Stavanger, JUG meeting | Stavanger, Norway| 22. Aug 2018 | IoT powered by MicroProfile - Microservices in practice (with Rustam Mehmandarov) | <a href="https://www.meetup.com/javaBin-Stavanger/events/253537920/">Link</a> |
+| Voxxed Days Bucharest | Bucharest, Romania | 22.-23. Mar 2018 | IoT powered by MicroProfile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://voxxeddays.com/romania/2018/01/16/iot-powered-by-microprofile-microservices-in-practice/">Link</a> |
+| Software 2018 | Oslo, Norway | 14.-15. Feb 2018 | Technology is fun, but the domain is important (with Anne Landro) | <a href="https://event.dnd.no/software/sessions/teknologi-er-artig-men-domenet-er-viktig-vanne-landro-og-mads-opheim-computas/">Link</a> |
+
+#### 2017
+
+| JavaZone 2017 | Oslo, Norway | 13.-14. Sep 2017 | DDD + legacy-monolith=true? (with Anne Landro) | <a href="https://2017.javazone.no/program/bcbb8c889b204ddbb59a4c5d67035897">Link</a> |
+| Booster 2017 | Bergen, Norway | 15.-17. Feb 2017 | Programming and politics - it's more similar than you believe | <a href="https://2017.boosterconf.no/talks/877">Link</a> |
+| NTNU Tech Talks | Trondheim, Norway | 7. Feb 2017 | Programming and politics - it's more similar than you believe| <a href="https://techtalks.no/">Link</a> |
+
 
 ##### Company internal
-<table>
-<tr>
-    <th>Month</th><th>Topic</th>
-</tr>
-<tr><td>Oct 2018</td><td>9 ways to test your spaghetti code</td></tr>
-<tr><td>Feb 2018</td><td>Java Specification Request 385</td></tr>
-<tr><td>Dec 2017</td><td>Modern agile</td></tr>
-<tr><td>Jun 2017</td><td>Domain-driven design</td></tr>
-<tr><td>Feb 2017</td><td>Programming and politics - it's more similar than you believe</td></tr>
-<tr><td>Dec 2015</td><td>From 13 to 37% test coverage in a year</td></tr>
-<tr><td>Regularly for new employees</td><td>Introduction to Domain-driven design and TDD</td></tr>
-</table>
-and many more
+
+| Month | Topic |
+| ---- |
+| Oct 2018 | 9 ways to test your spaghetti code |
+| Feb 2018 | Java Specification Request 385 |
+| Dec 2017| Modern agile |
+| Jun 2017| Domain-driven design |
+| Feb 2017| Programming and politics - it's more similar than you believe |
+| Dec 2015| From 13 to 37% test coverage in a year | 
+| Regularly for new employees| Introduction to Domain-driven design and TDD |
 
 ##### Upcoming talks
-<table>
-<tr><th>Conference </th><th> Location </th><th> Date </th><th> Talk title </th><th> URL</th></tr>
-<tr>
-    <td>JFuture</td>
-    <td>Minsk, Belarus</td>
-    <td>16. November 2019</td>
-    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="https://jfuture.dev/#talk_Mads_Opheim">Link</a></td>
-</tr>
-<tr>
-    <td>J-Santa</td>
-    <td>Lublin, Poland</td>
-    <td>30. November 2019</td>
-    <td>IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov)</td>
-    <td><a href="https://j-santa.pl/">Link</a></td>
-</tr>
-</table>
+
+| Conference | Location | Date | Talk title | URL |
+| --- |
+| JFuture | Minsk, Belarus | 16. November 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://jfuture.dev/#talk_Mads_Opheim">Link</a> |
+| J-Santa | Lublin, Poland | 30. November 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://j-santa.pl/">Link</a> |
