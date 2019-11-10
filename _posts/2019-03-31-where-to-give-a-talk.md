@@ -11,6 +11,7 @@ I'm grateful for being in such a position. I'm working as tech lead in my job, b
  Where do I head to find places to apply for speaking?
 
  - <a href="https://www.meetup.com/">Meetup</a>: There are a lot of meetups out there, and most put a lot of work into finding speakers. Chances are, they'll be happy if you pitch your idea.  
+ - <a href="https://cfpcalendar.com/">CFP calendar</a>
  - Twitter:
    - <a href="https://twitter.com/cfp_land">cfp_land</a>
    - <a href="https://twitter.com/cfp_exchange">cfp_exchange</a>
