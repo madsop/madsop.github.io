@@ -6,6 +6,7 @@ Slides for several of the talks are available at <a href="https://speakerdeck.co
 
 | Conference | Location | Date | Talk title | URL |
 | ------ |
+| Virtual DDD | Virtual | 12. november 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://www.meetup.com/Virtual-Domain-Driven-Design-meetup/events/266077606/">Link</a> |
 | KanDDDinsky | Berlin, Germany | 17.-18. October 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://kandddinsky.de/">Link</a> |
 | MakeIT | Portoroz, Slovenia | 14.-15. October 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://www.makeit.si/index.php/vsebina/java-devops/item/90-iot-powered-by-microprofile-microservices-in-practice/">Link</a> |
 | Testkonferansen Odin | Oslo, Norway | 18. September 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://event.dnd.no/odin/make-your-tests-tell-the-story-of-your-domain/">Link</a> |
