@@ -1,0 +1,72 @@
+---
+title: Test your legacy code
+date: 2019-03-28
+published: true
+canonical_url: false
+description: "Do you want tests for your code, but find it hard to get started? Or maybe you got it going, but ran into code you were not able to test?"
+---
+
+**Test your legacy code**
+
+
+Do you want tests for your code, but find it hard to get started? Or maybe you got it going, but ran into code you were not able to test?
+
+Testing code that was written without tests in mind can be challenging. The code tends to contain static calls, long methods and a high degree of tangling. Whether you label it legacy code or spaghetti code, these are common pitfalls.
+
+Luckily, there are lots of things you can do to get even that code under test.
+
+**Humans are creative, flexible and full of ideas.**
+We are bad at doing the exact same thing over and over. We become easily distracted and tired, and our mind starts to wander. We might quickly become bored, which makes us even less focused.
+
+A computer, on the other hand, is great at repetitive routine work. Let the computer handle the repeating parts, while we are freed to do more exploratory and challenging things.
+
+So let the computer do the automated testing. But how?
+
+**One mile at a time**
+
+The single biggest issue preventing testability is, as of my experience, tangling. The code is so tangled together that it is hard to change anything without putting the entire system at stake.
+
+The safest and typically best way to get your code under test is to do it one mile at a time. Each time you change some code, you make sure that you test it and improve the surrounding code a little bit as well. That way, you will always have a functioning system, where the quality is constantly improving.
+
+As a bonus, this tends to be a way of doing it that you will actually be allowed to do. It is not influencing budgets, the functional roadmap or any deadlines, and you can do it gradually.
+
+It requires you to be determined and patient, though, especially when you are figuring out how to test things you have not tested before. Be patient, be consistent and do not do stupid things.
+
+It can be tempting to “fix it all at once” in a big, major refactoring. This may sometimes be suitable. I do in most cases find it better to improve the code step by step, adhering to the boy scout rule: leave the code better than you found it. Write a test, improve a variable name, extract a method or find another way to improve it.
+
+This is a safe, easy way to refactor. It is also a way to refactor with low initial cost and very little risk.
+
+**Design and testability go hand in hand** Getting code under test has a lot of benefits by itself. A fascinating side effect is that it also tends to improve the design of your code. Adhering to principles like the Single responsibility principles or Inversion of control improves the design as well as testability. The same goes for good variable names or short methods.
+
+Extracting an interface might make your code easier to test, as it lowers the amount of things you have to consider and care about in every single test. Using dependency injection might make your code easier to test, as you can have total control over the code you are testing and which dependencies it uses - real version or a fake version, it is up to you in the test. Both of these are ways to untangle your code as well.
+
+On the other hand, some of the tricks to get code under test are slightly suboptimal to the design, at least in the short term. In Java, an example may be to change the visibility of a private method to package-protected, in order to be able to invoke it directly from your test. 
+
+While this in itself is a trade-off between design and testability, the need for it indicates that your code is not properly divided. This method, which you would prefer to make private, highlights that weakness and encourages you to fix it.
+
+You may also make use of other refactorings, as well as appropriate tools. Maybe you should reconsider the use of final in your code base, or introduce a tool such as Mockito? What is suitable for your project varies a lot, but there are many techniques you should have in your toolbox.
+
+**DRY**
+
+A very popular acronym among developers is DRY, Don’t repeat yourself. This principle deserves more traction in the testing community as well (while admittedly somewhat less traction among developers, one might say).
+
+This counts for how often you test every single part of your code manually. If you are testing all the corner cases of your logic manually in both test phase, system test phase and acceptance test phase, why do you do that? Do you really expect it to have change? Of course, it might make sense that you test that your components communicate properly, but it is a long way from that into testing every single quirk of the internal logic.
+
+**Share the knowledge**
+
+
+The same goes for know-how of how to test things. If you have figured out how to test a pattern from your code, share that knowledge with your colleagues, so that they do not have to invent that wheel once again. Getting legacy code under tests must be a task for the entire team, not just the most enthusiastic developer.
+
+That will also make it easier for you all to write tests, which in turn will increase the probability that every team member actually writes tests. This tends to be self-reinforcing, as you will become better at writing tests the more you do it, and thus, it will be easier for you to do it.
+
+It may also increase the quality of the test, as you are able to focus on the business logic rather than the instrumentation.
+
+Still, you will sometimes have to write a lot of test code per line of production code. Sometimes, it is hard to write those tests.
+
+Some code will always be harder to test than other code. That is not a reason to skip it altogether, it is merely a reason to figure out how to do it, and then do some changes so that it will be easier the next time around.
+
+Write a new convenience method. Adjust visibility on some code. Document how you did it. Whatever. Make it easier for the next one having the same problem.
+
+**Get started**
+
+In the end, you just have to get started. Which is the single most important thing to do to get your legacy code under test. Start testing it. Start writing tests today, and solve the problems as you meet them. Your codebase successors will be forever grateful.
