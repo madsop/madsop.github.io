@@ -1,3 +1,10 @@
+---
+title: Tips for finding your next conference
+date: 2019-03-31
+published: true
+canonical_url: false
+description: "Where do I head to find places to apply for speaking?"
+---
 # Tips for finding your next conference
 
 We working in the IT sector are privileged as few others. 

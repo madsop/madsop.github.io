@@ -1,3 +1,10 @@
+---
+title: Microservices with Microprofile
+date: 2019-08-18
+published: true
+canonical_url: false
+description: "Welcome to the world of microservices! We now can provide you with the tools you miss from your time with Java EE, while still leaving you free to switch application server whenever you want, without having to change your Java code."
+---
 Welcome to the world of microservices! We now can provide you with the tools you miss from your time with Java EE, while still leaving you free to switch application server whenever you want, without having to change your Java code.
 
 Sounds too good to be true? It’s not, it’s <a href="https://microprofile.io">MicroProfile</a>.

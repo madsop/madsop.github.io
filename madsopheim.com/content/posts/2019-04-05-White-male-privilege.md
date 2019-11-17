@@ -1,3 +1,11 @@
+---
+title: White male privilege
+date: 2019-04-05
+published: true
+canonical_url: false
+description: "I'm a developer and tech lead, working in the tech industry. 
+An industry that is predominantly consisting of men, both among the developers and the leadership."
+---
 I'm a developer and tech lead, working in the tech industry. 
 An industry that is predominantly consisting of men, both among the developers and the leadership.
 

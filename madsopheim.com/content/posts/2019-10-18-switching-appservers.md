@@ -1,3 +1,10 @@
+---
+title: Switching appservers
+date: 2019-10-18
+published: true
+canonical_url: false
+description: "With <a href='../microservices-with-microprofile/'>MicroProfile</a>, you can switch application servers for your Java or Kotlin application without touching your code at all."
+---
 With <a href="../microservices-with-microprofile/">MicroProfile</a>, you can switch application servers for your Java or Kotlin application without touching your code at all.
 
 That means that the cost of switching servers shrinks dramatically, and is codewise limited to configuration of build files (like pom.xml for Maven or build.gradle), container deployment (like Dockerfile or Maven-plugin) and CI/CD (like Jenkinsfile). This is of course oversimplified, as there are also costs on gaining knowledge on the operations parts and so on.

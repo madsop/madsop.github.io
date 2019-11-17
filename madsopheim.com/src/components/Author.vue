@@ -1,19 +1,20 @@
 <template>
 	<div class="author">
 
-		<g-image alt="Author image" class="author__image" src="~/assets/images/author.jpg" width="180" height="180" blur="5" />
+		<g-image alt="Mads Opheim" class="author__image" src="~/assets/images/author.jpg" width="180" height="180" blur="5" />
 
 		<h1 v-if="showTitle" class="author__site-title">
 			{{ $static.metadata.siteName }}
 		</h1>
 
 		<p class="author__intro">
-			A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.
+			I'm a tech lead, developer and test enthusiast. I'm at my best when I can make people awesome.
 		</p>
 
 		<p class="author__links">
-			<a href="//twitter.com/gridsome">Follow on Twitter</a>
-			<a href="//github.com/gridsome/gridsome-starter-blog">GitHub</a>
+			<a href="mailto:mads.opheim+web@gmail.com">E-mail</a>
+			<a href="//twitter.com/madsopheim">Twitter</a>
+			<a href="//github.com/madsop/">GitHub</a>
 		</p>
 
 	</div>
