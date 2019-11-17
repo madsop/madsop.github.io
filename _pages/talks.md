@@ -6,6 +6,7 @@ Slides for several of the talks are available at <a href="https://speakerdeck.co
 
 | Conference | Location | Date | Talk title | URL |
 | ------ |
+| JFuture | Minsk, Belarus | 16. November 2019 | IoT powered by Microprofile – Microservices in practice | <a href="https://jfuture.dev/#talk_Mads_Opheim">Link</a> |
 | Virtual DDD | Virtual | 12. november 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://www.meetup.com/Virtual-Domain-Driven-Design-meetup/events/266077606/">Link</a> |
 | KanDDDinsky | Berlin, Germany | 17.-18. October 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://kandddinsky.de/">Link</a> |
 | MakeIT | Portoroz, Slovenia | 14.-15. October 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://www.makeit.si/index.php/vsebina/java-devops/item/90-iot-powered-by-microprofile-microservices-in-practice/">Link</a> |
@@ -58,5 +59,4 @@ Slides for several of the talks are available at <a href="https://speakerdeck.co
 
 | Conference | Location | Date | Talk title | URL |
 | --- |
-| JFuture | Minsk, Belarus | 16. November 2019 | IoT powered by Microprofile – Microservices in practice | <a href="https://jfuture.dev/#talk_Mads_Opheim">Link</a> |
 | J-Santa | Lublin, Poland | 30. November 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://j-santa.pl/">Link</a> |
