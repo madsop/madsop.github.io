@@ -11,10 +11,6 @@
 
     <div class="post content-box">
       <div class="post__content" v-html="$page.post.content" />
-
-      <div class="post__footer">
-        <PostTags :post="$page.post" />
-      </div>
     </div>
 
     <div class="post-comments">
@@ -27,14 +23,12 @@
 
 <script>
 import PostMeta from '~/components/PostMeta'
-import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
 
 export default {
   components: {
     Author,
     PostMeta,
-    PostTags
   },
   metaInfo () {
     return {
@@ -56,11 +50,6 @@ query Post ($id: ID!) {
     title
     path
     date (format: "D. MMMM YYYY")
-    tags {
-      id
-      title
-      path
-    }
     description
     content
   }
