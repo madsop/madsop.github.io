@@ -6,7 +6,8 @@
         <Logo v-if="showLogo" /> 
       </div>
       
-      <div class="header__right">        
+      <div class="header__right">   
+        <a href="About">About</a>     
         <ToggleTheme />
       </div>
     </header>
@@ -16,7 +17,7 @@
     </main>
 
     <footer class="footer">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
+      <span class="footer__copyright">© {{ new Date().getFullYear() }}. </span>
       <span class="footer__links">Powered by <a href="//gridsome.org"> Gridsome </a></span>
     </footer>
 
