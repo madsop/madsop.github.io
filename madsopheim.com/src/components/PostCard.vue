@@ -56,11 +56,6 @@ export default {
     box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
   }
 
-  &__tags {
-    z-index: 1;
-    position: relative;
-  }
-
   &__link {
     position: absolute;
     top: 0;

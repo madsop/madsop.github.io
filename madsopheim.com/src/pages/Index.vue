@@ -18,14 +18,9 @@ query {
       node {
         id
         title
-        date (format: "D. MMMM YYYY")
+        date (format: "Do of MMMM YYYY")
         description
         path
-        tags {
-          id
-          title
-          path
-        }
       }
     }
   }

@@ -9,8 +9,7 @@ module.exports = {
   siteDescription: 'Tech lead. Java. TDD, DDD, Modern agile.',
 
   templates: {
-    Post: '/:title',
-    Tag: '/tag/:id'
+    Post: '/:title'
   },
 
   plugins: [
@@ -20,13 +19,6 @@ module.exports = {
       options: {
         typeName: 'Post',
         path: 'content/posts/*.md',
-        refs: {
-          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
-          tags: {
-            typeName: 'Tag',
-            create: true
-          }
-        }
       }
     }
   ],
