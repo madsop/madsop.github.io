@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <div class="wrapper">
-            <h1>Talks</h1>
+            <h1 class="author__site-title">Talks</h1>
             <div v-for="talk in this.talks" :key="talk.conference+talk.title" class="myTalks content-box">
                 <div id="title">{{ talk.title }}</div>
                 <div id="conference">{{ talk.conference }}</div>

@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <div id="wrapper" class="content-box">
-            <h1>Who is Mads Opheim?</h1>
+            <h1 class="author__site-title">Who is Mads Opheim?</h1>
             <p>I'm a tech lead, developer and test enthusiast. I'm at my best when I can make people awesome, or when I'm with a keyboard and an IDE.</p>
             <p>Currently, I work in Computas, a Norwegian consultancy company. I'm working on a project for the Norwegian Courts, where I'm tech lead, and hence dealing with all from architecture via development to discovering business needs.</p>
             <p>I want to make people awesome, and I've found test-driven development, Domain-driven design and Modern agile as very useful techniques to achieve that.</p>
@@ -13,10 +13,6 @@
 </template>
 
 <style scoped lang="scss">
-
-h1 {
-    font-size: 1.5em;
-}
 
 div#wrapper {
     width: 70%;
