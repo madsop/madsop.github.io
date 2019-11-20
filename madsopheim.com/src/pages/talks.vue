@@ -2,11 +2,12 @@
     <Layout>
         <div class="wrapper">
             <h1 class="author__site-title">Talks</h1>
+            <section id="slides" class="content-box">Slides for several of the talks are available at <a href="https://speakerdeck.com/madsopheim">SpeakerDeck</a>.</section>
             <div v-for="talk in this.talks" :key="talk.conference+talk.title" class="myTalks content-box">
                 <div id="title">{{ talk.title }}</div>
                 <div id="conference">{{ talk.conference }}</div>
                 <div id="date">{{talk.date | formatDate}}</div>
-                <div id="location"><span v-if="talk.city">{{ talk.city }}, </span>{{ ' ' }} {{ talk.country }}</div>
+                <div id="location"><span v-if="talk.city">{{ talk.city }}, </span>{{ talk.country }}</div>
                 <div><span v-if="talk.cospeaker">with {{ talk.cospeaker }}</span></div>
                 <div id="link"><a :href="talk.infolink">Link</a><b />
                     <a class="videolink" v-if="talk.video" :href="talk.video">Video</a>
@@ -68,6 +69,15 @@ h1 {
     text-align: center;
 }
 
+section#slides {
+    padding: 1em;
+    text-align: center;
+}
+
+.content-box p {
+    padding: 0;
+    margin: 0;
+}
 
 div.myTalks {
     display: grid;
