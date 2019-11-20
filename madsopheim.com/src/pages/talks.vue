@@ -57,7 +57,6 @@ Vue.filter('formatDate', function(value) {
         return moment(String(value)).format('MMMM Do YYYY')
 })
 
-
 </script>
 
 <style lang="scss" scoped>

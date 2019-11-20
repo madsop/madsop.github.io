@@ -12,9 +12,18 @@
 		</p>
 
 		<p class="author__links">
-			<a href="mailto:mads.opheim+web@gmail.com">E-mail</a>
-			<a href="//twitter.com/madsopheim">Twitter</a>
-			<a href="//github.com/madsop/">GitHub</a>
+			<a href="mailto:mads.opheim+web@gmail.com">
+				<img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt="E-mail">
+			</a>
+			<a href="//twitter.com/madsopheim">
+				<img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg" alt="Twitter"/>
+			</a>
+			<a href="//github.com/madsop/">
+				<img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt="GitHub"/>
+			</a>
+			<a href="//linkedin.com/in/madsopheim/">
+				<img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="LinkedIn"/>
+			</a>
 		</p>
 
 	</div>
@@ -32,9 +41,16 @@ query {
 export default {
 	props: ['showTitle']
 }
+
 </script>
 
 <style lang="scss">
+
+.icon {
+	height: 24px;
+	width: 24px;
+}
+
 .author {
 	margin: 0 auto;
 	max-width: 500px;

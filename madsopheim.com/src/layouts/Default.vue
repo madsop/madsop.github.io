@@ -7,8 +7,8 @@
       </div>
       
       <div class="header__right">   
-        <a href="About">About</a>   
-        <a href="Talks">Talks</a>  
+        <a href="About" id="about">About</a>   
+        <a href="Talks" id="talks">Talks</a>  
         <ToggleTheme />
       </div>
     </header>
@@ -61,6 +61,10 @@ export default {
     position: sticky;
     width: 100%;
   }
+}
+
+a#talks {
+  padding: 0 0.5em;
 }
 
 .main {
