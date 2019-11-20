@@ -54,11 +54,16 @@ export default Vue.extend({
 {conference: 'JavaZone', date: '2017-09-13', city: 'Oslo', country: 'Norway', title: 'DDD + legacy-monolitt=sant?', cospeaker: 'Anne Landro', infolink: 'https://2017.javazone.no/program/bcbb8c889b204ddbb59a4c5d67035897'},
 {conference: 'Booster', date: '2017-02-15', city: 'Bergen', country: 'Norway', title: 'Politikk og programmering - det liknar meir enn du trur', infolink: 'https://2017.boosterconf.no/talks/877'},
 {conference: 'NTNU Tech Talks', date: '2017-02-07', city: 'Trondheim', country: 'Norway', title: 'Politikk og programmering - det liknar meir enn du trur', infolink: 'https://techtalks.no/', }
-]})});
+]}),
+metaInfo: {
+    title: 'Talks'
+} 
+});
 
 Vue.filter('formatDate', function(value) {
-    if (value)
+    if (value) {
         return moment(String(value)).format('MMMM Do YYYY')
+    }
 })
 
 </script>

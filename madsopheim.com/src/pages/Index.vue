@@ -42,7 +42,7 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: 'Mads Opheim'
+    title: 'Home'
   }
 }
 </script>

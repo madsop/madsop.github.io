@@ -12,6 +12,14 @@
     </Layout>
 </template>
 
+<script lang="ts">
+export default {
+    metaInfo: {
+        title: 'About'
+    }
+}
+</script>
+
 <style scoped lang="scss">
 
 div#wrapper {
