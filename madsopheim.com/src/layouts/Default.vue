@@ -7,7 +7,8 @@
       </div>
       
       <div class="header__right">   
-        <a href="About">About</a>     
+        <a href="About">About</a>   
+        <a href="Talks">Talks</a>  
         <ToggleTheme />
       </div>
     </header>
