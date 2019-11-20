@@ -13,6 +13,15 @@
                     <a class="videolink" v-if="talk.video" :href="talk.video">Video</a>
                 </div>
             </div>
+            <section id="companyinternal" class="content-box">
+                In addition to company-internal talks and workshops on different topics, including 
+                <ul>
+                    <li>Modern agile</li>
+                    <li>Domain-driven design</li>
+                    <li>Test-driven development</li>
+                    <li>Testing legacy code</li>
+                </ul> 
+            </section>>
         </div>
     </Layout>
 </template>
@@ -77,6 +86,21 @@ h1 {
 section#slides {
     padding: 1em;
     text-align: center;
+}
+
+section#companyinternal {
+    padding: 0.5em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+ul {
+    margin: 1em;
+}
+
+li {
+    text-align: left;
+    margin: 0;   
 }
 
 .content-box p {
