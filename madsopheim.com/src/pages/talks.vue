@@ -1,13 +1,16 @@
 <template>
-    <Layout class="wrapper">
-        <div v-for="talk in this.talks" :key="talk.conference+talk.title" class="myTalks">
-            <div id="conference">{{ talk.conference }}</div>
-            <div id="date">{{talk.date | formatDate}}</div>
-            <div id="title">{{ talk.title }}</div>
-            <div><span v-if="talk.cospeaker">with {{ talk.cospeaker }}</span></div>
-            <div id="location"><span v-if="talk.city">{{ talk.city }}, </span> {{ talk.country }}</div>
-            <div id="link"><a :href="talk.infolink">Link</a><b />
-                <a class="videolink" v-if="talk.video" :href="talk.video">Video</a>
+    <Layout>
+        <div class="wrapper">
+            <h1>Talks</h1>
+            <div v-for="talk in this.talks" :key="talk.conference+talk.title" class="myTalks content-box">
+                <div id="title">{{ talk.title }}</div>
+                <div id="conference">{{ talk.conference }}</div>
+                <div id="date">{{talk.date | formatDate}}</div>
+                <div id="location"><span v-if="talk.city">{{ talk.city }}, </span>{{ ' ' }} {{ talk.country }}</div>
+                <div><span v-if="talk.cospeaker">with {{ talk.cospeaker }}</span></div>
+                <div id="link"><a :href="talk.infolink">Link</a><b />
+                    <a class="videolink" v-if="talk.video" :href="talk.video">Video</a>
+                </div>
             </div>
         </div>
     </Layout>
@@ -61,11 +64,23 @@ Vue.filter('formatDate', function(value) {
 
 <style lang="scss" scoped>
 
+h1 {
+    text-align: center;
+}
+
+
 div.myTalks {
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: 1.1fr 1fr 2.5fr 1.1fr 1fr 0.6fr;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+div#title {
+    grid-column: 1/3;
 }
 
 .myTalks div {
