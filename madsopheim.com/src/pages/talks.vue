@@ -7,7 +7,7 @@
                 <div id="title">{{ talk.title }}</div>
                 <div id="conference">{{ talk.conference }}</div>
                 <div id="date">{{talk.date | formatDate}}</div>
-                <div id="location"><span v-if="talk.city">{{ talk.city }}, </span>{{ talk.country }}</div>
+                <div id="location"><span v-if="talk.city">{{ talk.city }},&nbsp; </span>{{ talk.country }}</div>
                 <div><span v-if="talk.cospeaker">with {{ talk.cospeaker }}</span></div>
                 <div id="link"><a :href="talk.infolink">Link</a><b />
                     <a class="videolink" v-if="talk.video" :href="talk.video">Video</a>
