@@ -1,5 +1,5 @@
 <template>
-  <Layout :show-logo="true">
+  <Layout>
     <!-- Author intro -->
     <Author :show-title="true" />
 
