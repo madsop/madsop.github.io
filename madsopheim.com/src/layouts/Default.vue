@@ -3,10 +3,10 @@
 
     <header class="header">
       <div class="header__left">
-        <Logo v-if="showLogo" /> 
       </div>
       
       <div class="header__right">   
+        <a href="/">Home</a>
         <a href="About" id="about">About</a>   
         <a href="Talks" id="talks">Talks</a>  
         <ToggleTheme />
@@ -26,15 +26,10 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 import ToggleTheme from '~/components/ToggleTheme.vue'
 
 export default {
-  props: {
-    showLogo: { default: true }
-  },
   components: {
-    Logo,
     ToggleTheme
   }
 }
@@ -63,7 +58,7 @@ export default {
   }
 }
 
-a#talks {
+.header__right a {
   padding: 0 0.5em;
 }
 
