@@ -1,15 +1,15 @@
 <template>
     <Layout class="wrapper">
-        <grid-container v-for="talk in this.talks" :key="talk.conference+talk.title" class="myTalks">
-            <grid-item id="conference">{{ talk.conference }}</grid-item>
-            <grid-item id="date">{{talk.date | formatDate}}</grid-item>
-            <grid-item id="title">{{ talk.title }}</grid-item>
-            <grid-item><span v-if="talk.cospeaker">with {{ talk.cospeaker }}</span></grid-item>
-            <grid-item id="location"><span v-if="talk.city">{{ talk.city }},</span> {{ talk.country }}</grid-item>
-            <grid-item id="link"><a :href="talk.infolink">Link</a><b />
+        <div v-for="talk in this.talks" :key="talk.conference+talk.title" class="myTalks">
+            <div id="conference">{{ talk.conference }}</div>
+            <div id="date">{{talk.date | formatDate}}</div>
+            <div id="title">{{ talk.title }}</div>
+            <div><span v-if="talk.cospeaker">with {{ talk.cospeaker }}</span></div>
+            <div id="location"><span v-if="talk.city">{{ talk.city }}, </span> {{ talk.country }}</div>
+            <div id="link"><a :href="talk.infolink">Link</a><b />
                 <a class="videolink" v-if="talk.video" :href="talk.video">Video</a>
-            </grid-item>
-        </grid-container>
+            </div>
+        </div>
     </Layout>
 </template>
 
@@ -18,8 +18,8 @@ import moment from 'moment';
 import Vue from 'vue';
 
 export default Vue.extend({
-    data: () => ({
-            talks: [
+    data: () => ({talks: [
+{conference: 'J-Santa', date: '2019-11-30', city: 'Lublin', country: 'Poland', title: 'IoT powered by Microprofile - Microservices in practice', cospeaker: 'Rustam Mehmandarov', infolink: 'https://j-santa.pl'},
 {conference: 'JFuture', date: '2019-11-16', city: 'Minsk', country: 'Belarus', title: 'IoT powered by Microprofile – Microservices in practice', infolink: 'https://jfuture.dev/#talk_Mads_Opheim'},
 {conference: 'Virtual DDD', date: '2019-11-12', country: 'Virtual', title: 'Make your tests tell the story of your domain', cospeaker: 'Anne Landro', infolink: 'https://www.meetup.com/Virtual-Domain-Driven-Design-meetup/events/266077606'},
 {conference: 'KanDDDinsky', date: '2019-10-18', city: 'Berlin', country: 'Germany', title: 'Make your tests tell the story of your domain', cospeaker: 'Anne Landro', infolink: 'https://kandddinsky.de/'},
@@ -50,13 +50,11 @@ export default Vue.extend({
 {conference: 'JavaZone', date: '2017-09-13', city: 'Oslo', country: 'Norway', title: 'DDD + legacy-monolitt=sant?', cospeaker: 'Anne Landro', infolink: 'https://2017.javazone.no/program/bcbb8c889b204ddbb59a4c5d67035897'},
 {conference: 'Booster', date: '2017-02-15', city: 'Bergen', country: 'Norway', title: 'Politikk og programmering - det liknar meir enn du trur', infolink: 'https://2017.boosterconf.no/talks/877'},
 {conference: 'NTNU Tech Talks', date: '2017-02-07', city: 'Trondheim', country: 'Norway', title: 'Politikk og programmering - det liknar meir enn du trur', infolink: 'https://techtalks.no/', }
-
-]})
-});
+]})});
 
 Vue.filter('formatDate', function(value) {
     if (value)
-        return moment(String(value)).format('MMMM Do. YYYY')
+        return moment(String(value)).format('MMMM Do YYYY')
 })
 
 
@@ -64,34 +62,27 @@ Vue.filter('formatDate', function(value) {
 
 <style lang="scss" scoped>
 
-.wrapper {
-  display: grid;
-  align-items: center;
-  justify-content: center;
+div.myTalks {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1.1fr 1fr 2.5fr 1.1fr 1fr 0.6fr;
 }
 
-grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2.5fr 1.2fr 1fr 0.8fr;
+.myTalks div {
+    display: flex;
+    justify-content: left;
+    $mobile-max: 700px;
+    text-align: left;
+    @media screen and (max-width: $mobile-max) {
+        padding: 0.2rem 0.1rem;
+        margin: 0.3rem 0.1rem;
+        word-break: break-word;
+    }
+    margin: 0.2rem;
 }
 
-
-
-grid-item {
-    border: 0px solid blue;
-  display: flex;
-  justify-content: left;
-  $mobile-max: 700px;
-  text-align: left;
-  @media screen and (max-width: $mobile-max) {
-      padding: 0.2rem 0.1rem;
-      margin: 0.3rem 0.1rem;
-      word-break: break-word;
-  }
-  margin: 0.2rem;
-}
-
-a {
+a.videolink {
     margin-left: 1em;
 }
 
