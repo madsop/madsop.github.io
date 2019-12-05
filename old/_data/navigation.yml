@@ -1,7 +1,0 @@
-main:
-  - title: "Home"
-    url: /
-  - title: "About"
-    url: /_pages/about/
-  - title: "Talks"
-    url: /_pages/talks/
