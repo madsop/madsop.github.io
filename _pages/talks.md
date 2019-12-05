@@ -6,9 +6,10 @@ Slides for several of the talks are available at <a href="https://speakerdeck.co
 
 | Conference | Location | Date | Talk title | URL |
 | ------ |
+| J-Santa | Lublin, Poland | 30. November 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://j-santa.pl/">Link</a> |
 | JFuture | Minsk, Belarus | 16. November 2019 | IoT powered by Microprofile – Microservices in practice | <a href="https://jfuture.dev/#talk_Mads_Opheim">Link</a> |
 | Virtual DDD | Virtual | 12. november 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://www.meetup.com/Virtual-Domain-Driven-Design-meetup/events/266077606/">Link</a> |
-| KanDDDinsky | Berlin, Germany | 17.-18. October 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://kandddinsky.de/">Link</a> |
+| KanDDDinsky | Berlin, Germany | 17.-18. October 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://www.youtube.com/watch?v=j70OLAvs_-8&">Video</a> <a href="https://kandddinsky.de/">Info</a> |
 | MakeIT | Portoroz, Slovenia | 14.-15. October 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://www.makeit.si/index.php/vsebina/java-devops/item/90-iot-powered-by-microprofile-microservices-in-practice/">Link</a> |
 | Testkonferansen Odin | Oslo, Norway | 18. September 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://event.dnd.no/odin/make-your-tests-tell-the-story-of-your-domain/">Link</a> |
 | JavaZone | Oslo, Norway | 11.-12. September 2019 | Make your tests tell the story of your domain (with Anne Landro) | <a href="https://vimeo.com/360781128">Video</a> <a href="https://2019.javazone.no/program/31684fcf-7dc4-4b3d-ae1a-1d4e46e0b9e4">Info</a> |
@@ -59,4 +60,3 @@ Slides for several of the talks are available at <a href="https://speakerdeck.co
 
 | Conference | Location | Date | Talk title | URL |
 | --- |
-| J-Santa | Lublin, Poland | 30. November 2019 | IoT powered by Microprofile – Microservices in practice (with Rustam Mehmandarov) | <a href="https://j-santa.pl/">Link</a> |
