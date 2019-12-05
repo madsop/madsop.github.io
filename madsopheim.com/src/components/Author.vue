@@ -8,7 +8,8 @@
 		</h1>
 
 		<p class="author__intro">
-			I'm a tech lead, developer and test enthusiast. I'm at my best when I can make people awesome.
+			I'm a tech lead, developer and test enthusiast.<br />
+			I'm at my best when I can make people awesome.
 		</p>
 
 		<p class="author__links">
