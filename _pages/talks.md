@@ -59,4 +59,3 @@ Slides for several of the talks are available at <a href="https://speakerdeck.co
 ##### Upcoming talks
 
 | Conference | Location | Date | Talk title | URL |
-| --- |
