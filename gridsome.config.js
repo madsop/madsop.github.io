@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'Mads Opheim',
   siteDescription: 'Tech lead. Java. TDD, DDD, Modern agile.',
-  siteUrl: 'https://madsop.github.io',
+  siteUrl: 'http://madsopheim.com',
 
   templates: {
     Post: '/:title'
