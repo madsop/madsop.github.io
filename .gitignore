@@ -6,3 +6,10 @@ Gemfile.lock
 .sass-cache/*
 node_modules
 dist
+.cache
+.env
+.env.*
+src/.temp
+.swp
+*.log
+.DS_STORE
