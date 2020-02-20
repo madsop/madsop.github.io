@@ -32,6 +32,8 @@ import Vue from 'vue';
 
 export default Vue.extend({
     data: () => ({talks: [
+{conference: 'Voxxed Days Bucharest', date: '2020-03-13', city: 'Bucharest', country: 'Romania', title: 'Hands-on Lab: Serverless Java Apps in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://romania.voxxeddays.com/2020/02/09/serverless-java-apps-in-the-cloud/'},
+{conference: 'Voxxed Days Bucharest', date: '2020-03-12', city: 'Bucharest', country: 'Romania', title: 'No API? Build it yourself!', infolink: 'https://romania.voxxeddays.com/2020/02/09/no-api-build-it-yourself/'},
 {conference: 'J-Santa', date: '2019-11-30', city: 'Lublin', country: 'Poland', title: 'IoT powered by Microprofile - Microservices in practice', cospeaker: 'Rustam Mehmandarov', infolink: 'https://j-santa.pl'},
 {conference: 'JFuture', date: '2019-11-16', city: 'Minsk', country: 'Belarus', title: 'IoT powered by Microprofile – Microservices in practice', infolink: 'https://jfuture.dev/#talk_Mads_Opheim'},
 {conference: 'Virtual DDD', date: '2019-11-12', country: 'Virtual', title: 'Make your tests tell the story of your domain', cospeaker: 'Anne Landro', infolink: 'https://www.meetup.com/Virtual-Domain-Driven-Design-meetup/events/266077606'},
