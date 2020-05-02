@@ -13,9 +13,15 @@
 </template>
 
 <script lang="ts">
-export default {
-    metaInfo: {
-        title: 'About'
+import { Vue } from 'vue-property-decorator';
+
+export default class About extends Vue {
+    data() {
+            return {
+                metaInfo: {
+                    title: 'About'
+                }
+        }
     }
 }
 </script>
@@ -24,7 +30,7 @@ export default {
 
 div#wrapper {
     width: 70%;
-    dislay: grid;
+    display: grid;
 }
 
 </style>
