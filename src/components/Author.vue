@@ -12,20 +12,7 @@
 			I'm at my best when I can make people awesome.
 		</p>
 
-		<p class="author__links">
-			<a href="mailto:mads.opheim+web@gmail.com">
-				<img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt="E-mail">
-			</a>
-			<a href="//twitter.com/madsopheim">
-				<img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg" alt="Twitter"/>
-			</a>
-			<a href="//github.com/madsop/">
-				<img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt="GitHub"/>
-			</a>
-			<a href="//linkedin.com/in/madsopheim/">
-				<img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="LinkedIn"/>
-			</a>
-		</p>
+		<Profiles />
 
 	</div>
 </template>
@@ -39,6 +26,8 @@ query {
 </static-query>
 
 <script>
+import { Vue } from 'vue-property-decorator';
+
 export default {
 	props: ['showTitle']
 }
@@ -46,11 +35,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-.icon {
-	height: 24px;
-	width: 24px;
-}
 
 .author {
 	margin: 0 auto;
@@ -71,13 +55,6 @@ export default {
 
 	&__site-title {
 		font-size: 1.5em;
-	}
-
-	&__links {
-		margin-top: -.5em;
-		a {
-			margin: 0 .5em;
-		}
 	}
 }
 </style>
