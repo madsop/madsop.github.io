@@ -1,8 +1,8 @@
-<a<template>
+<template>
     <Layout>
         <div id="wrapper" class="content-box">
             <h1>CV</h1>
-            <p>I'm a tech lead and developer. <a href="/about">Read more about me.</a></p>
+            <p>I'm a tech lead and developer. <a href="/about/">Read more about me.</a></p>
             Mads Opheim
             <a href="mailto:mads.opheim@gmail.com">mads.opheim@gmail.com</a>
             <a href="http://madsopheim.com">madsopheim.com</a>
@@ -64,7 +64,7 @@ import { Vue } from 'vue-property-decorator';
 import Profiles from '@/components/Profiles.vue';
 
 
-export default class CV extends Vue {
+export default Vue.extend({
     data() {
         return {
             metaInfo: {
@@ -72,7 +72,7 @@ export default class CV extends Vue {
             }
         }
     }
-}
+});
 </script>
 
 <style scoped lang="scss">
