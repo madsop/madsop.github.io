@@ -32,6 +32,8 @@ import Vue from 'vue';
 
 export default Vue.extend({
     data: () => ({talks: [
+{conference: 'JCON', date: '2020-10-27', city: 'Düsseldorf/Online', country: 'Germany', title: 'Serverless Java Apps in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://jcon.one/en/'},
+{conference: 'MakeIT', date: '2019-11-30', city: 'Portoroz/Online', country: 'Slovenia', title: 'Serverless Java Apps in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://makeit.si/index.php/en/agenda/java/item/90-serverless-java-apps-in-the-cloud-microprofile-quarkus-and-cloud-run'},
 {conference: 'J-Santa', date: '2019-11-30', city: 'Lublin', country: 'Poland', title: 'IoT powered by Microprofile - Microservices in practice', cospeaker: 'Rustam Mehmandarov', infolink: 'https://j-santa.pl'},
 {conference: 'JFuture', date: '2019-11-16', city: 'Minsk', country: 'Belarus', title: 'IoT powered by Microprofile – Microservices in practice', infolink: 'https://jfuture.dev/#talk_Mads_Opheim', video: 'https://www.youtube.com/watch?v=qCSFJSuzKkY&list=PLpVeA1tdgfCDArx2X2VpyR7Hke_GHXuqb'},
 {conference: 'Virtual DDD', date: '2019-11-12', country: 'Virtual', title: 'Make your tests tell the story of your domain', cospeaker: 'Anne Landro', infolink: 'https://www.meetup.com/Virtual-Domain-Driven-Design-meetup/events/266077606'},
