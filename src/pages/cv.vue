@@ -7,7 +7,7 @@
             <a href="mailto:mads.opheim@gmail.com">mads.opheim@gmail.com</a>
             <a href="http://madsopheim.com">madsopheim.com</a>
 
-            <h2>Tech I'm frequently using using</h2>
+            <h2>Tech I'm frequently using</h2>
                 <p>Java (8&amp;11), Maven, Jakarta EE 8, Eclipse MicroProfile, Git, Mercurial, Jenkins, SonarQube, Google Cloud Platform,
                     Quarkus, Wildfly, REST, Mockito, JUnit, Docker, Microsoft SQL Server, Vue, HTML, TypeScript, GitHub, yarn, npm and a lot more</p>
             <h2>Methodologies</h2>
