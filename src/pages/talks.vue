@@ -32,6 +32,8 @@ import Vue from 'vue';
 
 export default Vue.extend({
     data: () => ({talks: [
+{conference: 'GDG Minsk', date: '2021-04-29', city: 'Minsk/Online', country: 'Belarus', title: 'Serverless Java Apps in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://www.meetup.com/GDG-Minsk/events/277671167/'},
+{conference: 'GDG Bergen', date: '2021-03-17', city: 'Bergen/Online', country: 'Norway', title: 'Serverless Java Apps in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://www.meetup.com/GDGBergen/events/276744023/'},
 {conference: 'JCON', date: '2020-10-27', city: 'Düsseldorf/Online', country: 'Germany', title: 'Serverless Java Apps in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://jcon.one/en/'},
 {conference: 'MakeIT', date: '2020-10-15', city: 'Portoroz/Online', country: 'Slovenia', title: 'Serverless Java Apps in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://makeit.si/index.php/en/agenda/java/item/90-serverless-java-apps-in-the-cloud-microprofile-quarkus-and-cloud-run'},
 {conference: 'J-Santa', date: '2019-11-30', city: 'Lublin', country: 'Poland', title: 'IoT powered by Microprofile - Microservices in practice', cospeaker: 'Rustam Mehmandarov', infolink: 'https://j-santa.pl'},
