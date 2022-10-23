@@ -32,6 +32,7 @@ import Vue from 'vue';
 
 export default Vue.extend({
     data: () => ({talks: [
+{conference: 'JavaOne', date: '2022-10-20', city: 'Las Vegas', country: 'USA', title: 'Modern Java App Development in the Cloud', cospeaker: 'Rustam Mehmandarov', infolink: 'https://reg.rf.oracle.com/flow/oracle/cloudworld/session-catalog/page/catalog/session/1657310280067001Jln5'},
 {conference: 'Quarkus Unconference', date: '2022-06-06', city: 'Coimbra', country: 'Portugal', title: 'Modern Java App Development in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://twitter.com/holly_cummins/status/1533772638157430785'},
 {conference: 'Booster', date: '2022-03-23', city: 'Bergen', country: 'Norway', title: 'Modern Java App Development in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://2022.boosterconf.no/talk/69-modern-java-app-development-in-the-cloud-microprofile-quarkus-and-cloud-run/'},
 {conference: 'TDC Connections', date: '2021-06-10', city: 'Brazil/Online', country: 'Brazil', title: 'Modern Java App Development in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://thedevconf.com/tdc/2021/connections/trilha-stadium-internacional-quinta'},
