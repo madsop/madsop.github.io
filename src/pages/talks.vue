@@ -32,7 +32,9 @@ import Vue from 'vue';
 
 export default Vue.extend({
     data: () => ({talks: [
-{conference: 'Voxxed Days Bucharest', date: '2023-03-23', city: 'Bucharest', country: 'Romania', title: 'Modern Java App Development in the Cloud', cospeaker: 'Rustam Mehmandarov', infolink: 'https://romania.voxxeddays.com/modern-java-app-development-in-the-cloud-microprofile-quarkus-and-cloud-run/'},
+{conference: 'GeeCon Krakow', date: '2023-04-20', city: 'Krakow', country: 'Poland', title: 'Enterprise Kotlin: Jakarta EE for Kotlin developers', infolink: 'https://2023.geecon.org/speakers/info.html?id=773'},
+{conference: 'GeeCon Krakow', date: '2023-04-19', city: 'Krakow', country: 'Poland', title: 'Modern Java App Development in the Cloud', cospeaker: 'Rustam Mehmandarov', infolink: 'https://2023.geecon.org/speakers/info.html?id=773'},
+{conference: 'Voxxed Days Bucharest', date: '2023-03-23', city: 'Bucharest', country: 'Romania', title: 'Modern Java App Development in the Cloud', cospeaker: 'Rustam Mehmandarov', infolink: 'https://romania.voxxeddays.com/modern-java-app-development-in-the-cloud-microprofile-quarkus-and-cloud-run/', video: 'https://www.youtube.com/watch?v=QWFgrdeB0NI&list=PLRsbF2sD7JVojIeUdvXEX4F4OInswm0Px&index=23&ab_channel=Devoxx'},
 {conference: 'JavaLand', date: '2023-03-22', city: 'Brühl', country: 'Germany', title: 'Modern Java App Development in the Cloud', cospeaker: 'Rustam Mehmandarov', infolink: 'https://www.javaland.eu/'},
 {conference: 'J-Fall', date: '2022-11-03', city: 'Ede', country: 'The Netherlands', title: 'Modern Java App Development in the Cloud', cospeaker: 'Rustam Mehmandarov', infolink: 'https://www.jfall.nl'},
 {conference: 'EclipseCon', date: '2022-10-26', city: 'Ludwigsburg', country: 'Germany', title: 'Modern Java App Development in the Cloud', cospeaker: 'Rustam Mehmandarov', infolink: 'https://www.eclipsecon.org/2022/schedule/2022-10-26', video: 'https://www.youtube.com/watch?v=3S_oLgqVvE0&list=PLy7t4z5SYNaRoQ4o40i6zfD0ZuoenX7ph&index=101&ab_channel=EclipseFoundation'},
