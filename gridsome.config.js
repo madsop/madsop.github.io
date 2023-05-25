@@ -21,6 +21,27 @@ module.exports = {
         typeName: 'Post',
         path: 'content/posts/*.md',
       }
+    },
+    {
+      use: 'gridsome-plugin-feed',
+      options: {
+        contentTypes: ['Post'],
+        feedOptions: {
+          title: 'Mads Opheim',
+          description: 'Feed from the blog of Mads Opheim'
+        },
+        rss: {
+          enabled: true,
+          output: '/feed.xml'
+        },
+        maxItems: 25,
+        filterNodes: node => true,
+        nodeToFeedItem: node => ({
+          title: node.title,
+          date: node.date || node.fields.date,
+          content: node.content
+        })
+      }
     }
   ],
 
