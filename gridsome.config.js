@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Mads Opheim',
-  siteDescription: 'Tech lead. Java. TDD, DDD, Modern agile.',
+  siteDescription: 'Java. TDD, DDD, Modern agile.',
   siteUrl: 'http://madsopheim.com',
 
   templates: {
