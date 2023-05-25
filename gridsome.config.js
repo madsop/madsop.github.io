@@ -39,7 +39,7 @@ module.exports = {
         nodeToFeedItem: node => ({
           title: node.title,
           date: node.date || node.fields.date,
-          content: node.content
+          content: node.content.substring(0, 400)
         })
       }
     }
