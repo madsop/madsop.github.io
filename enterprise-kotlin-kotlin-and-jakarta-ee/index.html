@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Enterprise Kotlin - Kotlin and Jakarta EE - Mads Opheim</title><meta name="gridsome:hash" content="8ede6dfc4db03fb82c254c72254887cc99bf32c5"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.23"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><meta data-vue-tag="ssr" data-key="description" name="description" content="Java. TDD, DDD, Modern agile."><meta data-vue-tag="ssr" name="description" content="Kotlin is nice. Jakarta EE is nice. Let’s dive into how to make them play well together!"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/assets/static/favicon.ce0531f.e3f53a5697ed22afe04ca2d05af12d9d.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/assets/static/favicon.ac8d93a.e3f53a5697ed22afe04ca2d05af12d9d.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/assets/static/favicon.b9532cc.e3f53a5697ed22afe04ca2d05af12d9d.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/assets/static/favicon.f22e9f3.e3f53a5697ed22afe04ca2d05af12d9d.png"><link rel="preload" href="/assets/css/0.styles.7309b7bb.css" as="style"><link rel="preload" href="/assets/js/app.88b6f893.js" as="script"><link rel="preload" href="/assets/js/page--src--templates--post-vue.0ec352ed.js" as="script"><link rel="preload" href="/assets/js/page--src--pages--index-vue~page--src--templates--post-vue.750327bd.js" as="script"><link rel="prefetch" href="/assets/js/page--src--pages--404-vue.2f3c2e4a.js"><link rel="prefetch" href="/assets/js/page--src--pages--about-vue.afa7e0af.js"><link rel="prefetch" href="/assets/js/page--src--pages--cv-vue.180d6594.js"><link rel="prefetch" href="/assets/js/page--src--pages--index-vue.ff358970.js"><link rel="stylesheet" href="/assets/css/0.styles.7309b7bb.css"><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <script>
+      // Add dark / light detection that runs before Vue.js load. Borrowed from overreacted.io
+      (function() {
+        window.__onThemeChange = function() {};
+        function setTheme(newTheme) {
+          window.__theme = newTheme;
+          preferredTheme = newTheme;
+          document.body.setAttribute('data-theme', newTheme);
+          window.__onThemeChange(newTheme);
+        }
+
+        var preferredTheme;
+        try {
+          preferredTheme = localStorage.getItem('theme');
+        } catch (err) { }
+
+        window.__setPreferredTheme = function(newTheme) {
+          setTheme(newTheme);
+          try {
+            localStorage.setItem('theme', newTheme);
+          } catch (err) {}
+        }
+
+        var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        darkQuery.addListener(function(e) {
+          window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+        });
+
+        setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
+      })();
+    </script>
+
+    <div id="app" data-server-rendered="true"><header class="header"><div class="header__left"></div><div class="header__right"><a href="/">Home</a><a href="/about/" id="about">About</a><a href="/talks/" id="talks">Talks</a><a href="/cv/" id="cv">CV</a><button role="button" aria-label="Toggle dark/light" class="toggle-theme"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></div></header><main class="main"><div class="post-title"><h1 class="post-title__text">
+      Enterprise Kotlin - Kotlin and Jakarta EE
+    </h1><div class="post-meta">
+   Posted 25. May 2023.
+ </div></div><div class="post content-box"><div class="post__content"><p><em>Note: this blog post is also published
+on <a href="https://medium.com/compendium/enterprise-kotlin-kotlin-and-jakarta-ee-9b9d73c8268e">the Computas blog</a>.</em></p>
+<p><img class="g-image g-image--lazy g-image--loading" src="data:image/svg+xml,%3csvg fill='none' viewBox='0 0 1000 300' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdefs%3e%3cfilter id='__svg-blur-9102fd24c6632258446af0365d4cf948'%3e%3cfeGaussianBlur in='SourceGraphic' stdDeviation='40'/%3e%3c/filter%3e%3c/defs%3e%3cimage x='0' y='0' filter='url(%23__svg-blur-9102fd24c6632258446af0365d4cf948)' width='1000' height='300' xlink:href='data:image/png%3bbase64%2ciVBORw0KGgoAAAANSUhEUgAAAEAAAAATCAYAAAAgcwuHAAAACXBIWXMAAAsSAAALEgHS3X78AAAHuUlEQVRYw91Ye3BUVx0%2b97Hv3bxDkk02u7xbLVqVdnx0CkVbLeo/JbUZLErVYm0VH%2bVRQSk4xqkTII9CRyklYGSkA0ka9p57NzEJgVK17ajjjB3bf0RrRWYcx9HOCEn2nJ/fvedks7GM0/4JmTlzzz33vL7v9/0eG8be5p8cnnvK53TfjRiz34vjrUH/Py/fx667Px8wnVR9GmCGAp806MAsEXaPdMz3BX1uGn8dX3cdgR8ss/ggM/3nzIhtUt4yFeBIB/0yQtJJfSp4d5LWdQP%2b7x4sPqTBDzFbP1eh7VHgY1tpzCKajNJMIfNgQI6Xti%2bMfu46kf1wqW9p/28C%2bMt475e8fh1NhIgcNk3nwjQ1kt0SxIJCjX1p7BonAH7uW3o%2b%2bEGjGmN/oDFG8pTxqnSsy%2bQZIMCYoufDdGVk0TZ/nijUWH8b23ANW35Y%2bb0Gr/z85ywM8C/SOMAfYZcR/IgKJvzeFIECQMB0ofmRwAUKDfbF8bZrmIA5nzfKAqFHEwD/M8j/MSbkQWNGjlpC5g0JBRRpHGR49r06I1ybQfBivizXAzz9sQT%2beAD%2bBMA/zopyC5OyD6ALFhQAArhBSH1F6cZu1rWBKXnCQHYwSwS6lindsOrzCgTKpcE3cuLIGv78SKmukNwOiCee9FOqCYVZGEOrNKTTYBA3Lbif5T9FgRlXBu7EHgmTuM2Eu8AoutVsNh1LbmCebq6F9biHY%2bLdUns4sasXOjSoc/0A6/VlT6fYFbmHzdB29HdAASchfc93AUPQiE9A6ILwlkXVwYk55fAogJSd4UZL3yg/pzD1LWSUEWa87Xg1dhUV85jxjqy/MPdDZqf62ZunQn4ANLUKdgUBb5BNyQ4NHg39ItiF5QMCZmgSTx4%2bpCxqq1TJk0swtroM0Cewpl59q2ya9hbdrUi4CRaJboAFq7UCPgAyVUGVb4K1rXuggK1QwHbJaxZLp%2b4WnPsdWO9LeO6AAtZowJ%2bmYTtU9BpuLHpVjWrMysLy35Qu%2bxaUsFN65s3khFaTY2Evewv22CydWCVrbPlRiYiH79kQ6LQ4aGyiAsA%2bx6blE2yKtgH8Trz78n8a8h%2bxJKTk%2bz8UAFfglbdr64dVMRTfCGAntdXrcKDEJR9W0q782Iy3/JwiLHIALnC0TAXnQMB48M0zwiDtd1BRF9o2yVOjwm3YgDnfw5w3sG/XzIhxKyrSd9FEFHcwPlh0sysFr7lBu8Dnce7rUOA3QMReEPZejLk4b4B46DG4zE48lb9kc53x3W3toeDgc%2bw%2bOgvA8O1ip0nFrQaJHbD6diZoFyvSsCXgT771p%2bmMb32rEKxzGXwsZmkC1oOAfnUR%2byGoYQIkHVMEVNwh3JZjwklsJCfszck2%2bW60EczlaMv02knp1GYUObFR6VmrdPU5Jk43J7Wb/QAKGgX5nWp/nba58QDIOjLfNSwu3JoPv8UFspl9tZlc99aGTE9H36O3dV06nnqWDrEzAPwX2g0y9igF0DPw94IpIJ9pcmeDX3iF3twPfiFNwP0g4JgaD%2bfh7xnpVv1Y8vhNktfeiLELgRWdeH%2bZ3z4Oi7QTj7QD0A6952%2bkY/8C838PN/qJBrgAY2fhDk2QdwznODSUTeF5SrqphlJs4GYbzngTe4CcsHu5cEsSY0Mg9TW084InvxtMTGe7g4BRv7A3ns51nU42HaZo/eFXmjK9fO3KRw8fbf9Izxubq35Knew8jbJLQVCE5emsDQJim9RhiKpuZI5pJ/4ZSK1P8gX1APQv1AgHhVv5Z1gE/tyagxouCq%2bqWToVYyBlvY4fLxe9ikLRrXPRf0GNWc%2bj/35Y/DhI%2bbomoBHET4rTC%2bLE42ukE/73jFexF2D/gdY2R6j5AO4XuBe1N8yOOSBq1VsU0JLdX0pZmUVdJ7JLnqH0wqeoPttHyeY%2bSqQP/akue6C/7a5Hvn1%2b3/Ivg1VYM7JFXwjpplL/MKreCBXAXyO/AuvwwcguvJ8QbvJWnyzIdZJ4zdrpwvIxDfAO/Hj6Neatw/eXBK%2b4E77%2bUazFWOzjUNpZmWfN0q1oxtjrGKvFeVU4/7ciX1%2bJvZ/FWoCP%2bcFzN%2bYUygj4As57RXipTwo38ZDwKkC8iThS0St4HdRR%2b1nB61OsaeH%2bYEFztisAcTf7ogFVvNiy%2bAi15LpfzS3q3LN0yfdXt%2ba6ljM2gUhOpULnnwM%2b%2bKW%2bVFXa5PEP4UL90k18TUXy1CaZr2qdnS94FARV3zY12rj%2b6Gsv6TVJEJVEZA6vmVNQ5Vqo4y4oCRkiklbzUl8Rbmolef6Z0QcFb6yWvOqryBYq/Z68AbVCbLPg1QkdfOFq8YOY%2byRaH%2b50O0i6F/2n0Z5CvNqPmqSWpTO9UMA%2b5Q65/ZZ%2bvgdtd2tmb%2bSqufcMs4qnIya9kCoLMPb8OUNlwceJ2eQk5uVmepKxaSf5P/kbBc9Vfk4DiPl/q1fsP39%2b9J3VAQ25biigWyuhd97idLbHTuf2mU25Hl8ZRnOug61Ydr/6GOtA4bQYbJtstgiCJW3pxi0xsiKo0GBJ/Q%2bUkH8xBMpqY2okbWr3CcCpFpqrHJ1ksC6oEvOhWRIs4f8TxvX7IVPwBr%2bm8AMv02rz97cET%2bn5YV8pNuZa6k6oMh3bVGNREB3HeIr9Fx4KsXvOjnjLAAAAAElFTkSuQmCC' /%3e%3c/svg%3e" width="1000" alt="ates" data-srcset="/assets/static/jakarta-ee-logo.82a2fbd.0c7124895fc292d6ee29a497d914858e.png 480w, /assets/static/jakarta-ee-logo.97c148e.0c7124895fc292d6ee29a497d914858e.png 1000w" data-sizes="(max-width: 1000px) 100vw, 1000px" data-src="/assets/static/jakarta-ee-logo.97c148e.0c7124895fc292d6ee29a497d914858e.png"><noscript><img class="g-image g-image--lazy g-image--loaded" src="/assets/static/jakarta-ee-logo.97c148e.0c7124895fc292d6ee29a497d914858e.png" width="1000" alt="ates"></noscript>
+<small><em>The Jakarta EE logo, by the Eclipse Foundation</em></small></p>
+<br />
+If you look at the documentation on the Kotlin web page (<a href="https://kotlinlang.org/docs/server-overview.html">
+Kotlin for server side</a>), you’ll find a list of available
+frameworks for running Kotlin server-side, a list currently consisting of Spring, Vert.x, Ktor, kotlinx.html, Micronaut,
+http4k and Javalin.
+<p>None of these support <a href="https://jakarta.ee">Jakarta EE</a>, although for instance Spring is based on several
+Jakarta EE specifications, but it’s
+far from a full implementation.</p>
+<p>This raises two questions to me: 1. can you use Jakarta EE and Kotlin in combination, and 2. should you?</p>
+<p>The Kotlin docs state that “Kotlin is a great fit for developing server-side applications. It allows you to write
+concise and expressive code while maintaining full compatibility with existing Java-based technology
+stacks” (<a href="https://kotlinlang.org/docs/server-overview.html">
+Kotlin for server side</a>), so the answer to whether it’s possible clearly is yes. That’s with a technocratic
+perspective to the concept of <em>possible</em>, so the question should be rephrased into is it possible <em>within
+sensible time, space and hassle?</em></p>
+<p>We’ll answer that by starting to walk the path there and see what happens. The first step down that road is picking a
+runtime that supports Jakarta EE, and getting that one up and running.</p>
+<p>That gives us quite some options, including RedHat WildFly, Payara Server, Apache TomEE and Eclipse GlassFish. Let’s
+choose OpenLiberty from IBM for now, as that’s a runtime currently supporting the newest Jakarta EE, 10.</p>
+<p>When getting started with OpenLiberty, the obvious place to start is at the Get started section of the OpenLiberty web
+page. From here, we can download the necessary build and configuration files that give us a starting point, be it with
+Maven or Gradle.</p>
+<p>Once we’ve got OpenLiberty started up and running, it’ll be running Java code. Nice, but we’re interested in Kotlin, so
+the next step is to transition over to running Kotlin code. Changing the code is fast, you can even use IntelliJ to
+automatically convert the demo code into Kotlin. However, we’ll also need a dependency to the Kotlin compiler, so that
+you can use the Kotlin language, and your code can actually compile:</p>
+<pre class="language-text"><code class="language-text">&lt;dependency&gt;  
+    &lt;groupId&gt;org.jetbrains.kotlin&lt;/groupId&gt; 
+    &lt;artifactId&gt;kotlin-stdlib&lt;/artifactId&gt;
+    &lt;version&gt;${kotlin.version}&lt;/version&gt;  
+&lt;/dependency&gt;</code></pre>
+<p>In addition, you’ll need the <em>kotlin-maven-plugin</em> for your build to be able to parse the Kotlin classes. Towards
+the end
+of this article, you’ll find the complete config required to run your Jakarta EE application.</p>
+<p>That’ll make your code compile, which certainly is a good start, but you will inevitably run into issues when starting
+your application.</p>
+<p>Why is that? In Kotlin, all classes and methods are by default final. Thus, they cannot be extended or overridden by
+subclasses, or by any kind of proxy. In the CDI specification, though, it’s explicitly stated that beans must be
+eligible for overriding. As CDI is in the core of Jakarta EE, and used by many of the other specifications as well, this
+clearly has the potential of being a dealbreaker.</p>
+<p>However, there are two solutions to this problem:</p>
+<ol>
+<li><em>open</em> is a keyword in Kotlin, making the annotated class or method non-final. This solution is problematic if
+you’re
+using constructor injection though, as the generated get methods will be final.</li>
+<li>The <em>all-open</em> plugin which you can include in your pom.xml or build.gradle. This plugin will ensure that all
+classes
+annotated with one of the annotations you specify will be made non-final. You can then make for instance all
+@ApplicationScoped or @RequestScoped beans non-final, while sticking to the default Kotlin behaviour for your other
+classes. Note that you’ll have to specify the full namespace of the annotations, so make sure to use the Jakarta
+namespace if you’re on Jakarta EE 9 or newer, or javax if you’re still on Jakarta EE 8.</li>
+</ol>
+<p>The next issue you’ll run into is that you’ll have to create no-args constructors for your beans as well. You can of
+course do that by hand, but it quickly becomes cumbersome. You’ll also end up with lots of wiring code that CDI should
+be taking care of without your intervention. The same goes when using Jakarta Persistence, which requires entities to
+have a no-args constructor. Luckily, there’s a compiler plugin at your service also for these issues — the <em>
+no-arg</em>
+plugin. If you’re using JPA, there’s a specialized version of it you should use instead — simply named jpa.</p>
+<p>With these problems solved, you will now be able to run Jakarta EE for your Kotlin code.
+On <a href="https://github.com/madsop/enterprise-kotlin">my GitHub</a>, you can find a
+code example and see how I’ve done it, where you through the commits can follow along.</p>
+<p>However, if you run into some issues, the existing documentation is scarce. Here are the (few!) relevant blog posts and
+articles I’ve found useful while doing my research:</p>
+<p><a href="https://github.com/gcharters/Kotlin-REST-Service">GitHub — gcharters/Kotlin-REST-Service: How to write a simple
+Kotlin REST service on Open Liberty</a></p>
+<p><a href="https://rieckpil.de/howto-write-java-ee-applications-with-kotlin/">Guide to writing Java EE applications with
+Kotlin — rieckpil</a></p>
+<p><a href="https://www.baeldung.com/kotlin/java-ee-kotlin-app">Java EE Application with Kotlin | Baeldung on Kotlin</a></p>
+<p>Note that several of these links talk about <em>Java EE</em>, even though they are published as recently as this year,
+while Java
+EE became Jakarta EE in 2019.</p>
+<p>Now you’re ready to unleash the productivity boost from combining Jakarta EE with Kotlin. Enjoy, and happy coding!</p>
+<p>As promised earlier on, here’s the full config you will need:</p>
+<pre class="language-text"><code class="language-text">&lt;plugin&gt;
+   &lt;groupId&gt;org.jetbrains.kotlin&lt;/groupId&gt;
+   &lt;artifactId&gt;kotlin-maven-plugin&lt;/artifactId&gt;
+   &lt;version&gt;${kotlin.version}&lt;/version&gt;
+   &lt;executions&gt;
+       &lt;execution&gt;
+           &lt;id&gt;compile&lt;/id&gt;
+           &lt;phase&gt;process-sources&lt;/phase&gt;
+           &lt;goals&gt;
+               &lt;goal&gt;compile&lt;/goal&gt;
+           &lt;/goals&gt;
+           &lt;configuration&gt;
+               &lt;sourceDirs&gt;
+                   &lt;source&gt;src/main/kotlin&lt;/source&gt;
+               &lt;/sourceDirs&gt;
+           &lt;/configuration&gt;
+       &lt;/execution&gt;
+       &lt;execution&gt;
+           &lt;id&gt;test-compile&lt;/id&gt;
+           &lt;phase&gt;test-compile&lt;/phase&gt;
+           &lt;goals&gt;
+               &lt;goal&gt;test-compile&lt;/goal&gt;
+           &lt;/goals&gt;
+       &lt;/execution&gt;
+   &lt;/executions&gt;
+   &lt;dependencies&gt;
+       &lt;dependency&gt;
+           &lt;groupId&gt;org.jetbrains.kotlin&lt;/groupId&gt;
+           &lt;artifactId&gt;kotlin-maven-noarg&lt;/artifactId&gt;
+           &lt;version&gt;${kotlin.version}&lt;/version&gt;
+       &lt;/dependency&gt;
+       &lt;dependency&gt;
+           &lt;groupId&gt;org.jetbrains.kotlin&lt;/groupId&gt;
+           &lt;artifactId&gt;kotlin-maven-allopen&lt;/artifactId&gt;
+           &lt;version&gt;${kotlin.version}&lt;/version&gt;
+       &lt;/dependency&gt;
+   &lt;/dependencies&gt;
+
+
+   &lt;configuration&gt;
+       &lt;javaParameters&gt;true&lt;/javaParameters&gt;
+       &lt;jvmTarget&gt;17&lt;/jvmTarget&gt;
+       &lt;compilerPlugins&gt;
+           &lt;plugin&gt;all-open&lt;/plugin&gt;
+           &lt;plugin&gt;jpa&lt;/plugin&gt;
+       &lt;/compilerPlugins&gt;
+       &lt;pluginOptions&gt;
+           &lt;option&gt;all-open:annotation=jakarta.ws.rs.Path&lt;/option&gt;
+           &lt;option&gt;all-open:annotation=jakarta.enterprise.context.ApplicationScoped&lt;/option&gt;
+           &lt;option&gt;all-open:annotation=jakarta.persistence.Entity&lt;/option&gt;
+           &lt;option&gt;all-open:annotation=jakarta.ws.rs.ApplicationPath&lt;/option&gt;
+           &lt;option&gt;jpa:annotation=jakarta.ws.rs.Path&lt;/option&gt;
+           &lt;option&gt;jpa:annotation=jakarta.enterprise.context.ApplicationScoped&lt;/option&gt;
+       &lt;/pluginOptions&gt;
+   &lt;/configuration&gt;
+&lt;/plugin&gt;</code></pre>
+</div></div><div class="post-comments"></div><div class="author post-author"><img alt="Mads Opheim" src="data:image/svg+xml,%3csvg fill='none' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdefs%3e%3cfilter id='__svg-blur-ff7ad7e5ca6fb74dccaf84f374f4c092'%3e%3cfeGaussianBlur in='SourceGraphic' stdDeviation='5'/%3e%3c/filter%3e%3c/defs%3e%3cimage x='0' y='0' filter='url(%23__svg-blur-ff7ad7e5ca6fb74dccaf84f374f4c092)' width='180' height='180' xlink:href='data:image/jpeg%3bbase64%2c/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCABAAEADASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAABQYDBwECBAD/xAA0EAACAQQAAwQIBAcAAAAAAAABAgMABAURBhIhEzFBUQcUIlJhcZHBFXKBoSMkMjNj4fH/xAAaAQACAwEBAAAAAAAAAAAAAAADBQECBAAG/8QAIBEAAwEAAgICAwAAAAAAAAAAAAECAxESMVEhIgQyQf/aAAwDAQACEQMRAD8AN1molapkG6EHMhd1rNJFAhaaRUUdSWNJXE/F8pupMZw%2bpknjblmuANhD4gfHzNB7fD5u7LSKJJHPV5JH1uhXspD54Vp4LMgmguU5reaOVR3lG3qtiKq8i4wtysl1FPYy70LmM8yH82vvT9gcoMnbe2U7dB7XKejDzFdGyp8EaYVn8hA16vNWtFAnPG26gz%2bRGKwN9e95hiZlHm2ug%2buqxC1C%2bPopJ%2bD7/sVZ2jCylQN7CkE/tXPwSvJD6PcFHa2EYlI9Ycc8znvZz1NP3ZRhFHQCkTDZuG3s1uGhmaBhvtRyhfoTumxsqr4%2bO6sEiYMNgtvp8xSq02/k9Bk0p4RplLGN1chQ0ZXTKw2D8NVWmXvI%2bDs5BdWu1s5TqWHwXffr4U5LmJrqV4muZZLgNp09TZIxsbGm%2b9KHpQxkl9BbQxxA3TuY1%2bJ1vVWz%2btJMHv8AfNtFjxTR3MEc0LBo5FDKw8Qa8aDcE2k%2bP4ZtLK7cPNbrykj6gfp3UYY0ymuy5Ely4pywTC1T3tmmSxlxZyMyrNGycynRGxquOE0RtjUlUK9rgbGLHrLdxh5Ygq8zn%2bllGug%2b1M2PkWDGWjrLCR1PLzAa3S/kLlpbi/tYWRXEm1LHWvl%2b9b4OyPZx88NvHPsjlJdyd%2bPgDSy/LTPQ4NNJpD1ZyQOjaHZsV5gpHfS7expPk7YSojAsdKx7zykd9T29qcfM0t1OWlZG1GF0q0helqVpsAUt2O0ZJHYHqOvT7/SqRPauCdtOst%2bh7xkyyPcIsiyGNgjsvvAf8rqekz0YXPaWU6MdluRx8fYFOMlMcP0SEn5L50b9gOFqI2zUIjcDxrtt5qKZyv8Aja%2b9TzgaD%2b7zsGX3up/1TBhuPLfGWnYZOKRLpQNBh3jw0aluOGPxfi6xuE5GtzIXl2eoPL4efUCsRYeBLa2TJWyTy2n8tMHG98vj9NH9ayaY9VzSGGOzb4h/w4G4mvM1eubGJkj3syOPDyojn8O0nA2R5lZ7uRRLvvZmUggfb9aZrGws0C%2bqRIsXhqimOgS8lEmgbZG0n%2bRh3n5D9z8qpnDu1MoNpfSHVvkqXgq7bB5C4sch/DmgCow/L039CKsxpFdQykFSNgiuLO8H47KZU3bGaG6I9p4j0IHvDx8q0xeDyOLgeBp1vLVTuFgCHUe6R8PMVsWNZ0/TF1aTcr2j/9k=' /%3e%3c/svg%3e" width="180" data-src="/assets/static/author.e6b6009.fc86b1f5b3368da8128764e60bfbf0cc.jpg" data-srcset="/assets/static/author.e6b6009.fc86b1f5b3368da8128764e60bfbf0cc.jpg 180w" data-sizes="(max-width: 180px) 100vw, 180px" class="author__image g-image g-image--lazy g-image--loading"><noscript><img src="/assets/static/author.e6b6009.fc86b1f5b3368da8128764e60bfbf0cc.jpg" class="author__image g-image g-image--loaded" width="180" alt="Mads Opheim"></noscript><!----><p class="author__intro">
+		I'm a tech lead, developer and test enthusiast.<br>
+		I'm at my best when I can make people awesome.
+	</p><p class="author__links"><a href="mailto:mads.opheim+web@gmail.com"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt="E-mail" class="icon"></a><a href="//twitter.com/madsopheim"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg" alt="Twitter" class="icon"></a><a href="//github.com/madsop/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt="GitHub" class="icon"></a><a href="//linkedin.com/in/madsopheim/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="LinkedIn" class="icon"></a></p></div></main><footer class="footer"><span class="footer__copyright">© 2023. </span><span class="footer__links">Powered by <a href="//gridsome.org"> Gridsome </a></span></footer></div>
+    <script>window.__INITIAL_STATE__={"data":{"post":{"title":"Enterprise Kotlin - Kotlin and Jakarta EE","path":"\u002Fenterprise-kotlin-kotlin-and-jakarta-ee\u002F","date":"25. May 2023","description":"Kotlin is nice. Jakarta EE is nice. Let’s dive into how to make them play well together!","content":"\u003Cp\u003E\u003Cem\u003ENote: this blog post is also published\non \u003Ca href=\"https:\u002F\u002Fmedium.com\u002Fcompendium\u002Fenterprise-kotlin-kotlin-and-jakarta-ee-9b9d73c8268e\"\u003Ethe Computas blog\u003C\u002Fa\u003E.\u003C\u002Fem\u003E\u003C\u002Fp\u003E\n\u003Cp\u003E\u003Cimg class=\"g-image g-image--lazy g-image--loading\" src=\"data:image\u002Fsvg+xml,%3csvg fill='none' viewBox='0 0 1000 300' xmlns='http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg' xmlns:xlink='http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxlink'%3e%3cdefs%3e%3cfilter id='__svg-blur-9102fd24c6632258446af0365d4cf948'%3e%3cfeGaussianBlur in='SourceGraphic' stdDeviation='40'\u002F%3e%3c\u002Ffilter%3e%3c\u002Fdefs%3e%3cimage x='0' y='0' filter='url(%23__svg-blur-9102fd24c6632258446af0365d4cf948)' width='1000' height='300' xlink:href='data:image\u002Fpng%3bbase64%2ciVBORw0KGgoAAAANSUhEUgAAAEAAAAATCAYAAAAgcwuHAAAACXBIWXMAAAsSAAALEgHS3X78AAAHuUlEQVRYw91Ye3BUVx0%2b97Hv3bxDkk02u7xbLVqVdnx0CkVbLeo\u002FJbUZLErVYm0VH%2bVRQSk4xqkTII9CRyklYGSkA0ka9p57NzEJgVK17ajjjB3bf0RrRWYcx9HOCEn2nJ\u002Ffvedks7GM0\u002F4JmTlzzz33vL7v9\u002F0eG8be5p8cnnvK53TfjRiz34vjrUH\u002FPy\u002Ffx667Px8wnVR9GmCGAp806MAsEXaPdMz3BX1uGn8dX3cdgR8ss\u002FggM\u002F3nzIhtUt4yFeBIB\u002F0yQtJJfSp4d5LWdQP%2b7x4sPqTBDzFbP1eh7VHgY1tpzCKajNJMIfNgQI6Xti%2bMfu46kf1wqW9p\u002F28C%2bMt475e8fh1NhIgcNk3nwjQ1kt0SxIJCjX1p7BonAH7uW3o%2b%2bEGjGmN\u002FoDFG8pTxqnSsy%2bQZIMCYoufDdGVk0TZ\u002FnijUWH8b23ANW35Y%2bb0Gr\u002Fz85ywM8C\u002FSOMAfYZcR\u002FIgKJvzeFIECQMB0ofmRwAUKDfbF8bZrmIA5nzfKAqFHEwD\u002FM8j\u002FMSbkQWNGjlpC5g0JBRRpHGR49r06I1ybQfBivizXAzz9sQT%2beAD%2bBMA\u002FzopyC5OyD6ALFhQAArhBSH1F6cZu1rWBKXnCQHYwSwS6lindsOrzCgTKpcE3cuLIGv78SKmukNwOiCee9FOqCYVZGEOrNKTTYBA3Lbif5T9FgRlXBu7EHgmTuM2Eu8AoutVsNh1LbmCebq6F9biHY%2bLdUns4sasXOjSoc\u002F0A6\u002FVlT6fYFbmHzdB29HdAASchfc93AUPQiE9A6ILwlkXVwYk55fAogJSd4UZL3yg\u002FpzD1LWSUEWa87Xg1dhUV85jxjqy\u002FMPdDZqf62ZunQn4ANLUKdgUBb5BNyQ4NHg39ItiF5QMCZmgSTx4%2bpCxqq1TJk0swtroM0Cewpl59q2ya9hbdrUi4CRaJboAFq7UCPgAyVUGVb4K1rXuggK1QwHbJaxZLp%2b4WnPsdWO9LeO6AAtZowJ%2bmYTtU9BpuLHpVjWrMysLy35Qu%2bxaUsFN65s3khFaTY2Evewv22CydWCVrbPlRiYiH79kQ6LQ4aGyiAsA%2bx6blE2yKtgH8Trz78n8a8h%2bxJKTk%2bz8UAFfglbdr64dVMRTfCGAntdXrcKDEJR9W0q782Iy3\u002FJwiLHIALnC0TAXnQMB48M0zwiDtd1BRF9o2yVOjwm3YgDnfw5w3sG\u002FXzIhxKyrSd9FEFHcwPlh0sysFr7lBu8Dnce7rUOA3QMReEPZejLk4b4B46DG4zE48lb9kc53x3W3toeDgc%2bw%2bOgvA8O1ip0nFrQaJHbD6diZoFyvSsCXgT771p%2bmMb32rEKxzGXwsZmkC1oOAfnUR%2byGoYQIkHVMEVNwh3JZjwklsJCfszck2%2bW60EczlaMv02knp1GYUObFR6VmrdPU5Jk43J7Wb\u002FQAKGgX5nWp\u002Fnba58QDIOjLfNSwu3JoPv8UFspl9tZlc99aGTE9H36O3dV06nnqWDrEzAPwX2g0y9igF0DPw94IpIJ9pcmeDX3iF3twPfiFNwP0g4JgaD%2bfh7xnpVv1Y8vhNktfeiLELgRWdeH%2bZ3z4Oi7QTj7QD0A6952%2bkY\u002F8C838PN\u002FqJBrgAY2fhDk2QdwznODSUTeF5SrqphlJs4GYbzngTe4CcsHu5cEsSY0Mg9TW084InvxtMTGe7g4BRv7A3ns51nU42HaZo\u002FeFXmjK9fO3KRw8fbf9Izxubq35Knew8jbJLQVCE5emsDQJim9RhiKpuZI5pJ\u002F4ZSK1P8gX1APQv1AgHhVv5Z1gE\u002FtyagxouCq%2bqWToVYyBlvY4fLxe9ikLRrXPRf0GNWc%2bj\u002F35Y\u002FDhI%2bbomoBHET4rTC%2bLE42ukE\u002F73jFexF2D\u002FgdY2R6j5AO4XuBe1N8yOOSBq1VsU0JLdX0pZmUVdJ7JLnqH0wqeoPttHyeY%2bSqQP\u002Fakue6C\u002F7a5Hvn1%2b3\u002FIvg1VYM7JFXwjpplL\u002FMKreCBXAXyO\u002FAuvwwcguvJ8QbvJWnyzIdZJ4zdrpwvIxDfAO\u002FHj6Neatw\u002FeXBK%2b4E77%2bUazFWOzjUNpZmWfN0q1oxtjrGKvFeVU4\u002F7ciX1%2bJvZ\u002FFWoCP%2bcFzN%2bYUygj4As57RXipTwo38ZDwKkC8iThS0St4HdRR%2b1nB61OsaeH%2bYEFztisAcTf7ogFVvNiy%2bAi15LpfzS3q3LN0yfdXt%2ba6ljM2gUhOpULnnwM%2b%2bKW%2bVFXa5PEP4UL90k18TUXy1CaZr2qdnS94FARV3zY12rj%2b6Gsv6TVJEJVEZA6vmVNQ5Vqo4y4oCRkiklbzUl8Rbmolef6Z0QcFb6yWvOqryBYq\u002FZ68AbVCbLPg1QkdfOFq8YOY%2byRaH%2b50O0i6F\u002F2n0Z5CvNqPmqSWpTO9UMA%2b5Q65\u002FZZ%2bvgdtd2tmb%2bSqufcMs4qnIya9kCoLMPb8OUNlwceJ2eQk5uVmepKxaSf5P\u002FkbBc9Vfk4DiPl\u002Fq1fsP39%2b9J3VAQ25biigWyuhd97idLbHTuf2mU25Hl8ZRnOug61Ydr\u002F6GOtA4bQYbJtstgiCJW3pxi0xsiKo0GBJ\u002FQ%2bUkH8xBMpqY2okbWr3CcCpFpqrHJ1ksC6oEvOhWRIs4f8TxvX7IVPwBr%2bm8AMv02rz97cET%2bn5YV8pNuZa6k6oMh3bVGNREB3HeIr9Fx4KsXvOjnjLAAAAAElFTkSuQmCC' \u002F%3e%3c\u002Fsvg%3e\" width=\"1000\" alt=\"ates\" data-srcset=\"\u002Fassets\u002Fstatic\u002Fjakarta-ee-logo.82a2fbd.0c7124895fc292d6ee29a497d914858e.png 480w, \u002Fassets\u002Fstatic\u002Fjakarta-ee-logo.97c148e.0c7124895fc292d6ee29a497d914858e.png 1000w\" data-sizes=\"(max-width: 1000px) 100vw, 1000px\" data-src=\"\u002Fassets\u002Fstatic\u002Fjakarta-ee-logo.97c148e.0c7124895fc292d6ee29a497d914858e.png\"\u003E\u003Cnoscript\u003E\u003Cimg class=\"g-image g-image--lazy g-image--loaded\" src=\"\u002Fassets\u002Fstatic\u002Fjakarta-ee-logo.97c148e.0c7124895fc292d6ee29a497d914858e.png\" width=\"1000\" alt=\"ates\"\u003E\u003C\u002Fnoscript\u003E\n\u003Csmall\u003E\u003Cem\u003EThe Jakarta EE logo, by the Eclipse Foundation\u003C\u002Fem\u003E\u003C\u002Fsmall\u003E\u003C\u002Fp\u003E\n\u003Cbr \u002F\u003E\nIf you look at the documentation on the Kotlin web page (\u003Ca href=\"https:\u002F\u002Fkotlinlang.org\u002Fdocs\u002Fserver-overview.html\"\u003E\nKotlin for server side\u003C\u002Fa\u003E), you’ll find a list of available\nframeworks for running Kotlin server-side, a list currently consisting of Spring, Vert.x, Ktor, kotlinx.html, Micronaut,\nhttp4k and Javalin.\n\u003Cp\u003ENone of these support \u003Ca href=\"https:\u002F\u002Fjakarta.ee\"\u003EJakarta EE\u003C\u002Fa\u003E, although for instance Spring is based on several\nJakarta EE specifications, but it’s\nfar from a full implementation.\u003C\u002Fp\u003E\n\u003Cp\u003EThis raises two questions to me: 1. can you use Jakarta EE and Kotlin in combination, and 2. should you?\u003C\u002Fp\u003E\n\u003Cp\u003EThe Kotlin docs state that “Kotlin is a great fit for developing server-side applications. It allows you to write\nconcise and expressive code while maintaining full compatibility with existing Java-based technology\nstacks” (\u003Ca href=\"https:\u002F\u002Fkotlinlang.org\u002Fdocs\u002Fserver-overview.html\"\u003E\nKotlin for server side\u003C\u002Fa\u003E), so the answer to whether it’s possible clearly is yes. That’s with a technocratic\nperspective to the concept of \u003Cem\u003Epossible\u003C\u002Fem\u003E, so the question should be rephrased into is it possible \u003Cem\u003Ewithin\nsensible time, space and hassle?\u003C\u002Fem\u003E\u003C\u002Fp\u003E\n\u003Cp\u003EWe’ll answer that by starting to walk the path there and see what happens. The first step down that road is picking a\nruntime that supports Jakarta EE, and getting that one up and running.\u003C\u002Fp\u003E\n\u003Cp\u003EThat gives us quite some options, including RedHat WildFly, Payara Server, Apache TomEE and Eclipse GlassFish. Let’s\nchoose OpenLiberty from IBM for now, as that’s a runtime currently supporting the newest Jakarta EE, 10.\u003C\u002Fp\u003E\n\u003Cp\u003EWhen getting started with OpenLiberty, the obvious place to start is at the Get started section of the OpenLiberty web\npage. From here, we can download the necessary build and configuration files that give us a starting point, be it with\nMaven or Gradle.\u003C\u002Fp\u003E\n\u003Cp\u003EOnce we’ve got OpenLiberty started up and running, it’ll be running Java code. Nice, but we’re interested in Kotlin, so\nthe next step is to transition over to running Kotlin code. Changing the code is fast, you can even use IntelliJ to\nautomatically convert the demo code into Kotlin. However, we’ll also need a dependency to the Kotlin compiler, so that\nyou can use the Kotlin language, and your code can actually compile:\u003C\u002Fp\u003E\n\u003Cpre class=\"language-text\"\u003E\u003Ccode class=\"language-text\"\u003E&lt;dependency&gt;  \n    &lt;groupId&gt;org.jetbrains.kotlin&lt;\u002FgroupId&gt; \n    &lt;artifactId&gt;kotlin-stdlib&lt;\u002FartifactId&gt;\n    &lt;version&gt;${kotlin.version}&lt;\u002Fversion&gt;  \n&lt;\u002Fdependency&gt;\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003EIn addition, you’ll need the \u003Cem\u003Ekotlin-maven-plugin\u003C\u002Fem\u003E for your build to be able to parse the Kotlin classes. Towards\nthe end\nof this article, you’ll find the complete config required to run your Jakarta EE application.\u003C\u002Fp\u003E\n\u003Cp\u003EThat’ll make your code compile, which certainly is a good start, but you will inevitably run into issues when starting\nyour application.\u003C\u002Fp\u003E\n\u003Cp\u003EWhy is that? In Kotlin, all classes and methods are by default final. Thus, they cannot be extended or overridden by\nsubclasses, or by any kind of proxy. In the CDI specification, though, it’s explicitly stated that beans must be\neligible for overriding. As CDI is in the core of Jakarta EE, and used by many of the other specifications as well, this\nclearly has the potential of being a dealbreaker.\u003C\u002Fp\u003E\n\u003Cp\u003EHowever, there are two solutions to this problem:\u003C\u002Fp\u003E\n\u003Col\u003E\n\u003Cli\u003E\u003Cem\u003Eopen\u003C\u002Fem\u003E is a keyword in Kotlin, making the annotated class or method non-final. This solution is problematic if\nyou’re\nusing constructor injection though, as the generated get methods will be final.\u003C\u002Fli\u003E\n\u003Cli\u003EThe \u003Cem\u003Eall-open\u003C\u002Fem\u003E plugin which you can include in your pom.xml or build.gradle. This plugin will ensure that all\nclasses\nannotated with one of the annotations you specify will be made non-final. You can then make for instance all\n@ApplicationScoped or @RequestScoped beans non-final, while sticking to the default Kotlin behaviour for your other\nclasses. Note that you’ll have to specify the full namespace of the annotations, so make sure to use the Jakarta\nnamespace if you’re on Jakarta EE 9 or newer, or javax if you’re still on Jakarta EE 8.\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Cp\u003EThe next issue you’ll run into is that you’ll have to create no-args constructors for your beans as well. You can of\ncourse do that by hand, but it quickly becomes cumbersome. You’ll also end up with lots of wiring code that CDI should\nbe taking care of without your intervention. The same goes when using Jakarta Persistence, which requires entities to\nhave a no-args constructor. Luckily, there’s a compiler plugin at your service also for these issues — the \u003Cem\u003E\nno-arg\u003C\u002Fem\u003E\nplugin. If you’re using JPA, there’s a specialized version of it you should use instead — simply named jpa.\u003C\u002Fp\u003E\n\u003Cp\u003EWith these problems solved, you will now be able to run Jakarta EE for your Kotlin code.\nOn \u003Ca href=\"https:\u002F\u002Fgithub.com\u002Fmadsop\u002Fenterprise-kotlin\"\u003Emy GitHub\u003C\u002Fa\u003E, you can find a\ncode example and see how I’ve done it, where you through the commits can follow along.\u003C\u002Fp\u003E\n\u003Cp\u003EHowever, if you run into some issues, the existing documentation is scarce. Here are the (few!) relevant blog posts and\narticles I’ve found useful while doing my research:\u003C\u002Fp\u003E\n\u003Cp\u003E\u003Ca href=\"https:\u002F\u002Fgithub.com\u002Fgcharters\u002FKotlin-REST-Service\"\u003EGitHub — gcharters\u002FKotlin-REST-Service: How to write a simple\nKotlin REST service on Open Liberty\u003C\u002Fa\u003E\u003C\u002Fp\u003E\n\u003Cp\u003E\u003Ca href=\"https:\u002F\u002Frieckpil.de\u002Fhowto-write-java-ee-applications-with-kotlin\u002F\"\u003EGuide to writing Java EE applications with\nKotlin — rieckpil\u003C\u002Fa\u003E\u003C\u002Fp\u003E\n\u003Cp\u003E\u003Ca href=\"https:\u002F\u002Fwww.baeldung.com\u002Fkotlin\u002Fjava-ee-kotlin-app\"\u003EJava EE Application with Kotlin | Baeldung on Kotlin\u003C\u002Fa\u003E\u003C\u002Fp\u003E\n\u003Cp\u003ENote that several of these links talk about \u003Cem\u003EJava EE\u003C\u002Fem\u003E, even though they are published as recently as this year,\nwhile Java\nEE became Jakarta EE in 2019.\u003C\u002Fp\u003E\n\u003Cp\u003ENow you’re ready to unleash the productivity boost from combining Jakarta EE with Kotlin. Enjoy, and happy coding!\u003C\u002Fp\u003E\n\u003Cp\u003EAs promised earlier on, here’s the full config you will need:\u003C\u002Fp\u003E\n\u003Cpre class=\"language-text\"\u003E\u003Ccode class=\"language-text\"\u003E&lt;plugin&gt;\n   &lt;groupId&gt;org.jetbrains.kotlin&lt;\u002FgroupId&gt;\n   &lt;artifactId&gt;kotlin-maven-plugin&lt;\u002FartifactId&gt;\n   &lt;version&gt;${kotlin.version}&lt;\u002Fversion&gt;\n   &lt;executions&gt;\n       &lt;execution&gt;\n           &lt;id&gt;compile&lt;\u002Fid&gt;\n           &lt;phase&gt;process-sources&lt;\u002Fphase&gt;\n           &lt;goals&gt;\n               &lt;goal&gt;compile&lt;\u002Fgoal&gt;\n           &lt;\u002Fgoals&gt;\n           &lt;configuration&gt;\n               &lt;sourceDirs&gt;\n                   &lt;source&gt;src\u002Fmain\u002Fkotlin&lt;\u002Fsource&gt;\n               &lt;\u002FsourceDirs&gt;\n           &lt;\u002Fconfiguration&gt;\n       &lt;\u002Fexecution&gt;\n       &lt;execution&gt;\n           &lt;id&gt;test-compile&lt;\u002Fid&gt;\n           &lt;phase&gt;test-compile&lt;\u002Fphase&gt;\n           &lt;goals&gt;\n               &lt;goal&gt;test-compile&lt;\u002Fgoal&gt;\n           &lt;\u002Fgoals&gt;\n       &lt;\u002Fexecution&gt;\n   &lt;\u002Fexecutions&gt;\n   &lt;dependencies&gt;\n       &lt;dependency&gt;\n           &lt;groupId&gt;org.jetbrains.kotlin&lt;\u002FgroupId&gt;\n           &lt;artifactId&gt;kotlin-maven-noarg&lt;\u002FartifactId&gt;\n           &lt;version&gt;${kotlin.version}&lt;\u002Fversion&gt;\n       &lt;\u002Fdependency&gt;\n       &lt;dependency&gt;\n           &lt;groupId&gt;org.jetbrains.kotlin&lt;\u002FgroupId&gt;\n           &lt;artifactId&gt;kotlin-maven-allopen&lt;\u002FartifactId&gt;\n           &lt;version&gt;${kotlin.version}&lt;\u002Fversion&gt;\n       &lt;\u002Fdependency&gt;\n   &lt;\u002Fdependencies&gt;\n\n\n   &lt;configuration&gt;\n       &lt;javaParameters&gt;true&lt;\u002FjavaParameters&gt;\n       &lt;jvmTarget&gt;17&lt;\u002FjvmTarget&gt;\n       &lt;compilerPlugins&gt;\n           &lt;plugin&gt;all-open&lt;\u002Fplugin&gt;\n           &lt;plugin&gt;jpa&lt;\u002Fplugin&gt;\n       &lt;\u002FcompilerPlugins&gt;\n       &lt;pluginOptions&gt;\n           &lt;option&gt;all-open:annotation=jakarta.ws.rs.Path&lt;\u002Foption&gt;\n           &lt;option&gt;all-open:annotation=jakarta.enterprise.context.ApplicationScoped&lt;\u002Foption&gt;\n           &lt;option&gt;all-open:annotation=jakarta.persistence.Entity&lt;\u002Foption&gt;\n           &lt;option&gt;all-open:annotation=jakarta.ws.rs.ApplicationPath&lt;\u002Foption&gt;\n           &lt;option&gt;jpa:annotation=jakarta.ws.rs.Path&lt;\u002Foption&gt;\n           &lt;option&gt;jpa:annotation=jakarta.enterprise.context.ApplicationScoped&lt;\u002Foption&gt;\n       &lt;\u002FpluginOptions&gt;\n   &lt;\u002Fconfiguration&gt;\n&lt;\u002Fplugin&gt;\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n"}},"context":{}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/assets/js/app.88b6f893.js" defer></script><script src="/assets/js/page--src--templates--post-vue.0ec352ed.js" defer></script><script src="/assets/js/page--src--pages--index-vue~page--src--templates--post-vue.750327bd.js" defer></script>
+  </body>
+</html>
