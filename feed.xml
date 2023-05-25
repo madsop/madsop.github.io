@@ -4,7 +4,7 @@
         <title>Mads Opheim</title>
         <link>http://madsopheim.com/</link>
         <description>Feed from the blog of Mads Opheim</description>
-        <lastBuildDate>Thu, 25 May 2023 11:20:36 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 25 May 2023 13:38:22 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="http://madsopheim.com/feed.xml" rel="self" type="application/rss+xml"/>
@@ -21,156 +21,7 @@ on <a href="https://medium.com/compendium/enterprise-kotlin-kotlin-and-jakarta-e
 <small><em>The Jakarta EE logo, by the Eclipse Foundation</em></small>
 
 <br />
-If you look at the documentation on the Kotlin web page (<a href="https://kotlinlang.org/docs/server-overview.html">
-Kotlin for server side</a>), you’ll find a list of available
-frameworks for running Kotlin server-side, a list currently consisting of Spring, Vert.x, Ktor, kotlinx.html, Micronaut,
-http4k and Javalin.
-
-None of these support <a href="https://jakarta.ee">Jakarta EE</a>, although for instance Spring is based on several
-Jakarta EE specifications, but it’s
-far from a full implementation.
-
-This raises two questions to me: 1. can you use Jakarta EE and Kotlin in combination, and 2. should you?
-
-The Kotlin docs state that “Kotlin is a great fit for developing server-side applications. It allows you to write
-concise and expressive code while maintaining full compatibility with existing Java-based technology
-stacks” (<a href="https://kotlinlang.org/docs/server-overview.html">
-Kotlin for server side</a>), so the answer to whether it’s possible clearly is yes. That’s with a technocratic
-perspective to the concept of <em>possible</em>, so the question should be rephrased into is it possible <em>within
-sensible time, space and hassle?</em>
-
-We’ll answer that by starting to walk the path there and see what happens. The first step down that road is picking a
-runtime that supports Jakarta EE, and getting that one up and running.
-
-That gives us quite some options, including RedHat WildFly, Payara Server, Apache TomEE and Eclipse GlassFish. Let’s
-choose OpenLiberty from IBM for now, as that’s a runtime currently supporting the newest Jakarta EE, 10.
-
-When getting started with OpenLiberty, the obvious place to start is at the Get started section of the OpenLiberty web
-page. From here, we can download the necessary build and configuration files that give us a starting point, be it with
-Maven or Gradle.
-
-Once we’ve got OpenLiberty started up and running, it’ll be running Java code. Nice, but we’re interested in Kotlin, so
-the next step is to transition over to running Kotlin code. Changing the code is fast, you can even use IntelliJ to
-automatically convert the demo code into Kotlin. However, we’ll also need a dependency to the Kotlin compiler, so that
-you can use the Kotlin language, and your code can actually compile:
-
-    <dependency>  
-        <groupId>org.jetbrains.kotlin</groupId> 
-        <artifactId>kotlin-stdlib</artifactId>
-        <version>${kotlin.version}</version>  
-    </dependency>
-
-In addition, you’ll need the <em>kotlin-maven-plugin</em> for your build to be able to parse the Kotlin classes. Towards
-the end
-of this article, you’ll find the complete config required to run your Jakarta EE application.
-
-That’ll make your code compile, which certainly is a good start, but you will inevitably run into issues when starting
-your application.
-
-Why is that? In Kotlin, all classes and methods are by default final. Thus, they cannot be extended or overridden by
-subclasses, or by any kind of proxy. In the CDI specification, though, it’s explicitly stated that beans must be
-eligible for overriding. As CDI is in the core of Jakarta EE, and used by many of the other specifications as well, this
-clearly has the potential of being a dealbreaker.
-
-However, there are two solutions to this problem:
-
-1. <em>open</em> is a keyword in Kotlin, making the annotated class or method non-final. This solution is problematic if
-   you’re
-   using constructor injection though, as the generated get methods will be final.
-
-2. The <em>all-open</em> plugin which you can include in your pom.xml or build.gradle. This plugin will ensure that all
-   classes
-   annotated with one of the annotations you specify will be made non-final. You can then make for instance all
-   @ApplicationScoped or @RequestScoped beans non-final, while sticking to the default Kotlin behaviour for your other
-   classes. Note that you’ll have to specify the full namespace of the annotations, so make sure to use the Jakarta
-   namespace if you’re on Jakarta EE 9 or newer, or javax if you’re still on Jakarta EE 8.
-
-The next issue you’ll run into is that you’ll have to create no-args constructors for your beans as well. You can of
-course do that by hand, but it quickly becomes cumbersome. You’ll also end up with lots of wiring code that CDI should
-be taking care of without your intervention. The same goes when using Jakarta Persistence, which requires entities to
-have a no-args constructor. Luckily, there’s a compiler plugin at your service also for these issues — the <em>
-no-arg</em>
-plugin. If you’re using JPA, there’s a specialized version of it you should use instead — simply named jpa.
-
-With these problems solved, you will now be able to run Jakarta EE for your Kotlin code.
-On <a href="https://github.com/madsop/enterprise-kotlin">my GitHub</a>, you can find a
-code example and see how I’ve done it, where you through the commits can follow along.
-
-However, if you run into some issues, the existing documentation is scarce. Here are the (few!) relevant blog posts and
-articles I’ve found useful while doing my research:
-
-<a href="https://github.com/gcharters/Kotlin-REST-Service">GitHub — gcharters/Kotlin-REST-Service: How to write a simple
-Kotlin REST service on Open Liberty</a>
-
-<a href="https://rieckpil.de/howto-write-java-ee-applications-with-kotlin/">Guide to writing Java EE applications with
-Kotlin — rieckpil</a>
-
-<a href="https://www.baeldung.com/kotlin/java-ee-kotlin-app">Java EE Application with Kotlin | Baeldung on Kotlin</a>
-
-Note that several of these links talk about <em>Java EE</em>, even though they are published as recently as this year,
-while Java
-EE became Jakarta EE in 2019.
-
-Now you’re ready to unleash the productivity boost from combining Jakarta EE with Kotlin. Enjoy, and happy coding!
-
-As promised earlier on, here’s the full config you will need:
-
-    <plugin>
-       <groupId>org.jetbrains.kotlin</groupId>
-       <artifactId>kotlin-maven-plugin</artifactId>
-       <version>${kotlin.version}</version>
-       <executions>
-           <execution>
-               <id>compile</id>
-               <phase>process-sources</phase>
-               <goals>
-                   <goal>compile</goal>
-               </goals>
-               <configuration>
-                   <sourceDirs>
-                       <source>src/main/kotlin</source>
-                   </sourceDirs>
-               </configuration>
-           </execution>
-           <execution>
-               <id>test-compile</id>
-               <phase>test-compile</phase>
-               <goals>
-                   <goal>test-compile</goal>
-               </goals>
-           </execution>
-       </executions>
-       <dependencies>
-           <dependency>
-               <groupId>org.jetbrains.kotlin</groupId>
-               <artifactId>kotlin-maven-noarg</artifactId>
-               <version>${kotlin.version}</version>
-           </dependency>
-           <dependency>
-               <groupId>org.jetbrains.kotlin</groupId>
-               <artifactId>kotlin-maven-allopen</artifactId>
-               <version>${kotlin.version}</version>
-           </dependency>
-       </dependencies>
-    
-    
-       <configuration>
-           <javaParameters>true</javaParameters>
-           <jvmTarget>17</jvmTarget>
-           <compilerPlugins>
-               <plugin>all-open</plugin>
-               <plugin>jpa</plugin>
-           </compilerPlugins>
-           <pluginOptions>
-               <option>all-open:annotation=jakarta.ws.rs.Path</option>
-               <option>all-open:annotation=jakarta.enterprise.context.ApplicationScoped</option>
-               <option>all-open:annotation=jakarta.persistence.Entity</option>
-               <option>all-open:annotation=jakarta.ws.rs.ApplicationPath</option>
-               <option>jpa:annotation=jakarta.ws.rs.Path</option>
-               <option>jpa:annotation=jakarta.enterprise.context.ApplicationScoped</option>
-           </pluginOptions>
-       </configuration>
-    </plugin>]]></content:encoded>
+If you look at the documentation on the Kotlin web page (<a href="https://kotlinlang.org/docs/server-overview.html]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[How to make your own scraper and then forget about it?]]></title>
@@ -181,20 +32,7 @@ As promised earlier on, here’s the full config you will need:
 
 I've done that on a couple of pages - most notably tracking how bonus point awards change on the Norwegian bonus point system Viatrumf. Feel free to <a href="https://viatrumf.madsopheim.com/">check it out</a>.
 
-This solution consists of three parts:
-- a scraper application running every morning
-- a frontend displaying the results to you as an end user
-- a simple backend-for-frontend
-
-The scraper is the distinguishing part here. It's basically a serverless Python application running on Google Cloud Functions, set to run every morning through a cron job, which GCP implements through pub-sub.
-
-The function, which you can find <a href="https://github.com/madsop/viatrumf-scraper">the source code for at Github</a>, uses the library Scrapy to fetch the entire HTML from Viatrumf, and then parse the interesting elements from it.
-
-I did some initial work to figure out how they have structured they HTML, and then used Scrapy to make a straight-forward parsing of that. Then, I converted it into a Python object, and from there on, I use the Firebase library to save each entry into Google Cloud Firestore.
-
-I've chosen a structure where I put each entry into a new document every day. This way, I have all the data up until now available, and when building the frontend and backend for accessing and parsing the data, I can use them to show trends, create graphs, show differences et cetera.
-
-PS: Even though I've done this in GCP, you can perfectly fine implement it at your cloud of choice.]]></content:encoded>
+This solution]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Switching appservers]]></title>
@@ -203,17 +41,7 @@ PS: Even though I've done this in GCP, you can perfectly fine implement it at yo
             <pubDate>Fri, 18 Oct 2019 00:00:00 GMT</pubDate>
             <content:encoded><![CDATA[With <a href="http://madsopheim.com/microservices-with-microprofile/">MicroProfile</a>, you can switch application servers for your Java or Kotlin application without touching your code at all.
 
-That means that the cost of switching servers shrinks dramatically, and is codewise limited to configuration of build files (like pom.xml for Maven or build.gradle), container deployment (like Dockerfile or Maven-plugin) and CI/CD (like Jenkinsfile). This is of course oversimplified, as there are also costs on gaining knowledge on the operations parts and so on.
-
-Nevertheless, all your Java code can still be the same. Let's have a look at an example. We have a very simple microservice, which I wrote for a side project, which has the responsibility of giving out the current time, and expose that through a REST API.
-
-The source code for the microservice is available at <a href="https://github.com/mehmandarov/microprofile-iot/tree/master/timeservice-v2">GitHub</a>, along with pom files for two different application servers. There, you'll see that one pom file is tailored for <a href="https://thorntail.io">Thorntail</a>, while the other is made for <a href="https://quarkus.io">Quarkus</a>.
-
-You can check out the code yourself and see that it gives exactly the same result when you run _mvn clean install_ as when you run _mvn clean install -f thorntail-pom.xml_. 
-
-Granted, the pom files are a bit long and can seem massive, but almost all of it is what you get from the official starters. Luckily, there's an effort currently being made in the MicroProfile community introducing <a href="https://microprofile.io/2019/04/18/build-your-microprofile-apps-quickly-with-boost/">Boost</a>, with the ambition of dramatically shrinking the differences between these pom files, so that you ideally the only change you'll have to make will be on the single line stating which application server to use.
-
-This very narrow microservice leverages only a subset of the features of MicroProfile, namely CDI, JAX-RS, JSON-B, OpenAPI and MP Config. however, hardly anything would be different if we've used all of it. As not everything about the configuration is part of the MicroProfile standard, I guess that you'd have to change some config files for JWT propagation and maybe also OpenTracing, but that shouldn't be much.]]></content:encoded>
+That means that the cost of switching servers shrinks dramatically, and is codewise limited to configuration of build files (like pom.xml for Maven or build.gradle), container deployment (like Dockerfile or Maven-plugin) and]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Microservices with Microprofile]]></title>
@@ -224,29 +52,7 @@ This very narrow microservice leverages only a subset of the features of MicroPr
 
 Sounds too good to be true? It’s not, it’s <a href="https://microprofile.io">MicroProfile</a>.
 
-Switching from TomEE to Payara Micro to OpenLiberty to Quarkus does only require changes in the configuration, pom files and such, you can leave your application code pretty much untouched. These application servers have in common that they all implement the MicroProfile standard.
-
-What is MicroProfile then? Easily said, it’s Jakarta EE for microservices. MicroProfile is to microservices what Jakarta EE is to monoliths. It’s a collection of those tools from Jakarta EE that is suitable for a typical REST, JSON based architecture, including JAX-RS and CDI. In addition, there are several features specifically made for MicroProfile, such as config and health check.
-
-Where their functionalities overlap, MicroProfile uses the same implementations as Jakarta EE. Hence, the threshold for changing MicroProfile code is low if you're already familiar with Jakarta EE.
-
-Just like Jakarta EE, MicroProfile is a standard. A lot of vendors provide their own implementation, including the likes of RedHat, IBM, Payara and Tomitribe, but also smaller companies like Kumuluz. It's also backed by Microsoft, Fujitsu and a lot of other companies that don't provide their own application server, but do support the initiative.
-
-This means that you can keep exactly the same Java code when you switch from one application server to the other, changing only the configuration files. This way, the risk of doing a suboptimal appserver choice early on is minimized.
-
-It also means that you can switch projects and find familiar code concepts and structures in the new project as in the previous, quite similar to the situation in for instance the current Angular or React ecosystem.	
-
-A surprisingly big part of MicroProfile is concerning operations, so it’s easy to see that it’s being created in the age of DevOps. The upcoming features in the next version is about reactive programming, so it’s fair to say that the development roadmap is somewhat hype-driven.
-
-However, most application servers lets you choose freely which features to bring into your system, and the unused features won’t even be included, using OSGi technology.
-
-Another thing that's fascinating with MicroProfile, is the diverse and broad backing they have from large application server creators such as IBM and Tomitribe, unrelated huge companies like Fujitsu and Microsoft, and lesser-known application server creators like Kumuluz.
-
-Along with colleague <a href="https://mehmandarov.com">Rustam Mehmandarov</a>, I've used MicroProfile to create a system, where our example domain is controlling the lights in our company's office.
-
-This system currently has four microservices, all using MicroProfile, each running on either Thorntail, Quarkus or OpenLiberty. There, you can see how it works in real, working code, and how little code that is actually needed to utilize the different features. It’s available at <a href="https://github.com/mehmandarov/microprofile-iot/issues">GitHub</a> (and yes, we do appreciate pull requests)
-
-You can also see us giving a talk about MicroProfile and this system over on <a href="https://www.youtube.com/watch?v=Kp5NRcbDvOk">YouTube</a>.]]></content:encoded>
+Switching from TomEE to Payara Micro to OpenLiberty to Quarkus does on]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[White male privilege]]></title>
@@ -259,39 +65,7 @@ An industry that is predominantly consisting of men, both among the developers a
 We're also an industry that is growing both in Norway and globally, 
 and we're in desperate need of more people.
 
-At the same time, it's an industry with unhealthy ideals of _rockstar developers_, people checking work e-mail during vacations, long hours et cetera.
-
-And it's an industry blind of its privileges.
-
-Most people in tech are men. In Norway, most tech people are white men. 
-We're also typically upper middle class, and we're privileged in so many senses.
-
-Sexual harassment, discrimination and the likes tend to not be directed at us. 
-So I, and most white male developers with me, could respond with "I've never experienced that, so that's not a problem",
-to whatever negative experience shared by someone from an underrepresented group in the industry.
-
-When we do that, we accomplish several things:
-<ol>
-    <li>We undermine the experience of the person sharing it with us</li>
-    <li>We reduce the probability of people being brave enough to share problems with us the next time</li>
-    <li>We waste the opportunity to learn</li>
-    <li>We waste the opportunity to improve the situation</li>
-    <li>We make the industry an even less appealing place to be for those with less privileges than us</li>
-    <li>And more</li>
-</ol>
-
-Several women have spoken brilliantly of this. Here are just a few examples. 
-
-Set aside some time and just listen. That's what we white men should do when women share what we remain spared of.
-Listen carefully. Shut up. Believe them. It's not all about you. Their experiences are real. 
-
-Thank them for sharing, _listen_, and think how you can be a part of the solution, not a part of the problem.
-
-<ul>
-<li><a href="https://2019.boosterconf.no/talks/1262">Diversity makes a difference - Tannaz Roshandel and Line Moseng. A lightning talk, but great, informative and consise</a></li>
-<li><a href="https://www.youtube.com/watch?v=02gpZuK5gF8">Deconstructing privilege - Patricia Aas</a>. 49 minutes filled with thought-provoking examples</li>
-<li><a href="https://slides.com/tatianamac/privilege-defines-performance-shared#/">Tatiana Mac</a> (currently only slides, but the recording will eventually be made available. <a href="https://twitter.com/sambreed/status/1113978458311254016">According to Twitter</a>, it's an amazing talk</li>
-</ul>]]></content:encoded>
+At the same time, it's an industry with unhealthy ideals of _rockstar developers_, people checking work e-mail during vacati]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Tips for finding your next conference]]></title>
@@ -305,29 +79,7 @@ Some of us even so that we're allowed to spend time going to conferences or meet
 
 I'm grateful for being in such a position. I'm working as tech lead in my job, but I'm also speaking every now and then.
   
- If you're in the IT sector and want to become a speaker yourself (and you should, it's fun!), it might be challenging to find possible conferences. 
- After all, there are many people wanting to share a message, and the program committees typically have luxury problems choosing talks.
- 
- Where do I head to find places to apply for speaking?
-
- - <a href="https://www.meetup.com/">Meetup</a>: There are a lot of meetups out there, and most put a lot of work into finding speakers. Chances are, they'll be happy if you pitch your idea.  
- - <a href="https://cfpcalendar.com/">CFP calendar</a>
- - Twitter:
-   - <a href="https://twitter.com/cfp_land">cfp_land</a>
-   - <a href="https://twitter.com/cfp_exchange">cfp_exchange</a>
-   - <a href="https://twitter.com/ItCfpList">ItCfpList</a>
-   - <a href="https://twitter.com/AppCfp">AppCfp</a>
-   - Following people I admire/look up to and see where they're speaking
-- Lists other speakers make of where they're speaking/wanting to speak
-    - <a href="https://github.com/dmitryvinn/it-conferences">https://github.com/dmitryvinn/it-conferences</a>
-    - <a href="https://marcus-biel.com/java-conferences-2020">https://marcus-biel.com/java-conferences-2020</a>
-    - <a href="https://confs.tech/cfp">https://confs.tech/cfp</a>
-    - PaperCall's <a href="https://www.papercall.io/events">list of events</a>
-    - And my current favourite: <a href="https://callingallpapers.com">Calling all papers</a>. This one is even more meta, as it fetches from both PaperCall and Confs.tech.
-- The <a href="https://beta.voxxeddays.com/#/">Voxxed-series</a> (Devoxx/Voxxed Days) consists of a lot of conferences, usually of high quality 
-
-
-You'll be disappointed, by the way. The acceptance-rejection ratio tends to be at quite many rejections per acceptance. That's how it is, for must of us.]]></content:encoded>
+ If you're in ]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Test your legacy code]]></title>
@@ -340,66 +92,7 @@ You'll be disappointed, by the way. The acceptance-rejection ratio tends to be a
 
 Do you want tests for your code, but find it hard to get started? Or maybe you got it going, but ran into code you were not able to test?
 
-Testing code that was written without tests in mind can be challenging. The code tends to contain static calls, long methods and a high degree of tangling. Whether you label it legacy code or spaghetti code, these are common pitfalls.
-
-Luckily, there are lots of things you can do to get even that code under test.
-
-**Humans are creative, flexible and full of ideas.**
-We are bad at doing the exact same thing over and over. We become easily distracted and tired, and our mind starts to wander. We might quickly become bored, which makes us even less focused.
-
-A computer, on the other hand, is great at repetitive routine work. Let the computer handle the repeating parts, while we are freed to do more exploratory and challenging things.
-
-So let the computer do the automated testing. But how?
-
-**One mile at a time**
-
-The single biggest issue preventing testability is, as of my experience, tangling. The code is so tangled together that it is hard to change anything without putting the entire system at stake.
-
-The safest and typically best way to get your code under test is to do it one mile at a time. Each time you change some code, you make sure that you test it and improve the surrounding code a little bit as well. That way, you will always have a functioning system, where the quality is constantly improving.
-
-As a bonus, this tends to be a way of doing it that you will actually be allowed to do. It is not influencing budgets, the functional roadmap or any deadlines, and you can do it gradually.
-
-It requires you to be determined and patient, though, especially when you are figuring out how to test things you have not tested before. Be patient, be consistent and do not do stupid things.
-
-It can be tempting to “fix it all at once” in a big, major refactoring. This may sometimes be suitable. I do in most cases find it better to improve the code step by step, adhering to the boy scout rule: leave the code better than you found it. Write a test, improve a variable name, extract a method or find another way to improve it.
-
-This is a safe, easy way to refactor. It is also a way to refactor with low initial cost and very little risk.
-
-**Design and testability go hand in hand** Getting code under test has a lot of benefits by itself. A fascinating side effect is that it also tends to improve the design of your code. Adhering to principles like the Single responsibility principles or Inversion of control improves the design as well as testability. The same goes for good variable names or short methods.
-
-Extracting an interface might make your code easier to test, as it lowers the amount of things you have to consider and care about in every single test. Using dependency injection might make your code easier to test, as you can have total control over the code you are testing and which dependencies it uses - real version or a fake version, it is up to you in the test. Both of these are ways to untangle your code as well.
-
-On the other hand, some of the tricks to get code under test are slightly suboptimal to the design, at least in the short term. In Java, an example may be to change the visibility of a private method to package-protected, in order to be able to invoke it directly from your test. 
-
-While this in itself is a trade-off between design and testability, the need for it indicates that your code is not properly divided. This method, which you would prefer to make private, highlights that weakness and encourages you to fix it.
-
-You may also make use of other refactorings, as well as appropriate tools. Maybe you should reconsider the use of final in your code base, or introduce a tool such as Mockito? What is suitable for your project varies a lot, but there are many techniques you should have in your toolbox.
-
-**DRY**
-
-A very popular acronym among developers is DRY, Don’t repeat yourself. This principle deserves more traction in the testing community as well (while admittedly somewhat less traction among developers, one might say).
-
-This counts for how often you test every single part of your code manually. If you are testing all the corner cases of your logic manually in both test phase, system test phase and acceptance test phase, why do you do that? Do you really expect it to have change? Of course, it might make sense that you test that your components communicate properly, but it is a long way from that into testing every single quirk of the internal logic.
-
-**Share the knowledge**
-
-
-The same goes for know-how of how to test things. If you have figured out how to test a pattern from your code, share that knowledge with your colleagues, so that they do not have to invent that wheel once again. Getting legacy code under tests must be a task for the entire team, not just the most enthusiastic developer.
-
-That will also make it easier for you all to write tests, which in turn will increase the probability that every team member actually writes tests. This tends to be self-reinforcing, as you will become better at writing tests the more you do it, and thus, it will be easier for you to do it.
-
-It may also increase the quality of the test, as you are able to focus on the business logic rather than the instrumentation.
-
-Still, you will sometimes have to write a lot of test code per line of production code. Sometimes, it is hard to write those tests.
-
-Some code will always be harder to test than other code. That is not a reason to skip it altogether, it is merely a reason to figure out how to do it, and then do some changes so that it will be easier the next time around.
-
-Write a new convenience method. Adjust visibility on some code. Document how you did it. Whatever. Make it easier for the next one having the same problem.
-
-**Get started**
-
-In the end, you just have to get started. Which is the single most important thing to do to get your legacy code under test. Start testing it. Start writing tests today, and solve the problems as you meet them. Your codebase successors will be forever grateful.
-]]></content:encoded>
+Testing code that was written without tests in mind can be challenging. The code tends to contain static calls, long methods and a high degree of tangling. Whether you label it legacy code or spaghetti code, these are common pitfall]]></content:encoded>
         </item>
     </channel>
 </rss>
