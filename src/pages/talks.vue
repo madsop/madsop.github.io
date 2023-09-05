@@ -32,6 +32,7 @@ import Vue from 'vue';
 
 export default Vue.extend({
     data: () => ({talks: [
+{conference: 'Jakarta Tech Talks', date: '2023-08-23', country: 'Virtual', title: 'Serverless Java Apps in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://www.meetup.com/jakartatechtalks_/events/293843866/'},
 {conference: 'JCON Europe', date: '2023-06-20', city: 'Köln', country: 'Germany', title: 'Quarkus Native - from Scratch to Production', infolink: 'https://sched.co/1K40N', video: 'https://www.youtube.com/watch?v=s7DQa78RkVw&list=PLFeSAZzYdUoeiBZIEDjgPRk3q3AsJlC84&index=21&ab_channel=JAVAPRO'},
 {conference: 'GDG Bucharest meetup', date: '2023-05-25', city: 'Bucharest', country: 'Romania', title: 'Modern Java App Development in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://www.meetup.com/bucharest-java-user-group/events/293562268'},
 {conference: 'Voxxed Days Iași', date: '2023-05-24', city: 'Iași', country: 'Romania', title: 'Modern Java App Development in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://romania.voxxeddays.com/talk/?id=2372', video: 'https://www.youtube.com/watch?v=KVXTLlQzuoc&list=PLRsbF2sD7JVpiRm7y11iSHIqyhQoq-AC6&index=5&ab_channel=Devoxx'},
