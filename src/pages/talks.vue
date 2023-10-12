@@ -32,6 +32,7 @@ import Vue from 'vue';
 
 export default Vue.extend({
     data: () => ({talks: [
+{conference: 'Voxxed Days Cluj', date: '2023-10-12', city: 'Cluj', country: 'Romania', title: 'Modern Java App Development in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://romania.voxxeddays.com/talk/?id=1553'},
 {conference: 'Jakarta Tech Talks', date: '2023-08-23', country: 'Virtual', title: 'Serverless Java Apps in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://www.meetup.com/jakartatechtalks_/events/293843866/'},
 {conference: 'JCON Europe', date: '2023-06-20', city: 'Köln', country: 'Germany', title: 'Quarkus Native - from Scratch to Production', infolink: 'https://sched.co/1K40N', video: 'https://www.youtube.com/watch?v=s7DQa78RkVw&list=PLFeSAZzYdUoeiBZIEDjgPRk3q3AsJlC84&index=21&ab_channel=JAVAPRO'},
 {conference: 'GDG Bucharest meetup', date: '2023-05-25', city: 'Bucharest', country: 'Romania', title: 'Modern Java App Development in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://www.meetup.com/bucharest-java-user-group/events/293562268'},
