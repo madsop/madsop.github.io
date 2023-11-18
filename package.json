@@ -13,16 +13,16 @@
     "@gridsome/remark-prismjs": "^0.5.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
-    "gh-pages": "^3.2.0",
+    "gh-pages": "^6.0.0",
     "gridsome": "^0.7.23",
     "gridsome-plugin-feed": "^1.0.2",
-    "moment": "^2.29.1",
-    "sharp": "^0.28.3",
+    "moment": "^2.29.4",
+    "sharp": "^0.32.6",
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2"
   },
   "devDependencies": {
-    "sass": "^1.60.0",
-    "sass-loader": "^10"
+    "sass": "^1.69.5",
+    "sass-loader": "^10.2.1"
   }
 }
