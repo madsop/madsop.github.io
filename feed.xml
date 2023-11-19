@@ -4,7 +4,7 @@
         <title>Mads Opheim</title>
         <link>http://madsopheim.com/</link>
         <description>Feed from the blog of Mads Opheim</description>
-        <lastBuildDate>Sun, 19 Nov 2023 11:49:35 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 19 Nov 2023 12:08:42 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="http://madsopheim.com/feed.xml" rel="self" type="application/rss+xml"/>
