@@ -32,7 +32,7 @@ import Vue from 'vue';
 
 export default Vue.extend({
     data: () => ({talks: [
-{conference: 'Øredev', date: '2023-11-09', city: 'Malmö', country: 'Sweden', title: 'Quarkus Native - from Scratch to Production', infolink: 'https://oredev.org/sessions/quarkus-native-from-scratch-to-production'},
+{conference: 'Øredev', date: '2023-11-09', city: 'Malmö', country: 'Sweden', title: 'Quarkus Native - from Scratch to Production', infolink: 'https://oredev.org/sessions/quarkus-native-from-scratch-to-production', video: 'https://www.youtube.com/watch?v=sKFwvYHYDr8&list=PLOUKmSqExtAH0k42evc9j3fiqfgHu00Cf&index=104&ab_channel=%C3%98redevConference'},
 {conference: 'Jakarta Tech Talks', date: '2023-10-25', country: 'Virtual', title: 'Enterprise Kotlin: Jakarta EE for Kotlin developers', infolink: 'https://www.meetup.com/jakartatechtalks_/events/296489827/'},
 {conference: 'Trondheim Developer Conference', date: '2023-10-24', city: 'Trondheim', country: 'Norway', title: 'Quarkus Native - from Scratch to Production', infolink: 'https://2023.trondheimdc.no/speakers/mads-opheim/'},
 {conference: 'Voxxed Days Cluj', date: '2023-10-12', city: 'Cluj', country: 'Romania', title: 'Modern Java App Development in the Cloud: MicroProfile, Quarkus, and Cloud Run', cospeaker: 'Rustam Mehmandarov', infolink: 'https://romania.voxxeddays.com/talk/?id=1553'},
