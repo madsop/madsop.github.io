@@ -1,11 +1,11 @@
 ---
 title: Continuous delivery for your open-source library
-date: 2014-05-30
+date: 2024-05-30
 published: true
 canonical_url: false
 description: "If you are building a software library, I suggest creating and pushing out new versions on every commit on _main_."
 ---
-![alt_text](images/cd-open-source.jpg "image_tooltip")
+![alt_text](./images/cd-open-source.jpg "image_tooltip")
 <sub>Photo: Kindel Media, Pexels</sub>
 
 # Continuous delivery for your open-source library
