@@ -4,7 +4,7 @@
         <title>Mads Opheim</title>
         <link>http://madsopheim.com/</link>
         <description>Feed from the blog of Mads Opheim</description>
-        <lastBuildDate>Sun, 19 Nov 2023 12:08:42 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 30 May 2024 21:46:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="http://madsopheim.com/feed.xml" rel="self" type="application/rss+xml"/>
@@ -93,6 +93,20 @@ I'm grateful for being in such a position. I'm working as tech lead in my job, b
 Do you want tests for your code, but find it hard to get started? Or maybe you got it going, but ran into code you were not able to test?
 
 Testing code that was written without tests in mind can be challenging. The code tends to contain static calls, long methods and a high degree of tangling. Whether you label it legacy code or spaghetti code, these are common pitfall]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Continuous delivery for your open-source library]]></title>
+            <link>http://madsopheim.com/continuous-delivery-for-your-open-source-library/</link>
+            <guid>http://madsopheim.com/continuous-delivery-for-your-open-source-library/</guid>
+            <pubDate>Fri, 30 May 2014 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[![alt_text](images/cd-open-source.jpg "image_tooltip")
+<sub>Photo: Kindel Media, Pexels</sub>
+
+# Continuous delivery for your open-source library
+
+If you are building a software library, I suggest creating and pushing out new versions on every commit on _main_.
+
+I like continuous integration, continuous deployment, and continuous delivery. I like it when creating business applications, side projec]]></content:encoded>
         </item>
     </channel>
 </rss>
