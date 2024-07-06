@@ -4,10 +4,22 @@
         <title>Mads Opheim</title>
         <link>http://madsopheim.com/</link>
         <description>Feed from the blog of Mads Opheim</description>
-        <lastBuildDate>Fri, 31 May 2024 23:00:05 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 06 Jul 2024 15:46:02 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="http://madsopheim.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[1Z0-1113 - The Oracle certification no one cares about?]]></title>
+            <link>http://madsopheim.com/1-z0-1113-the-oracle-certification-no-one-cares-about/</link>
+            <guid>http://madsopheim.com/1-z0-1113-the-oracle-certification-no-one-cares-about/</guid>
+            <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+I recently discovered the <a href="https://education.oracle.com/helidon-microservices-developer/pexam_1Z0-1113">1Z0-1113 certification</a>, which is named _Helidon Microservices Developer_, and is supposed to test your knowledge in "the Helidon programming language, coding practices, and utilization of MicroProfile features".
+
+Awesome!
+
+This certification is provided by Oracle, and it's a Java ex]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Continuous delivery for your open-source library]]></title>
             <link>http://madsopheim.com/continuous-delivery-for-your-open-source-library/</link>
