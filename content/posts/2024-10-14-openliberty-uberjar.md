@@ -17,3 +17,5 @@ While that might very well be a bug, and eventually fixed by the team, it's alwa
 I made <a href="https://github.com/madsop/openliberty-graalvm">a repository</a> where I made a minimal example of how to do it, and with quite distinct commits, so it should be easy to reproduce the steps for you as well.
 
 As you can guess from the name of the repo, I did this as part of an effort to run OpenLiberty with GraalVM. However, I found this issue, how to create an uber jar with OpenLiberty, useful by itself, so it clearly deserves this blog post.
+
+Note also that while this post is focused on OpenLiberty, the same concepts should be viable also for other app servers where you have a WAR and want a JAR, although I haven't tried that myself (yet?).
