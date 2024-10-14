@@ -4,10 +4,22 @@
         <title>Mads Opheim</title>
         <link>http://madsopheim.com/</link>
         <description>Feed from the blog of Mads Opheim</description>
-        <lastBuildDate>Sat, 06 Jul 2024 15:46:02 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 14 Oct 2024 17:33:28 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="http://madsopheim.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Package an uber-JAR with OpenLiberty]]></title>
+            <link>http://madsopheim.com/package-an-uber-jar-with-open-liberty/</link>
+            <guid>http://madsopheim.com/package-an-uber-jar-with-open-liberty/</guid>
+            <pubDate>Mon, 14 Oct 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+With OpenLiberty, you can easily get your artifact as a WAR file. But what if you (for some reason) want a self-containing JAR instead?
+
+You have created an application using OpenLiberty. You want a JAR file containing everything you need to run your app, including OpenLiberty itself, your dependencies and your code.
+
+It should be easy, yes. <a href="https://openliberty.io/guides/getting-started.]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[1Z0-1113 - The Oracle certification no one cares about?]]></title>
             <link>http://madsopheim.com/1-z0-1113-the-oracle-certification-no-one-cares-about/</link>
