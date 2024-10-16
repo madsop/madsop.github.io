@@ -33,6 +33,7 @@ import Vue from 'vue';
 export default Vue.extend({
     data: () => ({talks: [
 {conference: 'JCON Open Blend Slovenia', date: '2024-05-31', city: 'Portoroz', country: 'Slovenia', title: 'Quarkus Native - from Scratch to Production', infolink: 'https://makeit.si/sessions/#600624'},
+{conference: 'JakartaOne', date: '2023-12-03', country: 'Virtual', title: 'Enterprise Kotlin: Jakarta EE for Kotlin developers', infolink: 'https://jakartaone.org/2023/speakers/#mads-opheim', video: 'https://www.youtube.com/watch?v=gBQxryz10mw&ab_channel=JakartaEE'},
 {conference: 'Øredev', date: '2023-11-09', city: 'Malmö', country: 'Sweden', title: 'Quarkus Native - from Scratch to Production', infolink: 'https://oredev.org/sessions/quarkus-native-from-scratch-to-production', video: 'https://www.youtube.com/watch?v=sKFwvYHYDr8&list=PLOUKmSqExtAH0k42evc9j3fiqfgHu00Cf&index=104&ab_channel=%C3%98redevConference'},
 {conference: 'Jakarta Tech Talks', date: '2023-10-25', country: 'Virtual', title: 'Enterprise Kotlin: Jakarta EE for Kotlin developers', infolink: 'https://www.meetup.com/jakartatechtalks_/events/296489827/'},
 {conference: 'Trondheim Developer Conference', date: '2023-10-24', city: 'Trondheim', country: 'Norway', title: 'Quarkus Native - from Scratch to Production', infolink: 'https://2023.trondheimdc.no/speakers/mads-opheim/'},
