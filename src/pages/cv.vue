@@ -8,8 +8,7 @@
             <a href="http://madsopheim.com">madsopheim.com</a>
 
             <h2>Tech I'm frequently using</h2>
-                <p>Java (8&amp;11), Maven, Jakarta EE 8, Eclipse MicroProfile, Git, Mercurial, Jenkins, SonarQube, Google Cloud Platform,
-                    Quarkus, Wildfly, REST, Mockito, JUnit, Docker, Microsoft SQL Server, Vue, HTML, TypeScript, GitHub, yarn, npm and a lot more</p>
+                <p>I mainly thrive at the JVM stack, so Java and Kotlin with its ecosystem, including Jakarta EE and MicroProfile, build tools like Gradle and Maven and many more.</p>
             <h2>Methodologies</h2>
             <p>Tech is important to solve the problem right, but you also need to solve the right problem. I've in-depth knowledge of Domain-driven design,
                 and stick to test-driven development and <a href="http://modernagile.org/">Modern agile</a>.
@@ -22,6 +21,8 @@
                     <li><a href="https://www.microsoft.com/en-us/learning/exam-70-483.aspx">70-483</a> Programming in C# (2014)</li>
                     <li>Certified Scrum master (2015)</li>
                     <li><a href="https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808">1Z0-808</a> Oracle Certified Associate, Java SE 8 Programmer I (2016)</li>
+                    <li>Oracle ACE Pro</li>
+                    <li>IBM Influencer and Rising champion</li>
                 </ul> 
             <h2>Presentations</h2>
             <p>I've been doing a lot of presentations on various topics at meetups, conferences and other events both domestically and internationally. <a href="/talks">See the full list here.</a></p>
@@ -52,7 +53,8 @@
                     KumuluzEE and OpenLiberty. Co-project with <a href="http://mehmandarov.com/">Rustam Mehmandarov</a>.
                     <a href="https://github.com/mehmandarov/microprofile-iot">GitHub</a>
                 </li>
-                <li>And others, which are available on GitHub</li>
+                <li>The ones I'm using in <a href="/talks">my talks</a></li>
+                <li>And others, which are available on <a href="https://github.com/madsop">GitHub</a></li>
             </ul>
             <Profiles />
         </div>
@@ -61,7 +63,6 @@
 
 <script lang="ts">
 import { Vue } from 'vue-property-decorator';
-import Profiles from '@/components/Profiles.vue';
 
 
 export default Vue.extend({
@@ -91,3 +92,5 @@ h2 {
 }
 
 </style>
+<script setup lang="ts">
+</script>

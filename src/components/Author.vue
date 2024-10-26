@@ -8,8 +8,8 @@
 		</h1>
 
 		<p class="author__intro">
-			I'm a tech lead, developer and test enthusiast.<br />
-			I'm at my best when I can make people awesome.
+			Doing my best for a better world.<br />
+			Through better tech and better policies.
 		</p>
 
 		<Profiles />
