@@ -4,10 +4,22 @@
         <title>Mads Opheim</title>
         <link>http://madsopheim.com/</link>
         <description>Feed from the blog of Mads Opheim</description>
-        <lastBuildDate>Sat, 26 Oct 2024 10:44:23 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 31 Oct 2024 20:53:31 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="http://madsopheim.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[1Z0-1113 - Update on my progress]]></title>
+            <link>http://madsopheim.com/1-z0-1113-update-on-my-progress/</link>
+            <guid>http://madsopheim.com/1-z0-1113-update-on-my-progress/</guid>
+            <pubDate>Thu, 31 Oct 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+This summer, <a href="http://madsopheim.com/1-z0-1113-the-oracle-certification-no-one-cares-about/">I wrote about the 1Z0-1113 certification</a>.
+
+I promised to update on this blog if I were to give the exam a shot. This is that update. I've signed up for the exam, and in a couple of weeks, I have my exam.
+
+Since then, I've attempted what is out there on Udemy exams. Sometimes they are useful, but at other times, t]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Package an uber-JAR with OpenLiberty]]></title>
             <link>http://madsopheim.com/package-an-uber-jar-with-open-liberty/</link>
