@@ -9,7 +9,7 @@
         <a href="//linkedin.com/in/madsopheim/">
             <img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="LinkedIn"/>
         </a>
-      <a href="//bsky.app/profile/madsopheim.bsky.social">
+      <a href="//bsky.app/profile/madsopheim.com">
         <img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/bluesky.svg" alt="Bluesky"/>
       </a>
       <a href="//social.vivaldi.net/@madsopheim">
