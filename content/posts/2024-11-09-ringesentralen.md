@@ -1,0 +1,129 @@
+---
+title: Ringesentralen - say what?
+date: 2024-11-09
+published: true
+canonical_url: false
+description: "This side project of mine, what is it about? It's time to dive into what it's actually doing - meet Ringesentralen"
+---
+
+I've written some posts, both here on this blog and <a href="https://medium.com/@mads.opheim">over at medium</a> about
+my side projects, particularly about <a href="https://microprofile.io/">MicroProfile and <a href="https://jakarta.ee/">Jakarta EE</a>, but also touching on other technologies, such as <a href="https://www.graalvm.org/">GraalVM</a>. I've mentioned that I'm using the technologies for a
+side project, but I've never mentioned what the side project is actually about. So it's about time.
+
+I'm advocating for domain-driven design, and putting the domain you're working on in the core of the software we're
+creating. When looking at the package names of your application, I should be able to determine whether it's code for a
+bank, fishing or health care. Your users should be able to see some of your code and make sense out of it, or at the
+very least recognize some concepts. You as a developer should be able to speak to your users using their language, their
+concepts and their perspective, and you should make sense of what they are saying.
+
+These are thoughts from the domain-driven design sphere, and I've even talked about them at big conferences, along with
+my former colleague and good friend <a href="https://annelandro.no/">Anne</a>. We did a
+fun <a href="https://www.youtube.com/watch?v=e51BkMuZtIc&ab_channel=Domain-DrivenDesignEurope">talk at Domain-Driven
+Design Europe</a> some years ago, and <a href="https://www.youtube.com/watch?v=j70OLAvs_-8&">another take at
+KanDDDinsky</a>, and at several other conferences as well.
+
+Even then, I've written completely technical posts introducing technical concepts without disclosing the actual problems
+the software is meant to solve. Until today.
+
+# The first version - the 2017 and 2019 elections
+
+In addition to being a developer and software person, I'm also into politics, and I've been for many years part
+of <a href="https://roedt.no/">the Red Party</a> here in Norway. Currently, I'm the vice president of the Oslo branch of
+the party. Needless to say, it takes a lot of my time, energy and focus, and I do what the party needs. Luckily,
+sometimes, the party needs my technical expertise.
+
+Back in 2017, I joined the development of a software application helping party volunteers make calls to potential
+voters. The application told you who you should call next, with their name and phone number, and a manuscript with an
+introduction to the call as well as some topics and questions for the continuation of the call.
+
+The first version of the application was written, by my friend Didrik, in the months leading up to the Norwegian 2017
+parliamentary elections, to be used in the campaign. It did its purpose. I continued enhancing the application for a
+while, but the tech stack wasn't right up my alley, as it was mainly written in PHP. I know enough PHP to make it work,
+so I continued developing it even through the 2019 local elections.
+
+In 2020, we started planning ahead for the 2021 elections. As the pandemic was over us, noone knew in the autumn of 2020
+whether we could be out in the streets in the summer months of 2021 meeting people and talking about our policies, or if
+the campaign would be entirely without face-to-face interaction. Hence, we started exploring what a digital campaign
+could look like.
+
+It became clear to me quite quickly that the requirements and ideas we had for the phonebanking system could hardly be
+realized within the existing tech stack and architecture. At that time, I had few obligations except for my day job, and
+a desire to learn more about cloud native development and more to it, so I decided to create a new application from
+scratch.
+
+A partner in crime in the party is a great frontend developer, and he wanted to do a remake of the frontend part of the
+software, so we decided to start on a version two. As we made the decision in September 2020, we had almost a year until
+the elections, so we figured we had the time and possibility to make it good enough in time for the full-scale campaign
+to start about six months later.
+
+# Version two - the 2021 election campaign
+
+September 30th 2020, I made the first commit to the new repository. Bearing the knowledge of the inner workings of the
+first version in mind, as well as the functionality it provided and also its shortcomings in mind, I started with a
+blank codebase.
+
+I spent the autumn and winter months, which we have quite a few of here in Norway, to create the technical foundation.
+As everyone working in tech knows, this is the phase where you make a lot of decisions heavily influencing the onward
+path. I had several considerations in mind:
+
+- what technology could be suitable for solving the problems
+- what technology did I want to learn more about
+- what did I know already that I could make use of
+
+We didn't have a huge budget, neither for the development nor operations, so it was a no-brainer to aim for the clouds.
+Enter containers and a cloud provider. As the application was intended to be heavily used at daytime and in the
+campaigning months, but not at all used for instance during night hours, I decided to go serverless.
+
+## The runtime
+
+I also realized that I needed a runtime. At the time, Quarkus had been around for a year and a half, and seemed stable,
+fast and promising. Quarkus let me write code in Java or Kotlin, and it had (and still has) full-blown support for
+MicroProfile, so I could use the standards I was used to and happy with from there. Being a somewhat standard CRUD
+application, the support for JAX-RS, JSON-B and other core standards from Jakarta EE was essential.
+
+On top of that, I figured I would need a test environment, and thus the need to configure the application both for
+production and development, so I introduced MP Config. To ease communication with the frontend developer, it was really
+benefitial to provide documentation of the endpoints I made, where OpenAPI became useful.
+
+A requirement was that only members of the party should be able to make calls from the system. We figured we could use
+the login possibility provided by our membership system, so when the user met our application, the first thing they did
+was log in to the membership system, which in turned returned a token to our application. We then used that token for
+every following interaction the user did, utilizing MP JWT Authentication. Inside the system, we made a mechanism
+allowing admins to adjust roles and permissions per user, adding or removing additional claims to the token.
+
+It's also worth mentioning here that I wanted to gain some experience with Kotlin, so the backend is entirely Kotlin-based. Looking back now, I see that the first code I wrote was heavily Java-influenced, which I actually find to be a good thing, as that means that the learning curve didn't have to be very steep. Since then, I've of course learned a lot about Kotlin and am now writing much more idiomatic Kotlin, although I still have a lot to learn.
+
+## Where should it run?
+
+I had some previous knowledge with Google Cloud Platform, GCP, so I went there, and it quickly turned out that GCP could provide what we needed. I wanted the flow where I could make a commit to the main branch, push it, and everything from there would go automatically. Cloud Build listened to the changes, created a container and pushed it over to the serverless service, what is now known as Cloud Run.
+
+The data was stored in a Cloud SQL database, then using MySQL, the secrets were crafted into Secret Manager, and some blob files went into Cloud Storage.
+
+Nothing spectacular in these cloud tech choices, but they made sense from the beginning and has proven worthy since then.
+
+## Slow startup
+As I deployed the application to the test environment one day, I was about to test it, so I opened the frontend. Filled in my credentials, and logged in. And waited. And waited. And waited, for what felt like eternity. Time never moves as slowly as when you're waiting for an application to respond, so I was about to cancel my testing even before I got started.
+
+Which of course made me think. I am a somewhat patient person, I know that applications and the JVM may take some time to get started, and I really wanted to use the system. If _I_ was getting impatient, what would then the end users think?
+
+So I started to analyze why the system was moving slowly, and how to shorten the waiting time. Although Quarkus itself became quickly ready and available, the underlying JVM container took quite some time to get started. It's here that GraalVM comes into play.
+
+GraalVM lets you trade build-time for startup-time, to put it easy. So I figured that I would probably be the only developer working on the backend, and that some extra build-time minutes would be a small price to pay for the application to be almost instantly available whenever a new user wants to use the system.
+
+Some experimenting and a learning curve later, I got a GraalVM based version up and running. And the difference was huge - now I hardly needed to wait anymore. Thanks to GraalVM.
+
+## How was the campaign?
+As the September 2021 elections were approaching, Norway had opened up quite a bit, and the volunteers all around the country went out to spread the word. Some people were doing phonebanking to potential voters, through the system, and they were very happy with the system as such. However, they weren't eager staying inside doing calls when they instead could be out seeing people face-to-face. As a consequence, the system weren't used as much as expected.
+
+Still, quite some calls were made through the system, and the system turned out to be flexible, reliable and useful.
+
+During the campaign, we discovered a need some of our branches had to make calls to their members, which turned out to be a relatively minor change to the system. We added a toggle in the frontend to switch between calling voters and calling members, added a new manuscript and some new options in the role management to make sure that only the trusted party officials could see the list of members (party affiliancy is considered sensitive information here in Norway), and that was pretty much it. A huge win for me personally, as it was an acknowledgement that the system I'd designed was flexible for solving an unknown, but important, requirement.
+
+We also added support for registering volunteers, for sending text messages and so on, so the system turned out to be very useful for several purposes.
+
+# And since then?
+The system is still up and running, and I've been doing technical updates sporadically. I've removed unnecessary dependencies, simplified the code, switched from MySQL to PostgreSQL, and just recently, I replaced very manual and clumsy HTTP client code with MicroProfile REST Client, leading to code that's much easier to understand and develop further.
+
+Phonebanking itself is not a focus in our plans for upcoming campaigns, but the technical foundation the system provides is still rock solid and is well suited for new requirements and domains within the party activities.
+
+Having a system that's useful for others, and at the same time being technically interesting and challenging for me, has proven to be a great way for me to learn and grow my skills - and still is.
