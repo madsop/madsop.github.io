@@ -4,10 +4,20 @@
         <title>Mads Opheim</title>
         <link>http://madsopheim.com/</link>
         <description>Feed from the blog of Mads Opheim</description>
-        <lastBuildDate>Thu, 31 Oct 2024 20:53:31 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 Nov 2024 15:00:18 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="http://madsopheim.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Ringesentralen - say what?]]></title>
+            <link>http://madsopheim.com/ringesentralen-say-what/</link>
+            <guid>http://madsopheim.com/ringesentralen-say-what/</guid>
+            <pubDate>Sat, 09 Nov 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[![alt_text](./images/ring-login.png "")
+
+I've written some posts, both here on this blog and <a href="https://medium.com/@mads.opheim">over at medium</a> about
+my side projects, particularly about <a href="https://microprofile.io/">MicroProfile and <a href="https://jakarta.ee/">Jakarta EE</a>, but also touching on other technologies, such as <a href="https://www.graalvm.org/">GraalVM</a>. I've men]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[1Z0-1113 - Update on my progress]]></title>
             <link>http://madsopheim.com/1-z0-1113-update-on-my-progress/</link>
