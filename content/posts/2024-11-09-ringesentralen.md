@@ -5,6 +5,7 @@ published: true
 canonical_url: false
 description: "This side project of mine, what is it about? It's time to dive into what it's actually doing - meet Ringesentralen"
 ---
+![alt_text](./images/ring-login.png "")
 
 I've written some posts, both here on this blog and <a href="https://medium.com/@mads.opheim">over at medium</a> about
 my side projects, particularly about <a href="https://microprofile.io/">MicroProfile and <a href="https://jakarta.ee/">Jakarta EE</a>, but also touching on other technologies, such as <a href="https://www.graalvm.org/">GraalVM</a>. I've mentioned that I'm using the technologies for a
@@ -57,6 +58,7 @@ the elections, so we figured we had the time and possibility to make it good eno
 to start about six months later.
 
 # Version two - the 2021 election campaign
+![alt_text](./images/ring-start.png "")
 
 September 30th 2020, I made the first commit to the new repository. Bearing the knowledge of the inner workings of the
 first version in mind, as well as the functionality it provided and also its shortcomings in mind, I started with a
@@ -83,7 +85,7 @@ application, the support for JAX-RS, JSON-B and other core standards from Jakart
 
 On top of that, I figured I would need a test environment, and thus the need to configure the application both for
 production and development, so I introduced MP Config. To ease communication with the frontend developer, it was really
-benefitial to provide documentation of the endpoints I made, where OpenAPI became useful.
+beneficial to provide documentation of the endpoints I made, where OpenAPI became useful.
 
 A requirement was that only members of the party should be able to make calls from the system. We figured we could use
 the login possibility provided by our membership system, so when the user met our application, the first thing they did
@@ -113,6 +115,8 @@ GraalVM lets you trade build-time for startup-time, to put it easy. So I figured
 Some experimenting and a learning curve later, I got a GraalVM based version up and running. And the difference was huge - now I hardly needed to wait anymore. Thanks to GraalVM.
 
 ## How was the campaign?
+![alt_text](./images/ring-manus.png "")
+
 As the September 2021 elections were approaching, Norway had opened up quite a bit, and the volunteers all around the country went out to spread the word. Some people were doing phonebanking to potential voters, through the system, and they were very happy with the system as such. However, they weren't eager staying inside doing calls when they instead could be out seeing people face-to-face. As a consequence, the system weren't used as much as expected.
 
 Still, quite some calls were made through the system, and the system turned out to be flexible, reliable and useful.
