@@ -60,7 +60,7 @@ to start about six months later.
 # Version two - the 2021 election campaign
 ![alt_text](./images/ring-start.png "")
 
-September 30th 2020, I made the first commit to the new repository. Bearing the knowledge of the inner workings of the
+September 30th 2020, I made the first commit to <a href="https://github.com/Roedt/ringesentralen-backend">the new repository</a>. Bearing the knowledge of the inner workings of the
 first version in mind, as well as the functionality it provided and also its shortcomings in mind, I started with a
 blank codebase.
 
@@ -126,7 +126,7 @@ During the campaign, we discovered a need some of our branches had to make calls
 We also added support for registering volunteers, for sending text messages and so on, so the system turned out to be very useful for several purposes.
 
 # And since then?
-The system is still up and running, and I've been doing technical updates sporadically. I've removed unnecessary dependencies, simplified the code, switched from MySQL to PostgreSQL, and just recently, I replaced very manual and clumsy HTTP client code with MicroProfile REST Client, leading to code that's much easier to understand and develop further.
+The system is <a href="https://ringesentralen.no/">still up and running</a>, and I've been doing technical updates sporadically. I've removed unnecessary dependencies, simplified the code, switched from MySQL to PostgreSQL, and just recently, I replaced very manual and clumsy HTTP client code with MicroProfile REST Client, leading to code that's much easier to understand and develop further.
 
 Phonebanking itself is not a focus in our plans for upcoming campaigns, but the technical foundation the system provides is still rock solid and is well suited for new requirements and domains within the party activities.
 
