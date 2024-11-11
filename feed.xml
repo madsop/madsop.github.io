@@ -4,7 +4,7 @@
         <title>Mads Opheim</title>
         <link>http://madsopheim.com/</link>
         <description>Feed from the blog of Mads Opheim</description>
-        <lastBuildDate>Mon, 11 Nov 2024 11:32:52 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 11 Nov 2024 11:36:44 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="http://madsopheim.com/feed.xml" rel="self" type="application/rss+xml"/>
@@ -17,9 +17,9 @@
 
 This morning, I had my certification exam for the _1Z0-1113 Helidon Microservices Developer Professional_, and I passed!
 
-![Passed exam](images/passed-exam.png)
+![Passed exam](./images/passed-exam.png)
 
-As I've already written several posts about, I was curious what the exam would be like. To be honest, I was afraid of 60 questions asking nitty-gritty obscure detail questions, like the Java exams tend to do. Or that t]]></content:encoded>
+As I've already written several posts about, I was curious what the exam would be like. To be honest, I was afraid of 60 questions asking nitty-gritty obscure detail questions, like the Java exams tend to do. Or that]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Ringesentralen - say what?]]></title>
