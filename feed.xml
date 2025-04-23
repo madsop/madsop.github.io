@@ -4,10 +4,27 @@
         <title>Mads Opheim</title>
         <link>http://madsopheim.com/</link>
         <description>Feed from the blog of Mads Opheim</description>
-        <lastBuildDate>Thu, 14 Nov 2024 11:37:19 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 23 Apr 2025 06:33:28 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="http://madsopheim.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Replace simple sub-GitHub Actions with plain run]]></title>
+            <link>http://madsopheim.com/replace-simple-sub-git-hub-actions-with-plain-run/</link>
+            <guid>http://madsopheim.com/replace-simple-sub-git-hub-actions-with-plain-run/</guid>
+            <pubDate>Wed, 23 Apr 2025 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+I used to believe that running the GitHub CLI inside GitHub Actions was hard, which lead to using sub-actions for small things like creating a release.
+
+Turns out it was trivially easy. Yesterday, I replaced a release-sub action with one line of invoking the CLI.
+
+This post is me telling you it is not hard, which I've now learned.
+
+I started with this yaml:
+
+```
+- name: Step 8 - Create GitHub rel]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Local development with MicroProfile RestClient]]></title>
             <link>http://madsopheim.com/local-development-with-micro-profile-rest-client/</link>
