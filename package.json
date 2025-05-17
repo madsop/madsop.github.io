@@ -17,7 +17,7 @@
     "gridsome": "^0.7.23",
     "gridsome-plugin-feed": "^1.0.2",
     "moment": "^2.29.4",
-    "sharp": "^0.32.6",
+    "sharp": "^0.34.1",
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2"
   },
