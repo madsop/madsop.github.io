@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Mads Opheim]]></title>
+        <description><![CDATA[Mads Opheim]]></description>
+        <link>https://madsopheim.com</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sat, 17 May 2025 22:12:35 GMT</lastBuildDate>
+        <atom:link href="https://madsopheim.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Test your legacy code]]></title>
+            <description><![CDATA[Do you want tests for your code, but find it hard to get started? Or maybe you got it going, but ran into code you were not able to test?]]></description>
+            <link>/posts/2019-03-28-test-your-legacy-code</link>
+            <guid isPermaLink="true">/posts/2019-03-28-test-your-legacy-code</guid>
+            <pubDate>Thu, 28 Mar 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tips for finding your next conference]]></title>
+            <description><![CDATA[Where do I head to find places to apply for speaking?]]></description>
+            <link>/posts/2019-03-31-where-to-give-a-talk</link>
+            <guid isPermaLink="true">/posts/2019-03-31-where-to-give-a-talk</guid>
+            <pubDate>Sun, 31 Mar 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[White male privilege]]></title>
+            <description><![CDATA[I'm a developer and tech lead, working in the tech industry.  An industry that is predominantly consisting of men, both among the developers and the leadership.]]></description>
+            <link>/posts/2019-04-05-White-male-privilege</link>
+            <guid isPermaLink="true">/posts/2019-04-05-White-male-privilege</guid>
+            <pubDate>Fri, 05 Apr 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Microservices with Microprofile]]></title>
+            <description><![CDATA[Welcome to the world of microservices! We now can provide you with the tools you miss from your time with Java EE, while still leaving you free to switch application server whenever you want, without having to change your Java code.]]></description>
+            <link>/posts/2019-08-18-microservices-with-microprofile</link>
+            <guid isPermaLink="true">/posts/2019-08-18-microservices-with-microprofile</guid>
+            <pubDate>Sun, 18 Aug 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to make your own scraper and then forget about it?]]></title>
+            <description><![CDATA[You've found a web page you want to keep track of how changes, but they don't keep a changelog? Make your own!]]></description>
+            <link>/posts/2022-10-28-scraping</link>
+            <guid isPermaLink="true">/posts/2022-10-28-scraping</guid>
+            <pubDate>Fri, 28 Oct 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Switching appservers]]></title>
+            <description><![CDATA[With MicroProfile, you can switch application servers for your Java or Kotlin application without touching your code at all.]]></description>
+            <link>/posts/2019-10-18-switching-appservers</link>
+            <guid isPermaLink="true">/posts/2019-10-18-switching-appservers</guid>
+            <pubDate>Fri, 18 Oct 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Enterprise Kotlin - Kotlin and Jakarta EE]]></title>
+            <description><![CDATA[Kotlin is nice. Jakarta EE is nice. Let’s dive into how to make them play well together!]]></description>
+            <link>/posts/2023-05-25-enterprise-kotlin</link>
+            <guid isPermaLink="true">/posts/2023-05-25-enterprise-kotlin</guid>
+            <pubDate>Thu, 25 May 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Continuous delivery for your open-source library]]></title>
+            <description><![CDATA[If you are building a software library, I suggest creating and pushing out new versions on every commit on _main_.]]></description>
+            <link>/posts/2024-05-30-cd-open-source</link>
+            <guid isPermaLink="true">/posts/2024-05-30-cd-open-source</guid>
+            <pubDate>Thu, 30 May 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[1Z0-1113 - The Oracle certification no one cares about?]]></title>
+            <description><![CDATA[Tempted to do the 1Z0-1113 certification on Helidon from Oracle? The toughest part might be to find information.]]></description>
+            <link>/posts/2024-07-06-1z0-1113-pre</link>
+            <guid isPermaLink="true">/posts/2024-07-06-1z0-1113-pre</guid>
+            <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Package an uber-JAR with OpenLiberty]]></title>
+            <description><![CDATA[With OpenLiberty, you can easily get your artifact as a WAR file. But what if you (for some reason) want a self-containing JAR instead?]]></description>
+            <link>/posts/2024-10-14-openliberty-uberjar</link>
+            <guid isPermaLink="true">/posts/2024-10-14-openliberty-uberjar</guid>
+            <pubDate>Mon, 14 Oct 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[1Z0-1113 - Update on my progress]]></title>
+            <description><![CDATA[I wrote this summer about the 1Z0-1113 certification. What's my status?]]></description>
+            <link>/posts/2024-10-31-1z0-1113-update</link>
+            <guid isPermaLink="true">/posts/2024-10-31-1z0-1113-update</guid>
+            <pubDate>Thu, 31 Oct 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ringesentralen - say what?]]></title>
+            <description><![CDATA[This side project of mine, what is it about? It's time to dive into what it's actually doing - meet Ringesentralen]]></description>
+            <link>/posts/2024-11-09-ringesentralen</link>
+            <guid isPermaLink="true">/posts/2024-11-09-ringesentralen</guid>
+            <pubDate>Sat, 09 Nov 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[1Z0-1113 - I passed!]]></title>
+            <description><![CDATA[1Z0-1113 certification: I passed]]></description>
+            <link>/posts/2024-11-11-1z0-1113-I-passed</link>
+            <guid isPermaLink="true">/posts/2024-11-11-1z0-1113-I-passed</guid>
+            <pubDate>Mon, 11 Nov 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Local development with MicroProfile RestClient]]></title>
+            <description><![CDATA[Test your HTTP calls on your own fake]]></description>
+            <link>/posts/2024-11-14-restclient-local</link>
+            <guid isPermaLink="true">/posts/2024-11-14-restclient-local</guid>
+            <pubDate>Thu, 14 Nov 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Replace simple sub-GitHub Actions with plain run]]></title>
+            <description><![CDATA[Use the GH CLI directly instead of wrappers you don't need]]></description>
+            <link>/posts/2025-04-23-github-actions</link>
+            <guid isPermaLink="true">/posts/2025-04-23-github-actions</guid>
+            <pubDate>Wed, 23 Apr 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Markdown Examples]]></title>
+            <description><![CDATA[View examples of all possible Markdown options.]]></description>
+            <link>/posts/markdown</link>
+            <guid isPermaLink="true">/posts/markdown</guid>
+            <category><![CDATA[web development]]></category>
+            <dc:creator><![CDATA[You]]></dc:creator>
+            <pubDate>Thu, 18 Mar 2021 23:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Next.js Pages]]></title>
+            <description><![CDATA[Learn more about Next.js pages.]]></description>
+            <link>/posts/pages</link>
+            <guid isPermaLink="true">/posts/pages</guid>
+            <category><![CDATA[web development]]></category>
+            <dc:creator><![CDATA[You]]></dc:creator>
+            <pubDate>Wed, 17 Mar 2021 23:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

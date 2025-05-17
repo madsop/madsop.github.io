@@ -1,0 +1,144 @@
+---
+title: Continuous delivery for your open-source library
+date: 2024-05-30
+published: true
+canonical_url: false
+description: "If you are building a software library, I suggest creating and pushing out new versions on every commit on _main_."
+---
+
+<Image
+src="/images/cd-open-source.jpg"
+className="next-image"
+/>
+<sub>Photo: Kindel Media, Pexels</sub>
+
+# Continuous delivery for your open-source library
+
+If you are building a software library, I suggest creating and pushing out new versions on every commit on _main_.
+
+I like continuous integration, continuous deployment, and continuous delivery. I like it when creating business applications, side projects, and helper tools, and I see no reason why library development should be any different[1].
+
+Hence, whenever I merge a pull request to main, I want that change to be immediately available to whoever is interested[2]. Manual deployments or for that matter any manual step here will not work in the long run, so it must be automated.
+
+_It_ needs to be automated, I just stated. But _it_, what do I mean by _it_? Every part of the release, including, but not limited to, figuring out the version number, creating a release on GitHub, tagging the Git commit, and pushing and publishing the artifacts to the proper repositories.
+
+Let me walk you through how I recently did all of this on an open-source library. My team uses the Java- and Maven-based library[ Open HTML to PDF](https://github.com/openhtmltopdf/openhtmltopdf/) to convert HTML to PDF. This project was abandoned for a while until a couple of enthusiasts made a fork and decided to move the project forward. This meant that the release process was manual, and vulnerable, as only one person had the required credentials and competence to perform releases.
+
+Having experience with GitHub Actions, I made a release pipeline and a PR-build-pipeline, so that every push to main pushed the artifact to GitHub Package Registry. This was sufficient for my team’s usage, and I was happy. After a while, requests came from others that they wanted to use the new community-driven fork as well, but they needed the artifacts to be available at Maven Central. I had never performed any releases to Maven Central up until now, but I figured that I would give it a shot.
+
+## Releasing to GitHub Packages
+
+The release process to GitHub Packages Registry is relatively straightforward. You use the default GitHub secret linked to your repository, specify GitHub as your _distributionManagement_ repository in your pom, add an _mvn deploy_ to your pom file, and you are pretty much good to go.
+
+This is nice for you as a developer, in the sense that it is easy to do, but it is cumbersome and non-ensuring for your users.
+
+## Releasing to Maven Central
+
+Releasing to Maven Central is a different story. The plus side is that it is a one-time job setting it up, and the infrastructure is nice, powerful, and well-established. The downside is that the one-time job is not trivial at all and that the documentation you find is either non-complete or dated.
+
+This post is my story of building the pipeline, with what I believe to be state-of-the-art as of April 2024.
+
+
+## Build process outline
+
+* Step 1 - Checkout code
+* Step 2 - Import GPG key 
+* Step 3 - Setup Java 
+* Step 4 - Get the next version 
+* Step 5 - Prepare and perform release 
+* Step 6 - Upload artifact to GitHub Package Registry 
+* Step 7 - Push Git tag for the new release 
+* Step 8 - Create a GitHub release
+
+Let me go through each step.
+
+### Step 1 - Checkout code
+
+This is a standard GitHub action step, actions/checkout@v4. Nothing special here, the defaults are fine.
+
+### Step 2 - Import GPG key
+
+Maven Central requires everything to be signed with GPG. Hence step 2. I created a separate GPG key locally using the Mac program _gpg_, and uploaded the public key as well as the secret key as secrets in the GitHub repository. I used this guide ([https://unix.stackexchange.com/a/482559](https://unix.stackexchange.com/a/482559)) to extract the Keys.
+
+### Step 3 - Setup Java
+
+Step 3, setup Java, includes a couple of major decisions to make. Which Java distribution to use, and which Java version to target? I prefer Eclipse Temurin as my Java distribution, as it is fully open source, vendor-neutral, and with an exhaustive test process, but there are several great alternatives as well, such as Azul Zulu, Microsoft OpenJDK, and IBM Semeru.
+
+Regarding the Java version, I encourage you to choose the newest available version if you are making an application. If you are working with a library, you are probably better off going with one of the long-term supported versions[3].
+
+Remember also to set up the Maven cache here.
+
+### Step 4 - Get the next version
+
+In step 4, I decide what version of the software this new release will be. The concept here is to find the tag in the Git repo with the highest version number and increment it. By default, it will increment to a new patch version, and if the commits are tagged according to a given pattern, it will be a new minor or major version instead.[ The action I am using](https://github.com/reecetech/version-increment) looks for keywords such as _feat_ and exclamation marks to notify that this commit should lead to respectively a minor or major new version.
+
+### Step 5 - Prepare and perform release
+
+Step 5 is the actual release to Maven Central, triggered by a _mvn deploy_ with the correct profile and corresponding configuration in the pom file.
+
+This is a multi-step process by itself. First, head over to Sonatype and[ validate that you own the namespace](https://central.sonatype.org/publish-ea/publish-ea-guide/#component-validation).
+
+Then, you need to generate a token, which you can do at[ https://central.sonatype.com/account](https://central.sonatype.com/account).
+
+Copy the username and the token from this step as secrets in your GitHub repo.
+
+Then, head over to your pom file. You need to sign your artifacts with GPG, as mentioned above. maven-gpg-plugin takes care of that for you. Use the goal sign-artifact, and reference the GPG passphrase variable in the configuration part. If you run into errors related to _pinentry_, try adding this section to the configuration part:
+
+
+    <gpgArguments>
+     <arg> - pinentry-mode</arg>
+     <arg>loopback</arg>
+    </gpgArguments>
+
+Next, you will need javadoc and sources to be published as well. The plugin _maven-javadoc-plugin_ is nice for javadoc, and the _maven-source-plugin_ and _maven-jar-plugin_ take care of sources and jars.
+
+Once all of that is done, it is time for the publishing part. Sonatype is advocating the[ central-publishing-maven-plugin](https://central.sonatype.org/publish/publish-portal-maven/), which you can use by copying the default configuration from the documentation. If there are any modules you do not want to publish, you can use the configuration _excludeArtifacts_.
+
+I struggled a bit with getting the authorization working properly and ended up adding a settings.xml file in my repo. This feels like something that should not be necessary, but it works. The file looks like this:
+
+
+    <settings>
+     <servers>
+         <server>
+            <id>central</id> 
+            <username>${env.MAVEN_USERNAME}</username>
+            <password>${env.MAVEN_CENTRAL_TOKEN}</password>
+        </server>
+     </servers>
+    </settings>
+
+This is the command I ended up with in my workflow:
+
+
+    mvn -B deploy - no-transfer-progress -e -Prelease -Drevision=${{ steps.version.outputs.version }} -s settings.xml
+
+At this point, I think it is time to remind you that I am summarizing my experiences here, and how I solved the issues and ended up with the intended flow. There might be configuration in my code that is not necessary after all, and probably things I could simplify. That said, my config works, and we are using it in production at Open HTML to PDF, so far without any issues at all.
+
+You can find both[ the entire POM file](https://github.com/openhtmltopdf/openhtmltopdf/blob/main/pom.xml),[ the GitHub workflow](https://github.com/openhtmltopdf/openhtmltopdf/blob/main/.github/workflows/release.yml), and[ the rest of the code base](https://github.com/openhtmltopdf/openhtmltopdf) on GitHub.
+
+Note that if you are, as I am, working with a multi-Maven-module library, you will catch some extra challenges with the versioning. Luckily, the _flatten-maven-plugin_ gets you out of trouble. I spent quite some time realizing that I should add the line _<updatePomFile>true</updatePomFile>_ in the plugin configuration, so do that straight ahead and save yourself wasting the same hours that I did.
+
+### Step 6 - Upload artifact to GitHub Package Registry
+
+Step 6 is publishing to GitHub Package Registry. If I were to redo this pipeline, I am not sure that I would add this step, but as that is what I started out doing, it is easy and quick to get started pushing here. I recommend pushing your non-final artifacts here if you are developing a library, for instance, that you upload an artifact when a PR is opened or a commit is pushed. Unlike Maven Central, you can delete the artifacts from GitHub Package Registry.
+
+### Step 7 - Push Git tag for the new release
+
+Step 7 is where you push the Git tag for the new release. This is essential to make finding the new version, as we did in step 4, possible. You can do this yourself with git commands in the workflow, or you can use a pre-made action. I chose to use the[ action-create-tag from rickstaa](https://github.com/rickstaa/action-create-tag), which does the job without further hassle.
+
+### Step 8 - Create a GitHub release
+
+It is nice for your users to easily see what releases exist and what each contains, and the GitHub releases overview is great at that. I am at the moment using[ GitHub Release Action from elgohr](https://github.com/elgohr/Github-Release-Action), although it looks like that action is so straightforward that you might as well do it yourself.
+
+And that is all you need for continuous delivery of your library.
+
+Hopefully, I have provided enough details in this blog post that you will have everything you need, but I might of course have forgotten to mention something. Let me round up by repeating the fact that you can find[ the entire POM file](https://github.com/openhtmltopdf/openhtmltopdf/blob/main/pom.xml),[ the GitHub workflow](https://github.com/openhtmltopdf/openhtmltopdf/blob/main/.github/workflows/release.yml), and[ the rest of the code base](https://github.com/openhtmltopdf/openhtmltopdf) on GitHub.
+
+
+---
+
+[1]: And thus, you can utilize everything suggested in this blog post for applications as well.
+
+[2]: From the using side, it might be nice and beneficial to wait for a short period before adopting a new version of a library, but I want that choice to be made by the receiver, not the producer.
+
+[3]: There is a lot to be said about the concept of long-term support and Java versions nowadays, which I will not dig into here, but Nicolai Parlog has interesting thoughts on the topic at[ https://nipafx.dev/inside-java-newscast-52/](https://nipafx.dev/inside-java-newscast-52/)
