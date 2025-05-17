@@ -10,10 +10,6 @@ updates:
     schedule:
       interval: "weekly"
     groups:
-      lint:
+      nextra:
         patterns:
-          - "@babel*"
-      gridsome:
-        patterns:
-          - "*gridsome*"
-          - "vue*"
+          - "*nextra*"
