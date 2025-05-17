@@ -9,11 +9,11 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
-      groups:
-        lint:
-          patterns:
-            - "@babel*"
-        gridsome:
-          patterns:
-            - "*gridsome*"
-            - "vue*"
+    groups:
+      lint:
+        patterns:
+          - "@babel*"
+      gridsome:
+        patterns:
+          - "*gridsome*"
+          - "vue*"
