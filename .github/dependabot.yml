@@ -15,4 +15,5 @@ updates:
             - "@babel*"
         gridsome:
           patterns:
-            - "@gridsome*"
+            - "*gridsome*"
+            - "vue*"
