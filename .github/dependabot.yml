@@ -13,7 +13,9 @@ updates:
       nextra:
         patterns:
           - "*nextra*"
+          - "*next*"
           - "*react*"
+          - "*remark-mermaid*"
 
 
   - package-ecosystem: "github-actions" # See documentation for possible values
