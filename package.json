@@ -22,7 +22,7 @@
     "vue-property-decorator": "^9.1.2"
   },
   "devDependencies": {
-    "sass": "^1.69.5",
+    "sass": "^1.89.0",
     "sass-loader": "^16.0.5"
   }
 }
