@@ -9,23 +9,23 @@ export const metadata: Metadata = {
 
 function location(city: string | null, country: string) {
     if (!city) {
-        return <div><br/> {country}</div>;
+        return <>, {country}<br /></>;
     }
-    return <div>in {city}, {country}</div>;
+    return <> in {city}, {country}<br /></>;
 }
 
 function video(video: string | null) {
     if (!video) {
         return "";
     }
-    return <div><br /><a href={video} className="hover:opacity-80">Video</a></div>
+    return <><br /><a href={video} className="hover:opacity-80">Video</a></>
 }
 
 function cospeaker(cospeaker: string | null) {
     if (!cospeaker) {
         return "";
     }
-    return <div><br />with {cospeaker}</div>
+    return <><br />with {cospeaker}<br /></>
 }
 
 export default function Talks() {
@@ -37,6 +37,7 @@ export default function Talks() {
             <div className="w-full justify-between items-start sm:items-center space-y-1 mb-5 sm:space-y-0 sm:space-x-2">
               <h2 className="text-black dark:text-white">{talk.title}</h2>
               <p className="text-neutral-600 dark:text-neutral-400">
+                  {cospeaker(talk.cospeaker)}
                 at {talk.conference}
                   {location(talk.city, talk.country)}
                   <Link
@@ -47,7 +48,6 @@ export default function Talks() {
                       rel="noopener noreferrer"
                   >Link</Link>
                   {video(talk.video)}
-                  {cospeaker(talk.cospeaker)}
               </p>
                 <hr />
             </div>

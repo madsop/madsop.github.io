@@ -9,7 +9,7 @@ src="/images/cd-open-source.jpg"
 className="next-image"
 width="1296"
 height="730"
-
+alt=""
 />
 <sub>Photo: Kindel Media, Pexels</sub>
 
@@ -85,11 +85,12 @@ Copy the username and the token from this step as secrets in your GitHub repo.
 
 Then, head over to your pom file. You need to sign your artifacts with GPG, as mentioned above. maven-gpg-plugin takes care of that for you. Use the goal sign-artifact, and reference the GPG passphrase variable in the configuration part. If you run into errors related to _pinentry_, try adding this section to the configuration part:
 
-
+```
     <gpgArguments>
      <arg> - pinentry-mode</arg>
      <arg>loopback</arg>
     </gpgArguments>
+```
 
 Next, you will need javadoc and sources to be published as well. The plugin _maven-javadoc-plugin_ is nice for javadoc, and the _maven-source-plugin_ and _maven-jar-plugin_ take care of sources and jars.
 
@@ -118,7 +119,11 @@ At this point, I think it is time to remind you that I am summarizing my experie
 
 You can find both[ the entire POM file](https://github.com/openhtmltopdf/openhtmltopdf/blob/main/pom.xml),[ the GitHub workflow](https://github.com/openhtmltopdf/openhtmltopdf/blob/main/.github/workflows/release.yml), and[ the rest of the code base](https://github.com/openhtmltopdf/openhtmltopdf) on GitHub.
 
-Note that if you are, as I am, working with a multi-Maven-module library, you will catch some extra challenges with the versioning. Luckily, the _flatten-maven-plugin_ gets you out of trouble. I spent quite some time realizing that I should add the line _<updatePomFile>true</updatePomFile>_ in the plugin configuration, so do that straight ahead and save yourself wasting the same hours that I did.
+Note that if you are, as I am, working with a multi-Maven-module library, you will catch some extra challenges with the versioning. Luckily, the _flatten-maven-plugin_ gets you out of trouble. I spent quite some time realizing that I should add the line
+```
+<updatePomFile>true</updatePomFile>
+ ```
+in the plugin configuration, so do that straight ahead and save yourself wasting the same hours that I did.
 
 ### Step 6 - Upload artifact to GitHub Package Registry
 
