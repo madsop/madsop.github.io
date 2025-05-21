@@ -1,0 +1,35 @@
+---
+title: Local development with MicroProfile RestClient
+publishedAt: 2024-11-14
+summary: "Test your HTTP calls on your own fake"
+---
+
+# What are we trying to solve?
+Scenario: You have an external dependency that you communicate with over HTTP. That external dependency does not have a suitable test environment that you can access.
+
+With MicroProfile, that won't be a big deal. You can set up your own fake endpoint running inside your application.
+
+# Rest Client
+I've done this with Quarkus, so some of the pointers and classes here are Quarkus specific, but the concepts will work out on any MicroProfile runtime.
+
+First, make sure your calls to the third party goes through MicroProfile Rest Client. <a href="https://quarkus.io/guides/rest-client">The documentation</a> is fairly good, but shortly put, you create an interface representing the endpoints you need, annotate it with `@RegisterRestClient` and create one method per endpoint you want to use. Use the familiar Jakarta Rest annotations such as `@GET, @POST, @Path, @QueryParam, @PathParam` et cetera, as well as `@ClientHeaderParam` to specify header params such as `Authorization`. And you need to add a line in an environment variable or in `application.properties` providing the base URL of the endpoints.
+
+This way, the runtime will take care of the HTTP calls for you, and you'll end up with a declarative and nice representation of the external endpoint, with types all the way. My Rest Client implementation is <a href="https://github.com/Roedt/ringesentralen-backend/blob/main/src/main/kotlin/no/roedt/hypersys/restClient/HypersysRestClient.kt">here</a> if you want to have a look.
+
+# Faking the endpoints
+Now that you have clearly described your endpoints, you are in a good posiition to fake them as well.
+
+So now that you've got clarity and overview, create a new bean, and - this is the main trick - annotate it with `@io.quarkus.arc.profile.IfBuildProfile(value = "dev")`. Now, the CDI processor will make this bean available in dev mode on your computer, but not in production or elsewhere. This is similar to ConditionalOnProperty in Spring, and you can also do it a bit more manually with for instance a Producer-class and MicroProfile Config.
+
+Time to implement fake versions of the endpoints. I did it <a href="https://github.com/Roedt/ringesentralen-backend/blob/main/src/main/kotlin/no/roedt/hypersys/restClient/HypersysEndpoint.kt">like this</a>. You'll see that the methods at the time of writing are really simple, but they can of course be enhanced with more logic and data as needed.
+
+Now, override the environment variable to something along the line of `%dev.hypersysBaseUrl=http://localhost:${quarkus.http.port}/hypersys`
+
+The initial %dev here is important, it indicates that this property override is solely for the dev profily. You should adjust the final `/hypersys` to the URL of your third party, the main point being that your Rest client and your fake endpoint should be aligned.
+
+# The end result
+You'll end up with a fake implementation of your third party inside your application, so it's fast to change, always available and hassle-free. As it's only available in dev mode, it's not a security issue later on neither.
+
+The flip side is of course that you're not actually connecting to the external party, so issues like connectivity, firewalls or sudden API changes can go under the radar.
+
+Would I do this again if I had a test environment available? I think so, yes, as it allows you to develop without having to rely on an external part, so you know that it's available. You're also in full control of the test data. And you don't have to think about credentials and such, so it's technically easier to onboard new developers - or for yourself to switch computers.
