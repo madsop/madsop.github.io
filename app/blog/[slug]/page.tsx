@@ -46,7 +46,7 @@ export async function generateMetadata({
         },
       ],
     },
-    twitter: {
+    bluesky: {
       card: "summary_large_image",
       title,
       description,

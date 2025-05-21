@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
+  bluesky: {
     title: metaData.name,
     card: "summary_large_image",
   },

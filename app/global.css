@@ -130,11 +130,6 @@ input[type="email"] {
   appearance: none;
 }
 
-.prose .tweet a {
-  text-decoration: inherit;
-  font-weight: 500;
-}
-
 table {
   display: block;
   max-width: fit-content;
