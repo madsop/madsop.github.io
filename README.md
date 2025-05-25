@@ -2,45 +2,62 @@ My blog/portfolio, available at madsopheim.com
 
 Thanks to https://www.freecodecamp.org/news/how-to-deploy-next-js-app-to-github-pages/ for the GitHub Action pipelines.
 
+# Nextfolio
 
+A clean, fast, and lightweight portfolio template built with [Next.js](https://nextjs.org/), [Vercel](https://vercel.com/), and [Tailwind CSS](https://tailwindcss.com/).
 
-# Portfolio Starter Kit
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio)
 
-This portfolio is built with **Next.js** and a library called [Nextra](https://nextra.vercel.app/). It allows you to write Markdown and focus on the _content_ of your portfolio. This starter includes:
+## Technologies Used
 
-- Automatically configured to handle Markdown/MDX
-- Generates an RSS feed based on your posts
-- A beautiful theme included out of the box
-- Easily categorize posts with tags
-- Fast, optimized web font loading
+- Framework: [Next.js](https://nextjs.org/)
+- Styling: [Tailwind CSS](https://tailwindcss.com/)
+- Analytics: [Vercel Web Analytics](https://vercel.com/docs/speed-insights) and [Speed Insights](https://vercel.com/docs/speed-insights)
+- Deployment: [Vercel](https://vercel.com/)
 
-https://demo.vercel.blog
+## Features
+
+- **[MDX](https://mdxjs.com/) Support**: Use Markdown with JSX components for blog posts.
+- **Light and Dark Mode Toggle**: Switch between themes for better readability.
+- **Dynamic [OG Images](https://vercel.com/docs/functions/og-image-generation)**: Auto-generate Open Graph images for sharing.
+- **SEO Optimization**: Enhance search visibility with sitemap, robots.txt, and JSON-LD schema.
+- **Dynamic Feed Generation**: Automatic dynamic [RSS](https://nextfolio-template.vercel.app/rss.xml), [Atom](https://nextfolio-template.vercel.app/atom.xml), and [JSON](https://nextfolio-template.vercel.app/feed.json) feeds.
+- **[KaTeX](https://katex.org/) Integration**: Render mathematical expressions smoothly.
+- **Performance Tracking**: Monitor web performance with [Vercel Web Analytics](https://vercel.com/docs/speed-insights) and [Speed Insights](https://vercel.com/docs/speed-insights).
+- **Interactive Embeds**: Easily embed interactive tweets and YouTube videos.
+- **Captions**: Add descriptive captions to photos, tweets, and videos.
+- **Image Grid**: Easily showcase image galleries or photos.
+
+## Installation
+
+Nextfolio uses [pnpm](https://pnpm.io/installation) for dependency management, so ensure it is installed on your system.
+
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
+
+```
+pnpm create next-app --example https://github.com/1msirius/Nextfolio my-portfolio
+```
+
+Start the development server:
+
+```
+pnpm dev
+```
+
+The server will be running at [http://localhost:3000](http://localhost:3000).
 
 ## Configuration
 
-1. Update your name in `theme.config.js` or change the footer.
-1. Update your name and site URL for the RSS feed in `scripts/gen-rss.js`.
-1. Update the meta tags in `pages/_document.tsx`.
-1. Update the posts inside `pages/posts/*.md` with your own content.
+1. Update the site metadata and social links in `app/config.ts` to set up SEO, feeds, social links, and Open Graph settings.
+2. Update your routes in `app/sitemap.ts` for SEO optimization.
+3. Update your blog posts in the `/content` folder.
 
-## Deploy your own
+For more information about configuration, follow the instructions in the [Getting Started](https://nextfolio-template.vercel.app/blog/getting-started#configuration) post.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog&project-name=portfolio&repository-name=portfolio)
+## Contributing
 
-## How to use
+Contributions are welcome! To get involved, just push your code to the repo. Whether you're enhancing existing features or adding new ones, your efforts are greatly appreciated!
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Licence
 
-```bash
-npx create-next-app --example blog my-blog
-```
-
-```bash
-yarn create next-app --example blog my-blog
-```
-
-```bash
-pnpm create next-app --example blog my-blog
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Nextfolio is open-source and released under the MIT License.
