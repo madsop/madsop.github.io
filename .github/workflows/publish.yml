@@ -22,13 +22,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: ./.github/workflows/setup-node
 
-      - name: Setup Pages ⚙️
+      - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
           static_site_generator: next
@@ -39,18 +39,18 @@ jobs:
             ~/.npm
             ${{ github.workspace }}/.next/cache
           # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
-      - name: Build with Next.js
+      - name: Build
         run: npx next build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./dist
 
   deploy:
     environment:
@@ -61,6 +61,6 @@ jobs:
     needs: build
 
     steps:
-      - name: Publish to GitHub Pages 🚀
+      - name: Publish to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
