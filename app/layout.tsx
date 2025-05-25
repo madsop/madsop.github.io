@@ -37,10 +37,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  bluesky: {
-    title: metaData.name,
-    card: "summary_large_image",
-  },
   icons: {
     icon: "/favicon.ico",
   },
