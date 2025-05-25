@@ -1,10 +1,9 @@
 export const metaData = {
   baseUrl: "https://madsopheim.com/",
   title: "Mads Opheim",
-  name: "Sirius",
-  ogImage: "/opengraph-image.png",
+  name: "Mads Opheim",
   description:
-    "A clean, fast, and lightweight portfolio template built with Next.js, Vercel, and Tailwind CSS for optimal performance.",
+      "Doing my best for a better world. Through better tech and better policies.",
 };
 
 export const socialLinks = {

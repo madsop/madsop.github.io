@@ -25,9 +25,7 @@ export async function GET(
     );
   }
 
-  const BaseUrl = metaData.baseUrl.endsWith("/")
-    ? metaData.baseUrl
-    : `${metaData.baseUrl}/`;
+  const BaseUrl = metaData.baseUrl;
 
   const feed = new Feed({
     title: metaData.title,
