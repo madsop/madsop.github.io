@@ -9,7 +9,6 @@ runs:
       with:
         version: 10
         dest: ~/setup-pnpm
-        standalone: true
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
