@@ -10,12 +10,10 @@ updates:
     schedule:
       interval: "weekly"
     groups:
-      nextra:
+      next-react:
         patterns:
-          - "*nextra*"
           - "*next*"
           - "*react*"
-          - "*remark-mermaid*"
 
 
   - package-ecosystem: "github-actions" # See documentation for possible values
