@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   },
   description: metaData.description,
   openGraph: {
-    images: metaData.ogImage,
     title: metaData.title,
     description: metaData.description,
     url: metaData.baseUrl,
@@ -30,8 +29,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 };
-
-const cx = (...classes) => classes.filter(Boolean).join(" ");
 
 export default function RootLayout({
   children,
