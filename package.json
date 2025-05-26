@@ -10,8 +10,6 @@
     "@types/node": "22.15.21",
     "@types/react": "19.1.5",
     "@types/react-dom": "19.1.5",
-    "@vercel/analytics": "^1.4.1",
-    "@vercel/speed-insights": "^1.1.0",
     "feed": "^4.2.2",
     "katex": "^0.16.22",
     "next": "^15.3.2",
