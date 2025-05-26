@@ -1,0 +1,26 @@
+---
+title: Switching blog engine
+publishedAt: 2025-06-03
+summary: "I recently realized that the engine that used to run this blog wasn't updated since 2020"
+---
+
+Some years ago, I migrated this blog into Gridsome. It was a nice engine, providing everything I needed for this blog - except for the crucial aspect that it is no longer maintained, and the latest release came in 2020.
+
+In other words, my blog would at one time or another be falling apart. I'd prefer it not to.
+
+Many years in professional software development have thought me that regularly updating your dependencies tends to be really smart - and, on the opposite side, that _not_ updating them would lead to big bulks of upgrading work.
+
+Enough said, I needed to find an alternative. I'm primarily interested in - and good at - backend development, so I wasn't really eager to spend lots of time doing the frontend work. So I made a short list of required and desired features:
+
+* based on React, as that's what I'm using at work and has been for some years, so it's familiar
+* something that can be deployed to GitHub Pages, where my portfolio and blog lives
+* a deal where everything is regularly updated
+* using well-proven technology
+* nice design
+* not require lots of maintenance
+
+So I started out trying Nextra, which seemed promising, so I converted all my blog posts and my portfolio into it. The design was nice and all. However, after I configured dependabot and got updates, I ran into errors with conflicting React versions, where the newest version of the Nextra framework didn't support the newest React. A red flag, so I decided to leave Nextra behind, and look for something purely based on Next.js and other popular, more generic frameworks.
+
+Enter [Nextfolio](https://nextfolio-template.vercel.app/blog/getting-started). It has a bit more code in the repo, but that means that I have control myself. Nextfolio is primarily based on React, Next.js and Tailwind, so the risk of being left behind is small.
+
+It took me a while to make the static site generation work properly with the Nextfolio config, but I eventually made it. Now, the only thing that annoys me is that the link to the RSS feed has changed, and I haven't figured out how to override it.
