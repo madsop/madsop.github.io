@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "@types/node": "22.15.29",
-    "@types/react": "19.1.6",
-    "@types/react-dom": "19.1.5",
+    "@types/react": "19.1.7",
+    "@types/react-dom": "19.1.6",
     "feed": "^5.1.0",
     "katex": "^0.16.22",
     "next": "^15.3.2",
