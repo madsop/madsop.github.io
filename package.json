@@ -22,7 +22,7 @@
     "react-youtube": "^10.1.0",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
-    "sugar-high": "^0.9.3",
+    "sugar-high": "^0.9.5",
     "typescript": "5.9.3"
   },
   "devDependencies": {
