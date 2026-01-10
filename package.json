@@ -26,9 +26,9 @@
     "typescript": "5.9.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.11",
-    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@tailwindcss/typography": "^0.5.19",
     "postcss": "^8.5.6",
-    "tailwindcss": "4.1.11"
+    "tailwindcss": "4.1.17"
   }
 }
