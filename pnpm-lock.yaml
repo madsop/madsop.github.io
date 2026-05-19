@@ -54,8 +54,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0
       sugar-high:
-        specifier: ^0.9.5
-        version: 0.9.5
+        specifier: ^1.2.0
+        version: 1.2.0
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -1068,8 +1068,8 @@ packages:
       babel-plugin-macros:
         optional: true
 
-  sugar-high@0.9.5:
-    resolution: {integrity: sha512-eirwp9p7QcMg6EFCD6zrGh4H30uFx2YtfiMJUavagceP6/YUUjLeiQmis7QuwqKB3nXrWXlLaRumCqOd9AKpSA==}
+  sugar-high@1.2.0:
+    resolution: {integrity: sha512-tDChykLsm/+arY5Fb3cOiptiW75WQMkm/J/zQFuOaU0eB6tTVg/C5ANwh9bFw/3JrYaLK2mMm0F9VdXHbNtOhQ==}
 
   tailwindcss@4.3.0:
     resolution: {integrity: sha512-y6nxMGB1nMW9R6k96e5gdIFzcfL/gTJRNaqGes1YvkLnPVXzWgbqFF2yLC0T8G774n24cx3Pe8XrKoniCOAH+Q==}
@@ -2453,7 +2453,7 @@ snapshots:
       client-only: 0.0.1
       react: 19.2.6
 
-  sugar-high@0.9.5: {}
+  sugar-high@1.2.0: {}
 
   tailwindcss@4.3.0: {}
 
