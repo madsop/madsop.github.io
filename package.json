@@ -10,7 +10,7 @@
     "@types/node": "25.0.10",
     "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
-    "feed": "^5.1.0",
+    "feed": "^5.2.1",
     "katex": "^0.16.33",
     "next": "^16.2.6",
     "next-mdx-remote": "^6.0.0",
