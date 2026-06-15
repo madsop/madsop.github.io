@@ -7,7 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@types/node": "25.9.1",
+    "@types/node": "25.9.3",
     "@types/react": "19.2.16",
     "@types/react-dom": "19.2.3",
     "feed": "^5.2.1",
