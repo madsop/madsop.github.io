@@ -40,6 +40,7 @@ export default function Talks() {
                   {cospeaker(talk.cospeaker)}
                 at {talk.conference}
                   {location(talk.city, talk.country)}
+                  {talk.date} <br />
                   <Link
                       key={index}
                       href={talk.link}
