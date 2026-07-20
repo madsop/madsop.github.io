@@ -34,7 +34,7 @@ export default function Talks() {
       <h1 className="mb-8 text-2xl font-medium">Talks</h1>
       <div>
         {talks.map((talk, index) => (
-            <div className="w-full justify-between items-start sm:items-center space-y-1 mb-5 sm:space-y-0 sm:space-x-2">
+            <div key={index} className="w-full justify-between items-start sm:items-center space-y-1 mb-5 sm:space-y-0 sm:space-x-2">
               <h2 className="text-black dark:text-white">{talk.title}</h2>
               <p className="text-neutral-600 dark:text-neutral-400">
                   {cospeaker(talk.cospeaker)}
