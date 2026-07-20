@@ -10,16 +10,26 @@ export interface Talk {
 }
 
 export const talks: Talk[] = [
-    {
-      "conference": "GeeCon Krakow",
-      "date": "2025-05-15",
-      "city": "Krakow",
-      "country": "Poland",
-      "title": "How 15 years in politics have made me a better programmer",
-      "link": "https://2025.geecon.org/schedule-day2/",
-      "video": "",
-      "cospeaker": ""
-    },
+  {
+    "conference": "Open Community Experience",
+    "date": "2026-04-22",
+    "city": "Brussels",
+    "country": "Belgium",
+    "title": "15 years in politics made me a better developer",
+    "link": "https://www.ocxconf.org/event/2026/agenda",
+    "video": "",
+    "cospeaker": ""
+  },
+  {
+    "conference": "GeeCon Krakow",
+    "date": "2025-05-15",
+    "city": "Krakow",
+    "country": "Poland",
+    "title": "How 15 years in politics have made me a better programmer",
+    "link": "https://2025.geecon.org/schedule-day2/",
+    "video": "",
+    "cospeaker": ""
+  },
 {
   "conference": "Open Community Experience",
     "date": "2024-10-24",
