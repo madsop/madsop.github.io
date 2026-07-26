@@ -1,0 +1,52 @@
+---
+title: Scraping in Java is easy
+publishedAt: 2026-07-26
+summary: "I transformed my scraper from Python to Java, from scrapy to jsoup. It was surprisingly easy."
+---
+
+For some years, I've had <a href="2022-10-28-scraping">a scraper running</a>, polling a given website every morning,
+and persisting the results.
+
+It has always been implemented in Python, using _beautiful soup_ and _scrapy_ for the scraping part.
+Nothing wrong with that, but I prefer coding on the JVM stack, and that I've never put much effort into the deploy pipeline of it.
+
+A few days ago, I even wrote <a href="2026-07-20-add-value-by-doing-nothing">a blog post</a> on how I've left the application without much care for years.
+Although my insights from that blog post in general make sense and are valuable, I never did feel comfortable about not updating my code base.
+
+This might very well be a time of _listen to what I say and not what I do_, indeed.
+
+Putting down to words that I'd left the code alone was the push I needed to finally do something about it.
+Having a day off with no plans, I spent some hours today on it. With great success, I'd say.
+
+So now the scraper is running Java 25!
+
+I got surprised by how easy it was to do the scraping part in Java.
+That is a huge compliment to the folks creating <a href="https://jsoup.org">jsoup</a>, which does all the heavy lifting for you.
+All you need to do is provide a url, the html elements you are interested in, and do whatever you intend with the response.
+
+```
+String selectFilter = "a.merchant-tile";
+...
+for (Element butikk : Jsoup.connect(url).get().select(selectFilter)) {
+    ...
+    String popularitet = butikk.attribute("data-popularity").getValue();
+    ...
+
+}
+```
+
+I already had all of that in my Python implementation, so that part was almost trivial.
+
+I started from the Quarkus starter, added a REST endpooint that triggered the syncronization, and was up and running.
+I've <a href="https://medium.com/compendium/get-married-thanks-tojakarta-ee-and-microprofile-69d2a49ef435">written about that infrastructure</a>
+<a href="2024-11-09-ringesentralen">several times</a> already, the difference being that I used Java this time.
+
+The build pipeline is identical to <a href="https://medium.com/compendium/get-married-thanks-tojakarta-ee-and-microprofile-69d2a49ef435">the one I used when planning my wedding</a>,
+using GitHub Actions and Google Cloud, including Cloud Scheduler.
+
+The results are persisted into Firestore, and later fetched through a separate application.
+
+This scraper ended up with very few dependencies: Core Quarkus, Jakarta REST, Jakarta CDI, jsoup and firestore-connector.
+Lightweight and nice.
+
+You can find the scraper code <a href="https://github.com/madsop/viatrumf-scraper">on GitHub</a>.
