@@ -54,8 +54,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0
       sugar-high:
-        specifier: ^1.2.1
-        version: 1.2.1
+        specifier: ^2.0.1
+        version: 2.0.1
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4.3.3
@@ -1100,8 +1100,8 @@ packages:
       babel-plugin-macros:
         optional: true
 
-  sugar-high@1.2.1:
-    resolution: {integrity: sha512-C2E0iSC0Gwv+7t32ATFxgiH6fxskoSfd/nF5z11pQSrgJHYjY8/U11K+X0izV9ZyPNPwaomtn6uF7y11MxVNQA==}
+  sugar-high@2.0.1:
+    resolution: {integrity: sha512-scKbPz1/VAta3pTimoyhUB9CLYiQPvwsfE01tEcUoPuE3TfWnum8fl+0muGfUOXiBCjjmclMbEq8LBXu2smkYg==}
 
   tailwindcss@4.3.3:
     resolution: {integrity: sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==}
@@ -2489,7 +2489,7 @@ snapshots:
       client-only: 0.0.1
       react: 19.2.7
 
-  sugar-high@1.2.1: {}
+  sugar-high@2.0.1: {}
 
   tailwindcss@4.3.3: {}
 
